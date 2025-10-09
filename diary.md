@@ -1,5 +1,8 @@
 # Diary Entries FYP:
 
+## 9 October 2025:
+Abstract, risks and mitigations, timeline, and bibliography complete and will be turned in tonight. This weekend I plan on working on some basic game feature lists, finding my reference games, and beginning to look into video game design patterns. 
+
 ## 7 October 2025:
 I have continued to write my assertation. I am slightly behind schedule with my abstract as the research needed has been more than expected, however I am ahead of schedule with my resources list for my bibliography. My research has centered around game engines and the pros and cons of the different ones. I still need some research on game programming design. I will be completing my abstract tonight, if not tomorrow morning and beginning my risk assesment tomorrow.
 
