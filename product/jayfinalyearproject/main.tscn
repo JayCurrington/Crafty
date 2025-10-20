@@ -9,7 +9,7 @@
 [node name="Player" parent="." instance=ExtResource("1_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.76964, 0)
 
-[node name="Camera" parent="." instance=ExtResource("2_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 0.903978, 0.427579, 0, -0.427579, 0.903978, 0, 4.14793, 6.41838)
+[node name="Camera" parent="Player" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 0.903978, 0.427579, 0, -0.427579, 0.903978, 0, 5.63743, 6.41838)
 
 [node name="Floor" parent="." instance=ExtResource("3_h2yge")]

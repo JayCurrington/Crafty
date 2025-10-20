@@ -33,7 +33,7 @@ func _physics_process(delta):
 	if direction != Vector3.ZERO:
 		direction = direction.normalized()
 		# Setting the basis property will affect the rotation of the node. - makes player look around?? 
-#		$Pivot.basis = Basis.looking_at(direction)
+		$Pivot.basis = Basis.looking_at(direction)
 
 	#Jump ability
 	if Input.is_action_pressed("jump") and is_on_floor() and jumping == 0:

@@ -8,11 +8,15 @@
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_kpjcp")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
-
-[node name="leglessGuy" parent="." instance=ExtResource("2_kpjcp")]
-transform = Transform3D(0.23809, 0, 0.00515776, 0, 0.238146, 0, -0.00515776, 0, 0.23809, 0, 0.103685, 0)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_kne1u")
 debug_color = Color(0.276073, 0.643705, 0, 0.42)
+
+[node name="Pivot" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.665716, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.665716, 0)
+
+[node name="leglessGuy" parent="Pivot" instance=ExtResource("2_kpjcp")]
+transform = Transform3D(-0.238146, 0, -2.08194e-08, 0, 0.238146, 0, 2.08194e-08, 0, -0.238146, 0, 0.769401, 0)
