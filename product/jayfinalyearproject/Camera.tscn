@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dlneg0kylm00n"]
 
 [node name="Camera" type="Camera3D"]
+projection = 1
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+shadow_enabled = true

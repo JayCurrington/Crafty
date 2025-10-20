@@ -14,6 +14,9 @@ var target_velocity = Vector3.ZERO
 var walkRot = 1
 var walkTrack = 0
 
+func getJumping():
+	return (jumping)
+
 #Automatically called by the engine when scene run and is called on fix time ints
 func _physics_process(delta):
 	
@@ -40,7 +43,7 @@ func _physics_process(delta):
 		$Pivot.basis = Basis.looking_at(direction)
 		
 		#Make the chaarcter rotate and bounce when walks
-		if(walkTrack >= 10 or walkTrack <= -10 ):
+		if(walkTrack >= 5 or walkTrack <= -5 ):
 			walkRot = -walkRot
 		print(walkTrack, ", ", walkRot)
 		walkTrack += walkRot

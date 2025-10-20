@@ -18,8 +18,7 @@ transform = Transform3D(5.30187, 0, 0, 0, 2.55798, 0, 0, 0, 1, 0, 0.84092, 5.799
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.76964, 0)
 
 [node name="Camera" parent="Player" instance=ExtResource("2_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 0, 30.752)
-v_offset = 5.0
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 5.417, 30.752)
 size = 20.0994
 script = ExtResource("4_lquwl")
 
