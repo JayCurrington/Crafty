@@ -1,5 +1,8 @@
 # Diary Entries FYP:
 
+## 20 October 2025
+Added in the player movement, the player now can walk, jump, and looks in the direction of movement. The camera follows the player, however player jump creates weird movement with the camera. The Player model has been made and may be tweaked later. Godot proof of concept is on track. Next implementation will be the ability to iunteract with objects and fixing the camera.
+
 ## 16 October 2025:
 Other coursework has taken much more time than expected. I have created a Godot emviornment and I will begin the programming on that, with a movable player by Monday. Research has been going much slower than expected. Will resume over the weekend and into the next week. I will have a small paragraph outlining what a game programming pattern is and an example from a real game in which one was likely used by Monday afternoon. Laptop is currently broken, inhibiting progress slightly, however, a new charger has been ordered and will hopefully fix the issue within the next few days. If the issue is not resolved tomorrow, I will reference my risks and mitigations and work through my technological failure mitigation.
 
