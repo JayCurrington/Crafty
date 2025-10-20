@@ -10,6 +10,10 @@ var jumping = 0
 #3D Vector used across frames for directed speed
 var target_velocity = Vector3.ZERO
 
+#These track the angle of rotation and transform strech for character walking
+var walkRot = 1
+var walkTrack = 0
+
 #Automatically called by the engine when scene run and is called on fix time ints
 func _physics_process(delta):
 	
@@ -32,8 +36,21 @@ func _physics_process(delta):
 	#If the func is not still, make sure only goes one unit at a time (even diagonally)
 	if direction != Vector3.ZERO:
 		direction = direction.normalized()
-		# Setting the basis property will affect the rotation of the node. - makes player look around?? 
+		# Setting the basis property will affect the rotation of the node. - makes player look around
 		$Pivot.basis = Basis.looking_at(direction)
+		
+		#Make the chaarcter rotate and bounce when walks
+		if(walkTrack >= 10 or walkTrack <= -10 ):
+			walkRot = -walkRot
+		print(walkTrack, ", ", walkRot)
+		walkTrack += walkRot
+		#This sets all size transform to 1, undoes any scaling done ( otherwise shape will be misshapen after while)
+		$Pivot.rotate_object_local(Vector3(0, 0, 1), 0.05 * walkRot)
+		transform = transform.orthonormalized()
+	else:
+		$Pivot.rotation.z = 0;
+
+	
 
 	#Jump ability
 	if Input.is_action_pressed("jump") and is_on_floor() and jumping == 0:
@@ -42,10 +59,17 @@ func _physics_process(delta):
 	elif jumping > 0:
 		jumping -= 1
 		print("down Jump")
+	
+	
+	
 
 	#Set player velocity
 	target_velocity.x = direction.x * speed
 	target_velocity.z = direction.z * speed
+
+	
+		
+	
 	
 	#make Player fall to floor or jump 
 	if not is_on_floor() and jumping == 0: 
