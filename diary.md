@@ -1,11 +1,12 @@
 # Diary Entries FYP:
-## 28 October 2025
+
+## 28 October 2025:
 Writing paragraph today. Will be done by tomorrow. Laptop charger finally working, allows me to work while not on my desktop PC which means more productivity. I have re-worked my plan with my advisor and am looking for a meeting this thursday with him to talk in person. 
 
-## 24 October 2025
+## 24 October 2025:
 Forgot to log in the digital diary so I am preemptively adding my written journal entry. I am behind on my research, will be reading through library books and writing paragraph on the game programming patterns this week/weekend. Will also add player interaction with objects if time allows this week.
 
-## 20 October 2025
+## 20 October 2025:
 Added in the player movement, the player now can walk, jump, and looks in the direction of movement. The camera follows the player, however player jump creates weird movement with the camera. The Player model has been made and may be tweaked later. Godot proof of concept is on track. Next implementation will be the ability to iunteract with objects and fixing the camera.
 
 ## 16 October 2025:
