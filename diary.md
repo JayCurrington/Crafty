@@ -1,5 +1,17 @@
 # Diary Entries FYP:
 
+## 14 November 2025
+Decided that the indie game research wasn't going in the direction I intended. I wanted to look at indie game development and trends of games released and team sizes, however I was struggling to find resources so I have changed my research to in game crafting systems. This will be relevant to my project as I am using crafting as a main feature. I have lost time to this difficulty with researching and not finding resources that feel relevant enough to the programming of this project. I will be working on code this weekend and catching up on research.
+
+## 10 November 2025
+Read up on the relevance of Godot in the game programming sphere. I am feeling slightly stressed about my progress as the last week has been full of coursework from other classes. I am hoping to catch up on my research, however I also need to begin to focus on specific elements that are needed in the report for the end of term. I am also catching up on programming, however there are more available resources for programming than research. I am a tad concerned that my reserch should be more focused on programming and development, so I will steer in that direction.
+
+## 3 November 2025
+Began reading up on indie games and what classifies an indie game. I am struggling to find research that is relevant to both programming and indie game development. I would like to read more on specifically Godot's impact on indie games and game development, however am struggling to find relevant articles. I am also struggling to find relevant articles that are not web blogs or videos. I also wrote a section about Potion Permit. I am behind on my game references but on track with the rest of my research.
+
+## 30 October 2025
+Before my meeting with my advisor, I was sure to have a section about game programming patterns complete. While unedited, it covers 5/6 main design patterns. I will need more about this in the future. Had a meeting with advisor which went very well. Talked about timing and yet again moved the timeline around. Spoke about project progress and I was glad to hear I am on track.
+
 ## 28 October 2025:
 Writing paragraph today. Will be done by tomorrow. Laptop charger finally working, allows me to work while not on my desktop PC which means more productivity. I have re-worked my plan with my advisor and am looking for a meeting this thursday with him to talk in person. 
 
@@ -19,9 +31,7 @@ Abstract, risks and mitigations, timeline, and bibliography complete and will be
 I have continued to write my assertation. I am slightly behind schedule with my abstract as the research needed has been more than expected, however I am ahead of schedule with my resources list for my bibliography. My research has centered around game engines and the pros and cons of the different ones. I still need some research on game programming design. I will be completing my abstract tonight, if not tomorrow morning and beginning my risk assesment tomorrow.
 
 ## 4 October 2025:
-
 On Thursday, I had my meeting with my advisor. The meeting went to plan, confirmed I was on the right track with my ideas. I have began my week by week plan and will complete that this weekend, as well as beginning my abstract. This upcoming week, I have to complete my risk assessment and project abstract. I plan on completing my abstract by Wednesday and the risk assesment by Thursday. It is important to keep on top of the project at this point as to not fall behind as I plan. The project plan is due on the 10th.
 
 ## 29 September 2025:
-
 I have began the planning of my project. I have a meeting scheduled with my advisor for Thursday and hope to have a large chunk of my plan complete before then. I also plan on writing a list of questions and advice I would like for this meeting so it can go as seamless as possible. I am currently working towards deciding the basics of my project such as the program I will use for development, focuses of my report and research, my timeline, and books and resources I will use. I am also looking into what existing games I will analyse technically and break down to use as inspiration.
