@@ -53,8 +53,6 @@ func _physics_process(delta):
 	else:
 		$Pivot.rotation.z = 0;
 
-	
-
 	#Jump ability
 	if Input.is_action_pressed("jump") and is_on_floor() and jumping == 0:
 		jumping = 20
@@ -62,17 +60,10 @@ func _physics_process(delta):
 	elif jumping > 0:
 		jumping -= 1
 		print("down Jump")
-	
-	
-	
 
 	#Set player velocity
 	target_velocity.x = direction.x * speed
 	target_velocity.z = direction.z * speed
-
-	
-		
-	
 	
 	#make Player fall to floor or jump 
 	if not is_on_floor() and jumping == 0: 
