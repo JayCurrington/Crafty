@@ -20,8 +20,9 @@ func ready():
 	self.max_contacts_reported = 1
 	self.connect("body_entered", Callable (self, "_on_body_entered"))
 	
-func _on_body_entered(body: Node):
-	print("bodyHERE")
+func body_entered(body: Node):
+	get_node("interactMenu").visible
+	print(get_node("interactMenu").visible)
 
 
 
@@ -81,6 +82,21 @@ func _physics_process(delta):
 	#Actually move the player
 	velocity = target_velocity
 	move_and_slide()
+
+#	for i in range(get_slide_collision_count() - 1):
+#		var collision = get_slide_collision(i)
+#		#if collision.get_collider().get_parent().is_in_group("Object"):
+#		print(collision.get_collider())
+#		print("AAAAAAAAAAAAAAAAAAAAAAA")
+	
+	
+func objectHit(object):
+	get_node("interactMenu").visible = true
+	print("Hit")
+	
+func objectGone(object):
+	get_node("interactMenu").visible = false
+	print("gone")
 	
 func getJumping():
 	return (jumping)

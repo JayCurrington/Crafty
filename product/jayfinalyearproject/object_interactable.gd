@@ -6,7 +6,14 @@ func _ready():
 	pass
 	
 func _on_body_entered(body: Node):
-	print("bodyHERE")
+	if body.is_in_group("Player"):
+		body.objectHit(self)
+
+func _on_body_exited(body: Node):
+	print("here")
+	if body.is_in_group("Player"):
+		print(body)
+		body.objectGone(self)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

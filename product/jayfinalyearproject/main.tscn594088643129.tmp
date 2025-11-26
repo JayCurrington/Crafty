@@ -20,8 +20,7 @@ transform = Transform3D(5.30187, 0, 0, 0, 2.55798, 0, 0, 0, 1, 0, 0.84092, 5.799
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.76964, 0)
 
 [node name="interactMenu" parent="Player" instance=ExtResource("7_272bh")]
-visible = false
-position = Vector2(622, 244)
+position = Vector2(32.25, 0)
 
 [node name="Camera" parent="Player" instance=ExtResource("2_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 4.09101, 30.752)
