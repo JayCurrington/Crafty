@@ -20,7 +20,7 @@ func ready():
 	self.max_contacts_reported = 1
 	self.connect("body_entered", Callable (self, "_on_body_entered"))
 	
-func _body_entered(body: Node):
+func _on_body_entered(body: Node):
 	print("bodyHERE")
 
 
