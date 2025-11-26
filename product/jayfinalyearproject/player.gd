@@ -14,12 +14,19 @@ var target_velocity = Vector3.ZERO
 var walkRot = 1
 var walkTrack = 0
 
-func getJumping():
-	return (jumping)
-
-#Automatically called by the engine when scene run and is called on fix time ints
-func _physics_process(delta):
+#similar to init 
+func ready():
+	self.contact_monitor = true
+	self.max_contacts_reported = 1
+	self.connect("body_entered", Callable (self, "_on_body_entered"))
 	
+func _body_entered(body: Node):
+	print("bodyHERE")
+
+
+
+#Automatically called by the engine when scene run and is called on fix time ints - related to gameplay loop
+func _physics_process(delta):
 	#Stores the direction of the player
 	var direction = Vector3.ZERO
 	
@@ -45,7 +52,7 @@ func _physics_process(delta):
 		#Make the chaarcter rotate and bounce when walks
 		if(walkTrack >= 5 or walkTrack <= -5 ):
 			walkRot = -walkRot
-		print(walkTrack, ", ", walkRot)
+		#print(walkTrack, ", ", walkRot)
 		walkTrack += walkRot
 		#This sets all size transform to 1, undoes any scaling done ( otherwise shape will be misshapen after while)
 		$Pivot.rotate_object_local(Vector3(0, 0, 1), 0.05 * walkRot)
@@ -56,10 +63,10 @@ func _physics_process(delta):
 	#Jump ability
 	if Input.is_action_pressed("jump") and is_on_floor() and jumping == 0:
 		jumping = 20
-		print("Jump")
+		#print("Jump")
 	elif jumping > 0:
 		jumping -= 1
-		print("down Jump")
+		#print("down Jump")
 
 	#Set player velocity
 	target_velocity.x = direction.x * speed
@@ -74,4 +81,10 @@ func _physics_process(delta):
 	#Actually move the player
 	velocity = target_velocity
 	move_and_slide()
+	
+func getJumping():
+	return (jumping)
+
+	# Collisions:
+	
 		
