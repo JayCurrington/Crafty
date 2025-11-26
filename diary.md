@@ -1,4 +1,7 @@
 # Diary Entries FYP:
+## 26 November 2025
+While I still feel behind, I am happy with the progress I have made today to catch up. I have been struggling a lot to find proper Godot tutorial and documentation for their 3D objects. Due to it primarily being a 2D platform until recently, a majority of the developers, and in turn, forum questions, dcoumentation, and useful tutorials are for 2D games, which this is not. While I am able to adapt some of these resources into my 3D game, it is far from easy and takes quite abit of troubleshooting and trying to find the correct wording to find what I need. Today I got my player to interact with an object. The pickup is not quite working, but when a player walks in the vicinity of an object, the object will tell the player and in turn a menu will show up saying press E to pick up. This is great progress and I am approcahing the end of what I intended to implement for first term.
+
 ## 25 November 2025
 Report has about 1000 words, being written on google drive, so not being uploaded to github yet. I will add a version when it is completed. I have been finding research to be going much better since swapping my focus. Tomorrow I will work more on the programming side rather than the research as I need more code for my interim report. The researching aspects is much more time consuming than expeacted and I am having the opposite issue than expected where my programming is coming second to my research.
 
