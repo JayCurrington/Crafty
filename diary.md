@@ -1,4 +1,12 @@
 # Diary Entries FYP:
+## 25 November 2025
+Report has about 1000 words, being written on google drive, so not being uploaded to github yet. I will add a version when it is completed. I have been finding research to be going much better since swapping my focus. Tomorrow I will work more on the programming side rather than the research as I need more code for my interim report. The researching aspects is much more time consuming than expeacted and I am having the opposite issue than expected where my programming is coming second to my research.
+
+## 23 November 2025
+Swamped currently with other uni work. I am feeling behind on my research for this. While this is stressful, Iplan on getting parts of my report together, and seeing what major gaps I can fill rather than focusing on small techincal bits. The technicalities can come later.
+
+## 20 November 2025
+Issues with graphics driver. Godot having issues with Vulkan. I have swapped the default driver and will need to look into what exactly the issue is. Only collision meshes and no rendered files showing for a while.
 
 ## 14 November 2025
 Decided that the indie game research wasn't going in the direction I intended. I wanted to look at indie game development and trends of games released and team sizes, however I was struggling to find resources so I have changed my research to in game crafting systems. This will be relevant to my project as I am using crafting as a main feature. I have lost time to this difficulty with researching and not finding resources that feel relevant enough to the programming of this project. I will be working on code this weekend and catching up on research.
