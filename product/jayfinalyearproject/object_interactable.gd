@@ -14,6 +14,9 @@ func _on_body_exited(body: Node):
 	if body.is_in_group("Player"):
 		print(body)
 		body.objectGone(self)
+		
+func isPickedUp():
+	self.visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

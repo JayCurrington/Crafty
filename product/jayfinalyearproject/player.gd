@@ -6,6 +6,7 @@ extends CharacterBody3D
 
 #tracks jumping length 0 means no longer going upwards.
 var jumping = 0
+var nearObject = null
 
 #3D Vector used across frames for directed speed
 var target_velocity = Vector3.ZERO
@@ -83,19 +84,19 @@ func _physics_process(delta):
 	velocity = target_velocity
 	move_and_slide()
 
-#	for i in range(get_slide_collision_count() - 1):
-#		var collision = get_slide_collision(i)
-#		#if collision.get_collider().get_parent().is_in_group("Object"):
-#		print(collision.get_collider())
-#		print("AAAAAAAAAAAAAAAAAAAAAAA")
-	
+#	Deal with interaction with object:
+	if Input.is_action_pressed("Interact") and nearObject != null:
+		print("Interact")
+		nearObject.isPickedUp()
 	
 func objectHit(object):
 	get_node("interactMenu").visible = true
+	nearObject = object
 	print("Hit")
 	
 func objectGone(object):
 	get_node("interactMenu").visible = false
+	nearObject = null
 	print("gone")
 	
 func getJumping():
