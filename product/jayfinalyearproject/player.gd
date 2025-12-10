@@ -2,11 +2,15 @@ extends CharacterBody3D
 
 #Speed of player movement and falling
 @export var speed = 15
-@export var fall_acceleration = 75
+@export var fall_acceleration = 50
 
 #tracks jumping length 0 means no longer going upwards.
 var jumping = 0
 var nearObject = null
+
+#Inventory, for now, should be structured as an array containing arrays with two elements: 
+# [type, quantity]
+var inventory = []
 
 #3D Vector used across frames for directed speed
 var target_velocity = Vector3.ZERO
@@ -87,7 +91,21 @@ func _physics_process(delta):
 #	Deal with interaction with object:
 	if Input.is_action_pressed("Interact") and nearObject != null:
 		print("Interact")
+		addToInventory(nearObject)
 		nearObject.isPickedUp()
+		nearObject = null
+		
+# Adds a passed in item into inventory.
+func addToInventory(item):
+	var added = false
+	for i in inventory:
+		if item.getType() == i[0]:
+			i[1] += 1
+			added = true
+	if !added:
+		inventory.append([item.getType(), 1])
+	
+	print (inventory)
 	
 func objectHit(object):
 	get_node("interactMenu").visible = true
