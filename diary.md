@@ -1,4 +1,14 @@
 # Diary Entries FYP:
+
+## 10 December 2025
+I aim to finish the first draft of my retrospective, report, and a script for my video today. I am mostly complete with my report and retrospective. I completed the last of my coding, the player now has an inventory system that will be altered early next term to use a type object programming pattern, the way objects are stored in the inventory is by storing the data as an array of two element arrays which are formatted \[type, quantity\]. Tomorrow I will film the video and complete my editing so that they can be submitted late tomorrow or at latest, friday morning.
+
+## 8 December 2025
+I have been primarily working on my report and retrospective. I have completed the last small chunk of reading into game programming patterns, and I am now focusing on the writing itself and preparing for my presentation.
+
+## 4 December 2025
+When the player presses the 'E' button, the object currently being detected dissapears. The player does not keep track of the objects it has picked up and the object does not get removed, just dissapears. My presentation for the Viva is mostly complete. Ha da meeting with David today, I was concerned with the possibility of the code I have written being under the expected amount due to how streamlined GDScript is, however he assured that due to the game engine having other elements and that I have completed all my goals, I will be okay. I will be sure to make sure I finish up the inventory.
+
 ## 26 November 2025
 While I still feel behind, I am happy with the progress I have made today to catch up. I have been struggling a lot to find proper Godot tutorial and documentation for their 3D objects. Due to it primarily being a 2D platform until recently, a majority of the developers, and in turn, forum questions, dcoumentation, and useful tutorials are for 2D games, which this is not. While I am able to adapt some of these resources into my 3D game, it is far from easy and takes quite abit of troubleshooting and trying to find the correct wording to find what I need. Today I got my player to interact with an object. The pickup is not quite working, but when a player walks in the vicinity of an object, the object will tell the player and in turn a menu will show up saying press E to pick up. This is great progress and I am approcahing the end of what I intended to implement for first term.
 
