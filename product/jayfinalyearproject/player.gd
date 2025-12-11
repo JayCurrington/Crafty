@@ -19,17 +19,6 @@ var target_velocity = Vector3.ZERO
 var walkRot = 1
 var walkTrack = 0
 
-#similar to init 
-func ready():
-	self.contact_monitor = true
-	self.max_contacts_reported = 1
-	self.connect("body_entered", Callable (self, "_on_body_entered"))
-	
-func body_entered(body: Node):
-	get_node("interactMenu").visible
-	print(get_node("interactMenu").visible)
-
-
 
 #Automatically called by the engine when scene run and is called on fix time ints - related to gameplay loop
 func _physics_process(delta):
