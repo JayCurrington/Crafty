@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b2i3vrkrioq5l"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 152.0
+offset_bottom = 32.0
+
+[node name="MenuButton" type="MenuButton" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Press 'E' to pick up"
+flat = false
