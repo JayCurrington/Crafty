@@ -27,7 +27,7 @@ visible = false
 position = Vector2(622, 244)
 
 [node name="Camera" parent="Player" instance=ExtResource("2_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 4.09101, 30.752)
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, -0.0476322, 4.09101, 30.7651)
 v_offset = 5.0
 size = 20.0994
 script = ExtResource("4_lquwl")

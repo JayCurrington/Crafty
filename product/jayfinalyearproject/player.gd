@@ -6,6 +6,8 @@ extends CharacterBody3D
 
 #tracks jumping length 0 means no longer going upwards.
 var jumping = 0
+
+# Tracks nearby interactable object
 var nearObject = null
 
 #Inventory, for now, should be structured as an array containing arrays with two elements: 
@@ -62,16 +64,16 @@ func _physics_process(delta):
 	elif jumping > 0:
 		jumping -= 1
 		#print("down Jump")
-
+		
+	#make Player fall to floor or jump
+	if not is_on_floor() and jumping == 0: 
+			target_velocity.y = target_velocity.y - (fall_acceleration * delta)
+	elif jumping > 0: 
+			target_velocity.y = 10
+			
 	#Set player velocity
 	target_velocity.x = direction.x * speed
 	target_velocity.z = direction.z * speed
-	
-	#make Player fall to floor or jump 
-	if not is_on_floor() and jumping == 0: 
-		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
-	elif jumping > 0: 
-		target_velocity.y = 10
 	
 	#Actually move the player
 	velocity = target_velocity
@@ -106,9 +108,3 @@ func objectGone(object):
 	nearObject = null
 	print("gone")
 	
-func getJumping():
-	return (jumping)
-
-	# Collisions:
-	
-		
