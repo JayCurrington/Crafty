@@ -1,4 +1,6 @@
 # Diary Entries FYP:
+## 12 December 2025
+Report and retrospective took longer than expected. Video has been listed to youtube at https://www.youtube.com/watch?v=WFEr_yzgYOc. The report and retrospective are ready to be submitted. I finished up the last few bits of code cleanup and interaction today. I am aware these changes are very very late and I will strive to complete code on a more timely basis going foreward. I will do one go-over of the diary with a spell check, and then create the zip file for submission.
 
 ## 10 December 2025
 I aim to finish the first draft of my retrospective, report, and a script for my video today. I am mostly complete with my report and retrospective. I completed the last of my coding, the player now has an inventory system that will be altered early next term to use a type object programming pattern, the way objects are stored in the inventory is by storing the data as an array of two element arrays which are formatted \[type, quantity\]. Tomorrow I will film the video and complete my editing so that they can be submitted late tomorrow or at latest, friday morning.
