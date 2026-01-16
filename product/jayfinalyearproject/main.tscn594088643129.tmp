@@ -16,18 +16,14 @@ transform = Transform3D(5.30187, 0, 0, 0, 2.55798, 0, 0, 0, 1, 0, 0.84092, -1.71
 [node name="Wall2" parent="." instance=ExtResource("1_1bvp3")]
 transform = Transform3D(5.30187, 0, 0, 0, 2.55798, 0, 0, 0, 1, 0, 0.84092, 5.79975)
 
-[node name="Wall3" parent="." instance=ExtResource("1_1bvp3")]
-transform = Transform3D(8.92551, 0, 0, 0, 16.241, 0, 0, 0, 8.47146, 20.6338, 7.8803, 8.99551)
-
 [node name="Player" parent="." instance=ExtResource("1_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.76964, 0)
 
 [node name="interactMenu" parent="Player" instance=ExtResource("7_272bh")]
-visible = false
-position = Vector2(622, 244)
+position = Vector2(32.25, 0)
 
 [node name="Camera" parent="Player" instance=ExtResource("2_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, -0.0476322, 4.09101, 30.7651)
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 4.09101, 30.752)
 v_offset = 5.0
 size = 20.0994
 script = ExtResource("4_lquwl")
@@ -36,7 +32,7 @@ script = ExtResource("4_lquwl")
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
 
 [node name="InteractableObj1" parent="." instance=ExtResource("6_7mycd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13204, -15.3981)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.779389, -15.3981)
 
 [node name="interactableObj2" parent="." instance=ExtResource("6_7mycd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1347, 0.75, -1.05962)

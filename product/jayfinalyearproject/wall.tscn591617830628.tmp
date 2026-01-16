@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://tbb1ax644yw6"]
+
+[ext_resource type="Script" uid="uid://cf2wn2bbccfrh" path="res://wallScript.gd" id="1_xxgf6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oh6kn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_oh6kn"]
+
+[node name="Wall" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_oh6kn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_oh6kn")
+script = ExtResource("1_xxgf6")
