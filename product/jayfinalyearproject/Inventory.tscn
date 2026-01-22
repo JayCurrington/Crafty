@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://byhxvkturnpa2"]
+
+[ext_resource type="Texture2D" uid="uid://bug8sdnxj7olu" path="res://icon.svg" id="1_3n7vm"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 132.0
+offset_right = 128.0
+offset_bottom = 132.0
+
+[node name="TabContainer" type="TabContainer" parent="Control"]
+layout_mode = 2
+offset_right = 128.0
+current_tab = 0
+
+[node name="GridContainer" type="GridContainer" parent="Control/TabContainer"]
+layout_mode = 2
+columns = 2
+metadata/_tab_index = 0
+
+[node name="TextureButton2" type="TextureButton" parent="Control/TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_3n7vm")
+
+[node name="TextureButton" type="TextureButton" parent="Control/TabContainer/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_3n7vm")
