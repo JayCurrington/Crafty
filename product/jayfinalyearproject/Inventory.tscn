@@ -16,15 +16,16 @@ layout_mode = 2
 offset_right = 128.0
 current_tab = 0
 
-[node name="GridContainer" type="GridContainer" parent="Control/TabContainer"]
+[node name="Inventory" type="GridContainer" parent="Control/TabContainer"]
 layout_mode = 2
 columns = 2
 metadata/_tab_index = 0
 
-[node name="TextureButton2" type="TextureButton" parent="Control/TabContainer/GridContainer"]
+[node name="TextureButton2" type="TextureButton" parent="Control/TabContainer/Inventory"]
 layout_mode = 2
 texture_normal = ExtResource("1_3n7vm")
 
-[node name="TextureButton" type="TextureButton" parent="Control/TabContainer/GridContainer"]
+[node name="TextureButton" type="TextureButton" parent="Control/TabContainer/Inventory"]
 layout_mode = 2
 texture_normal = ExtResource("1_3n7vm")
+stretch_mode = 0
