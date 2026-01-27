@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqv4frk7ucjao"]
+
+[ext_resource type="Texture2D" uid="uid://nqt7mn137mcq" path="res://AssetImages/InventoryItems/GrassInventory.png" id="1_5wodm"]
+
+[node name="InventoryItem" type="TextureButton"]
+texture_normal = ExtResource("1_5wodm")
+
+[node name="Quantity" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 6.0
+offset_right = 49.0
+offset_bottom = 46.0
+text = "X1"
