@@ -11,9 +11,6 @@
 
 [node name="Node" type="Node"]
 
-[node name="Inventory" parent="." instance=ExtResource("1_5vw27")]
-position = Vector2(0, -2)
-
 [node name="Wall" parent="." instance=ExtResource("1_1bvp3")]
 transform = Transform3D(5.30187, 0, 0, 0, 2.55798, 0, 0, 0, 1, 0, 0.84092, -1.71355)
 
@@ -22,6 +19,9 @@ transform = Transform3D(5.30187, 0, 0, 0, 2.55798, 0, 0, 0, 1, 0, 0.84092, 5.799
 
 [node name="Player" parent="." instance=ExtResource("1_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.76964, 0)
+
+[node name="Inventory" parent="Player" instance=ExtResource("1_5vw27")]
+position = Vector2(0, -2)
 
 [node name="interactMenu" parent="Player" instance=ExtResource("7_272bh")]
 visible = false
