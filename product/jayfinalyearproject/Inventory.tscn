@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://byhxvkturnpa2"]
+[gd_scene load_steps=3 format=3 uid="uid://byhxvkturnpa2"]
 
 [ext_resource type="Script" uid="uid://gvd35ck0n6j2" path="res://inventory.gd" id="1_ki15f"]
+[ext_resource type="PackedScene" uid="uid://dqv4frk7ucjao" path="res://InventoryItem.tscn" id="2_ki15f"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -20,3 +21,15 @@ current_tab = 0
 layout_mode = 2
 script = ExtResource("1_ki15f")
 metadata/_tab_index = 0
+
+[node name="InventoryItem4" parent="Control/TabContainer/Inventory" instance=ExtResource("2_ki15f")]
+layout_mode = 2
+
+[node name="InventoryItem3" parent="Control/TabContainer/Inventory" instance=ExtResource("2_ki15f")]
+layout_mode = 2
+
+[node name="InventoryItem2" parent="Control/TabContainer/Inventory" instance=ExtResource("2_ki15f")]
+layout_mode = 2
+
+[node name="InventoryItem" parent="Control/TabContainer/Inventory" instance=ExtResource("2_ki15f")]
+layout_mode = 2
