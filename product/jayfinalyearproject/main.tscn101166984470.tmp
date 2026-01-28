@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://du1ccfs2c8c53"]
+
+[ext_resource type="PackedScene" uid="uid://cpe01awl8m6vf" path="res://Player.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://tbb1ax644yw6" path="res://wall.tscn" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dlneg0kylm00n" path="res://Camera.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://do5qhmgk5srtp" path="res://floor.tscn" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://clr082r5jsyuf" path="res://cameraScript.gd" id="4_lquwl"]
+
+[node name="Node" type="Node"]
+
+[node name="Wall" parent="." instance=ExtResource("1_1bvp3")]
+transform = Transform3D(5.30187, 0, 0, 0, 2.55798, 0, 0, 0, 1, 0, 0.84092, -1.71355)
+
+[node name="Wall2" parent="." instance=ExtResource("1_1bvp3")]
+transform = Transform3D(5.30187, 0, 0, 0, 2.55798, 0, 0, 0, 1, 0, 0.84092, 5.79975)
+
+[node name="Player" parent="." instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.76964, 0)
+
+[node name="Camera" parent="Player" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 5.417, 30.752)
+size = 20.0994
+script = ExtResource("4_lquwl")
+
+[node name="Floor" parent="." instance=ExtResource("3_h2yge")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)

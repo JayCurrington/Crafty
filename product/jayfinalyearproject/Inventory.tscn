@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://byhxvkturnpa2"]
+
+[ext_resource type="Script" uid="uid://gvd35ck0n6j2" path="res://inventory.gd" id="1_ki15f"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 132.0
+offset_right = 128.0
+offset_bottom = 132.0
+
+[node name="TabContainer" type="TabContainer" parent="Control"]
+layout_mode = 2
+offset_right = 128.0
+current_tab = 0
+
+[node name="Inventory" type="GridContainer" parent="Control/TabContainer"]
+layout_mode = 2
+script = ExtResource("1_ki15f")
+metadata/_tab_index = 0

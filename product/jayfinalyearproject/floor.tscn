@@ -1,8 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://do5qhmgk5srtp"]
+[gd_scene load_steps=6 format=3 uid="uid://do5qhmgk5srtp"]
+
+[ext_resource type="Texture2D" uid="uid://dsbdigt1ri1d6" path="res://AssetImages/GrassTexture.png" id="1_oj3tl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ryoud"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cgngl"]
+albedo_texture = ExtResource("1_oj3tl")
+uv1_scale = Vector3(7, 7, 7)
+uv1_triplanar = true
+
 [sub_resource type="BoxMesh" id="BoxMesh_oj3tl"]
+
+[sub_resource type="Skin" id="Skin_oj3tl"]
 
 [node name="Floor" type="StaticBody3D"]
 
@@ -12,4 +21,6 @@ shape = SubResource("BoxShape3D_ryoud")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(60, 0, 0, 0, 0.5, 0, 0, 0, 60, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_cgngl")
 mesh = SubResource("BoxMesh_oj3tl")
+skin = SubResource("Skin_oj3tl")
