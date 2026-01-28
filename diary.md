@@ -1,4 +1,10 @@
 # Diary Entries FYP:
+# Term 2
+## 28 January 2026
+Over break and this first week back, I have added some graphics, and began properly formatting the inventory items. Due to personal reasons I fell behind over break. To catch up, I need to finish formatting items, figure easy graphics implemetation, and write a segment on my reference games.
+As of today, I am on track to have the inventory and images implemented with plans of writing end of the week or start of next if I have no time.
+
+# Term 1:
 
 ## 12 December 2025
 Report and retrospective took longer than expected. Video has been listed on YouTube at https://www.youtube.com/watch?v=WFEr_yzgYOc. The report and retrospective are ready to be submitted. I finished up the last few bits of code cleanup and interaction today. I am aware these changes are late, and I will strive to complete code on a more timely basis going forward. I will do one go-over of the diary with a spell check, and then create the zip file for submission.
