@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cpe01awl8m6vf" path="res://Player.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://tbb1ax644yw6" path="res://wall.tscn" id="1_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://byhxvkturnpa2" path="res://Inventory.tscn" id="1_5vw27"]
+[ext_resource type="PackedScene" uid="uid://ca3jehsmboteq" path="res://Inventory.tscn" id="1_5vw27"]
 [ext_resource type="PackedScene" uid="uid://dlneg0kylm00n" path="res://Camera.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://do5qhmgk5srtp" path="res://floor.tscn" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://clr082r5jsyuf" path="res://cameraScript.gd" id="4_lquwl"]
@@ -10,9 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://b2i3vrkrioq5l" path="res://menu.tscn" id="7_272bh"]
 
 [node name="Node" type="Node"]
-
-[node name="Inventory" parent="." instance=ExtResource("1_5vw27")]
-position = Vector2(0, -2)
 
 [node name="Wall" parent="." instance=ExtResource("1_1bvp3")]
 transform = Transform3D(5.30187, 0, 0, 0, 2.55798, 0, 0, 0, 1, 0, 0.84092, -1.71355)
@@ -26,6 +23,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.76964, 0)
 [node name="interactMenu" parent="Player" instance=ExtResource("7_272bh")]
 visible = false
 position = Vector2(622, 244)
+
+[node name="Inventory" parent="Player" instance=ExtResource("1_5vw27")]
+position = Vector2(0, -2)
 
 [node name="Camera" parent="Player" instance=ExtResource("2_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, -0.0476322, 4.09101, 30.7651)

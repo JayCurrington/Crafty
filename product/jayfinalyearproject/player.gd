@@ -82,9 +82,11 @@ func _physics_process(delta):
 #	Deal with interaction with object:
 	if Input.is_action_pressed("Interact") and nearObject != null:
 		print("Interact")
+		$Inventory/Control/TabContainer/Inventory.addToInventory(nearObject)
 		addToInventory(nearObject)
 		nearObject.isPickedUp()
 		nearObject = null
+
 		
 # Adds a passed in item into inventory.
 func addToInventory(item):
