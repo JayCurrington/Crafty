@@ -1,11 +1,13 @@
 extends TextureButton
+class_name InventoryItem
 
-var type = null;
+var type = "Grass";
 var count = 0;
 
+var texture = str("res://AssetImages/InventoryItems/", type, "Inventory.png")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	self.texture_normal = load("res://AssetImages/InventoryItems/"+type+"Inventory.png")
+	self.texture_normal = load(texture)
 	self.texture_normal = load("res://AssetImages/InventoryItems/GrassInventory.png")
 	pass # Replace with function body.
 
@@ -16,6 +18,10 @@ func _process(delta: float) -> void:
 
 func setType(newType):
 	type = newType
+	
+func setTexture(newTexture):
+	self.texture_normal = load(newTexture)
+	
 func getType():
 	return type
 	
@@ -27,5 +33,7 @@ func increaseCount():
 	
 func getCount():
 	return count
+	
+	
 	
 	

@@ -4,6 +4,13 @@ extends CharacterBody3D
 @export var speed = 15
 @export var fall_acceleration = 50
 
+@onready var InventoryHold : InventoryHolder = preload("res://Inventory.tscn").instantiate()
+
+@onready var InventoryObj : Inventory = InventoryHold.getInventory()
+func _ready() -> void:
+	
+	pass
+	
 #tracks jumping length 0 means no longer going upwards.
 var jumping = 0
 
@@ -82,7 +89,7 @@ func _physics_process(delta):
 #	Deal with interaction with object:
 	if Input.is_action_pressed("Interact") and nearObject != null:
 		print("Interact")
-		$Inventory/Control/TabContainer/Inventory.addToInventory(nearObject)
+		InventoryObj.addToInventory(nearObject)
 		addToInventory(nearObject)
 		nearObject.isPickedUp()
 		nearObject = null

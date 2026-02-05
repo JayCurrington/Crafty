@@ -1,6 +1,7 @@
 extends GridContainer
+class_name Inventory
 
-var InventoryItem = preload("res://InventoryItem.tscn")
+var inventoryItem = preload("res://InventoryItem.tscn")
 
 var activeItems = []
 # Called when the node enters the scene tree for the first time.
@@ -23,7 +24,8 @@ func addToInventory(item):
 			i.increaseCount()
 			added = true
 	if !added:
-		var newItem = InventoryItem.instantiate()
+		#print("HERE HERE ", inventoryItem.instantiate())
+		var newItem = inventoryItem.instantiate()
 		newItem.setType(item.getType())
 		newItem.setCount(1)
 		activeItems.append(newItem)
