@@ -1,5 +1,9 @@
 # Diary Entries FYP:
 # Term 2
+
+## 2 Febuary 2026
+I have had a few personal issues recently, this has set me back on my timeline. I am having issues having children items of the inventory show up and am currently working on fixing those. I need to figure out the way that Godot makes child nodesin order to figure how to manipulate them. This weekend I plan on completeing a written section on games, this inventory showing items, and a last little segment on game programming patterns. I need to keep in mind more places in which I am using game programming patterns throughout my code. I plan on meeting with my advisor next week or the week after to reconvine and talk about my planning schedule.
+
 ## 28 January 2026
 Over break and this first week back, I have added some graphics, and began properly formatting the inventory items. Due to personal reasons I fell behind over break. To catch up, I need to finish formatting items, figure easy graphics implemetation, and write a segment on my reference games.
 As of today, I am on track to have the inventory and images implemented with plans of writing end of the week or start of next if I have no time.
