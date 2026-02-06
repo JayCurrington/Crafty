@@ -1,7 +1,7 @@
 extends Area3D
 
 #This can later be changed to point to a type object.
-var type = "exampleType"
+var type = "Grass"
 var player = null
 
 # Called when the node enters the scene tree for the first time.

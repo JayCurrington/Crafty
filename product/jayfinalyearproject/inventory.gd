@@ -22,10 +22,15 @@ func addToInventory(item):
 	for i in activeItems:
 		if item.getType() == i.getType():
 			i.increaseCount()
-			added = true
+			#added = true
 	if !added:
-		#print("HERE HERE ", inventoryItem.instantiate())
-		var newItem = inventoryItem.instantiate()
+		var newItem = InventoryItem.new()
 		newItem.setType(item.getType())
 		newItem.setCount(1)
+		add_child(newItem)
+		newItem.owner = self
+		
+		self.move_child(newItem, 1 * (self.columns + 1) - 1)
+		
+		print("HERE", get_child_count())
 		activeItems.append(newItem)
