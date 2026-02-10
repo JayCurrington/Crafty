@@ -1,6 +1,9 @@
 # Diary Entries FYP:
 # Term 2
 
+## 8 Febuary 2026
+Issue with child of items resolved. After four days of working on this bug, the issue was a second instance of a singleton variable. Instead of grabbing a pointer to the singleton, the player node was making a second instance of this node. This meant that there was a second, incorrectly instntiated inventory in which the player was attempting to add children nodes to. This was causing issues with the node tree and led to the setback. Because of this setback, I am behind on my work. I am unable to schedule a meeting with my advisor this week due to personal commitments, however I will plan on making a meeting next week to talk about my progress and unease about the timing behind the work I have done currently.
+
 ## 2 Febuary 2026
 I have had a few personal issues recently, this has set me back on my timeline. I am having issues having children items of the inventory show up and am currently working on fixing those. I need to figure out the way that Godot makes child nodesin order to figure how to manipulate them. This weekend I plan on completeing a written section on games, this inventory showing items, and a last little segment on game programming patterns. I need to keep in mind more places in which I am using game programming patterns throughout my code. I plan on meeting with my advisor next week or the week after to reconvine and talk about my planning schedule.
 
