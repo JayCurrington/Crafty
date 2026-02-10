@@ -32,6 +32,7 @@ func setCount(newCount):
 	
 func increaseCount():
 	count += 1
+	$Quantity.text = "X"+ str(count)
 	
 func getCount():
 	return count

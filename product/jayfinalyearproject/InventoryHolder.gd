@@ -15,16 +15,4 @@ func getInventory():
 	var inventory :Inventory = $Control/Container/Inventory
 	return(inventory)
 	
-func addToInventory(item):
-	var newItem = inventoryItem.instantiate()
-	print(newItem)
-	print(newItem.getType())
-	getInventory().add_child(newItem)
-	newItem.owner = get_tree().get_root()
-	newItem.setType(item.getType())
-	newItem.setCount(1)
-	newItem.visible = true
-	#newItem.global_position = self.global_position
-	print("HERE ",getInventory().get_child_count())
-	#activeItems.append(newItem)
 	

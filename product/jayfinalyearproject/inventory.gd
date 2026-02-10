@@ -3,39 +3,26 @@ class_name Inventory
 
 var inventoryItem = preload("res://InventoryItem.tscn")
 
-var activeItems = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
-	#$item1.texture_normal = load("res://AssetImages/TempCatImage2.png")
 	pass # Replace with function body.
 	
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 	
-#This needs edits
+
 func addToInventory(item):
 	var added = false
-	for i in activeItems:
+	for i in self.get_children():
 		if item.getType() == i.getType():
 			i.increaseCount()
-			#added = true
+			added = true
 	if !added:
+		#instanciate the item
 		var newItem = inventoryItem.instantiate()
-		print(newItem)
-		print(newItem.getType())
+		#this adds to the inventory container
 		self.add_child(newItem)
-		print(get_tree())
-		
-		
-		print_tree_pretty()
-		
+		#set values
 		newItem.setType(item.getType())
 		newItem.setCount(1)
-		newItem.visible = true
-		#newItem.global_position = self.global_position
-		print("HERE ",self.get_child_count())
-		#activeItems.append(newItem)
