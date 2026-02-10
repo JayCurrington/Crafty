@@ -4,7 +4,7 @@ extends CharacterBody3D
 @export var speed = 15
 @export var fall_acceleration = 50
 
-@onready var InventoryHold : InventoryHolder = preload("res://Inventory.tscn").instantiate()
+@onready var InventoryHold : InventoryHolder = get_node("../InventoryHold")
 
 @onready var InventoryObj : Inventory = InventoryHold.getInventory()
 func _ready() -> void:

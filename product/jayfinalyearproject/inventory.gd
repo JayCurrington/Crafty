@@ -24,13 +24,18 @@ func addToInventory(item):
 			i.increaseCount()
 			#added = true
 	if !added:
-		var newItem = InventoryItem.new()
+		var newItem = inventoryItem.instantiate()
+		print(newItem)
+		print(newItem.getType())
+		self.add_child(newItem)
+		print(get_tree())
+		
+		
+		print_tree_pretty()
+		
 		newItem.setType(item.getType())
 		newItem.setCount(1)
-		add_child(newItem)
-		newItem.owner = self
-		
-		self.move_child(newItem, 1 * (self.columns + 1) - 1)
-		
-		print("HERE", get_child_count())
-		activeItems.append(newItem)
+		newItem.visible = true
+		#newItem.global_position = self.global_position
+		print("HERE ",self.get_child_count())
+		#activeItems.append(newItem)

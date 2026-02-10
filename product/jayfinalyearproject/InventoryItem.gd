@@ -9,11 +9,13 @@ var texture = str("res://AssetImages/InventoryItems/", type, "Inventory.png")
 func _ready() -> void:
 	self.texture_normal = load(texture)
 	self.texture_normal = load("res://AssetImages/InventoryItems/GrassInventory.png")
+	
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
 	pass
 
 func setType(newType):
