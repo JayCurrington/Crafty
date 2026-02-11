@@ -1,6 +1,9 @@
 # Diary Entries FYP:
 # Term 2
 
+## 10 Febuary 2026
+Items now randomised and asset textures line up with type. Inventory working properly. I have began mapping out what the recipies will look like for crafting. I have a few options: Make each recipe a seperate node, each made and showing up in the crafting menu, figure how to connect a database with the title and components and then connect that to the inventory, so that it can pull craftable recipies to the crafting menu, and finally, use a type object of recipe and make individual recipie types that fill out based on criteria. I also have to decide how I portray to the user what can be crafted and if all recipies are shown or only ones where the user has one or more of the items needed to craft it. I am still behind, however now I have a working inventory, I can set myself in the correct direction for steady progress. 
+
 ## 8 Febuary 2026
 Issue with child of items resolved. After four days of working on this bug, the issue was a second instance of a singleton variable. Instead of grabbing a pointer to the singleton, the player node was making a second instance of this node. This meant that there was a second, incorrectly instntiated inventory in which the player was attempting to add children nodes to. This was causing issues with the node tree and led to the setback. Because of this setback, I am behind on my work. I am unable to schedule a meeting with my advisor this week due to personal commitments, however I will plan on making a meeting next week to talk about my progress and unease about the timing behind the work I have done currently.
 
