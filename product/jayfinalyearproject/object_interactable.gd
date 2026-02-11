@@ -1,11 +1,15 @@
 extends Area3D
 
 #This can later be changed to point to a type object.
-var type = "Grass"
+var itemTypes = ["Grass", "Rock", "Log"]
+var type = itemTypes.pick_random()
 var player = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#set image to correct item
+	var texture = load(str("res://AssetImages/InventoryItems/", type, "Inventory.png"))
+	$Sprite3D.texture = texture
 	pass
 	
 func _on_body_entered(body: Node):
@@ -31,7 +35,7 @@ func getType():
 	return self.type
 
 func setImage():
-	var texture = load('res://AssetImages/'+'TempCatImage.png')
+	var texture = load(str("res://AssetImages/InventoryItems/", type, "Inventory.png"))
 	$Sprite3D.texture = texture
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
