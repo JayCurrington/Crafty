@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ca3jehsmboteq"]
+[gd_scene load_steps=4 format=3 uid="uid://ca3jehsmboteq"]
 
 [ext_resource type="Script" uid="uid://gvd35ck0n6j2" path="res://inventory.gd" id="1_ki15f"]
-[ext_resource type="Script" uid="uid://b3u1l1ln4xyib" path="res://InventoryHolder.gd" id="1_nwt7c"]
+[ext_resource type="Script" path="res://InventoryHolder.gd" id="1_nwt7c"]
+[ext_resource type="PackedScene" uid="uid://cbfs5x1xy8a3k" path="res://RecipeItem.tscn" id="3_nwt7c"]
 
 [node name="InventoryHold" type="Node2D"]
 script = ExtResource("1_nwt7c")
@@ -14,11 +15,29 @@ offset_bottom = 40.0
 
 [node name="Container" type="TabContainer" parent="Control"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-current_tab = 0
+offset_right = 651.0
+offset_bottom = 438.0
+tab_alignment = 1
+current_tab = 1
+use_hidden_tabs_for_min_size = true
 
 [node name="Inventory" type="GridContainer" parent="Control/Container"]
+visible = false
 layout_mode = 2
 script = ExtResource("1_ki15f")
 metadata/_tab_index = 0
+
+[node name="Crafting" type="SplitContainer" parent="Control/Container"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="GridContainer" type="GridContainer" parent="Control/Container/Crafting"]
+layout_mode = 2
+columns = 4
+
+[node name="RecipeItem" parent="Control/Container/Crafting/GridContainer" instance=ExtResource("3_nwt7c")]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control/Container/Crafting"]
+layout_mode = 2
+color = Color(1, 0.132486, 0.660624, 1)
