@@ -42,4 +42,4 @@ layout_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="Control/Container/Crafting"]
 layout_mode = 2
-color = Color(0.210585, 0.233373, 0.392861, 1)
+color = Color(1, 0.132486, 0.660624, 1)

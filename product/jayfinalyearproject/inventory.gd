@@ -2,6 +2,7 @@ extends GridContainer
 class_name Inventory
 
 var inventoryItem = preload("res://InventoryItem.tscn")
+@onready var recipeMaker = $Crasfting
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,6 +22,7 @@ func addToInventory(item):
 	if !added:
 		#instanciate the item
 		var newItem = inventoryItem.instantiate()
+		recipeMaker.itemAdded(item.getType())
 		#this adds to the inventory container
 		self.add_child(newItem)
 		#set values
