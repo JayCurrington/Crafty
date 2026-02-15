@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://gvd35ck0n6j2" path="res://inventory.gd" id="1_ki15f"]
 [ext_resource type="Script" uid="uid://b3u1l1ln4xyib" path="res://InventoryHolder.gd" id="1_nwt7c"]
-[ext_resource type="Script" path="res://RecipeManager.gd" id="3_jqulp"]
+[ext_resource type="Script" uid="uid://b7sra2etrweju" path="res://RecipeManager.gd" id="3_jqulp"]
 [ext_resource type="PackedScene" uid="uid://cbfs5x1xy8a3k" path="res://RecipeItem.tscn" id="3_nwt7c"]
 
 [node name="InventoryHold" type="Node2D"]
@@ -42,4 +42,4 @@ layout_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="Control/Container/Crafting"]
 layout_mode = 2
-color = Color(0.210585, 0.233373, 0.392861, 1)
+color = Color(1, 0.132486, 0.660624, 1)

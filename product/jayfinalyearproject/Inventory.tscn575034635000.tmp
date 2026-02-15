@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca3jehsmboteq"]
+
+[ext_resource type="Script" uid="uid://gvd35ck0n6j2" path="res://inventory.gd" id="1_ki15f"]
+[ext_resource type="Script" uid="uid://b3u1l1ln4xyib" path="res://InventoryHolder.gd" id="1_nwt7c"]
+[ext_resource type="PackedScene" uid="uid://bg3t75lti8ej2" path="res://InventoryItem.tscn" id="2_ki15f"]
+
+[node name="InventoryHold" type="Node2D"]
+script = ExtResource("1_nwt7c")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Container" type="TabContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+current_tab = 0
+
+[node name="Inventory" type="GridContainer" parent="Control/Container"]
+layout_mode = 2
+script = ExtResource("1_ki15f")
+metadata/_tab_index = 0
+
+[node name="InventoryItem4" parent="Control/Container/Inventory" instance=ExtResource("2_ki15f")]
+layout_mode = 2
+
+[node name="InventoryItem3" parent="Control/Container/Inventory" instance=ExtResource("2_ki15f")]
+layout_mode = 2
+
+[node name="InventoryItem2" parent="Control/Container/Inventory" instance=ExtResource("2_ki15f")]
+layout_mode = 2
+
+[node name="InventoryItem" parent="Control/Container/Inventory" instance=ExtResource("2_ki15f")]
+layout_mode = 2
