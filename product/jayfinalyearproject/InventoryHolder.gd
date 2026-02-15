@@ -15,4 +15,10 @@ func getInventory():
 	var inventory :Inventory = $Control/Container/Inventory
 	return(inventory)
 	
+func OpenClose():
+	if self.visible:
+		self.visible = false
+	else:
+		self.visible = true
+	
 	

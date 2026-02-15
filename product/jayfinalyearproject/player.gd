@@ -88,6 +88,11 @@ func _physics_process(delta):
 		InventoryObj.addToInventory(nearObject)
 		nearObject.isPickedUp()
 		nearObject = null
+		
+		
+	if Input.is_action_just_pressed("InventoryOpen"):
+		print("inventory")
+		InventoryHold.OpenClose()
 
 	
 	

@@ -2,7 +2,7 @@ extends GridContainer
 class_name Inventory
 
 var inventoryItem = preload("res://InventoryItem.tscn")
-@onready var recipeMaker = $Crasfting
+@onready var recipeMaker = $"../Crafting"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
