@@ -1,6 +1,9 @@
 # Diary Entries FYP:
 # Term 2
 
+## 14 Febuary 2026
+Inventory can now be toggled on and off with "I". Godot does not use 2D arrays, I have decided to format my recipes as a JSON file. This JSON will be read by a recipeMaker program which will decide which recipes are made and placed into the crafting menu. All the recipes will have three elements. When the player has one of the three, the recipe appears, when the player has all three, they are able to craft the recipe and the item will appear in their inventory. This has yet to be fully implemented. Currently the JSO file can be read and the recipe base object has been made for the recipe maker to fill out. My goal is to finish this crafting system by the end of this week and start on an enemy system after.
+
 ## 10 Febuary 2026
 Items now randomised and asset textures line up with type. Inventory working properly. I have began mapping out what the recipies will look like for crafting. I have a few options: Make each recipe a seperate node, each made and showing up in the crafting menu, figure how to connect a database with the title and components and then connect that to the inventory, so that it can pull craftable recipies to the crafting menu, and finally, use a type object of recipe and make individual recipie types that fill out based on criteria. I also have to decide how I portray to the user what can be crafted and if all recipies are shown or only ones where the user has one or more of the items needed to craft it. I am still behind, however now I have a working inventory, I can set myself in the correct direction for steady progress. 
 
