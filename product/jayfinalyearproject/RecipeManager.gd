@@ -18,7 +18,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print( recipeList[1].Name)
+	print( recipeList[0].Name)
 	pass
 	
 	

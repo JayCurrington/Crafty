@@ -9,7 +9,7 @@
         },
 
         {
-            "name": "name3", "Ingredient1":"ing13", "Ingredient2": "ing23", "Ingredient3": "ing33"
+            "Name": "name3", "Ingredient1":"ing13", "Ingredient2": "ing23", "Ingredient3": "ing33"
         }
 
     ]
