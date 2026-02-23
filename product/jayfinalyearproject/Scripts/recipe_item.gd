@@ -1,10 +1,10 @@
 extends TextureButton
-var recName = "Grass"
-var components = ["Wood","Wood","Rock"]
+var recName = "None"
+var components = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	load(str("res://AssetImages/InventoryItems/", recName, "Inventory.png"))
+	imageUpdate()
 	pass # Replace with function body.
 
 
@@ -24,3 +24,12 @@ func setDescription (desc):
 
 func setComponents(comp1, comp2, comp3):
 	components = [comp1, comp2, comp3]
+
+func setName(newName):
+	recName = newName
+	imageUpdate()
+	print(recName)
+	
+func imageUpdate():
+	if recName != "None":
+		self.texture_normal = load(str("res://AssetImages/InventoryItems/", recName, "Inventory.png"))
