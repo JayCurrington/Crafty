@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cdgknxtl1qu53"]
 
-[ext_resource type="Script" uid="uid://du541d4f0nv6g" path="res://object_interactable.gd" id="1_xf4dt"]
+[ext_resource type="Script" uid="uid://du541d4f0nv6g" path="res://Scripts/object_interactable.gd" id="1_xf4dt"]
 [ext_resource type="Texture2D" uid="uid://epea4lprijdv" path="res://AssetImages/TempCatImage2.png" id="2_rulx5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rulx5"]

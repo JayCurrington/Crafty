@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbfs5x1xy8a3k"]
+[gd_scene load_steps=4 format=3 uid="uid://cbfs5x1xy8a3k"]
 
-[ext_resource type="Script" uid="uid://c2ngihrb34pc" path="res://recipe_item.gd" id="1_t001j"]
+[ext_resource type="Script" uid="uid://c2ngihrb34pc" path="res://Scripts/recipe_item.gd" id="1_t001j"]
 [ext_resource type="Texture2D" uid="uid://nqt7mn137mcq" path="res://AssetImages/InventoryItems/GrassInventory.png" id="2_tg8aa"]
+[ext_resource type="Texture2D" uid="uid://d2bojnkwfo7q8" path="res://AssetImages/InventoryItems/LogInventory.png" id="2_vwyln"]
 
 [node name="RecipeItem" type="TextureButton"]
 anchors_preset = 15
@@ -10,4 +11,5 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("2_tg8aa")
+texture_pressed = ExtResource("2_vwyln")
 script = ExtResource("1_t001j")

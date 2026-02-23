@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://byhxvkturnpa2"]
+[gd_scene load_steps=4 format=3 uid="uid://byhxvkturnpa2"]
 
-[ext_resource type="Script" uid="uid://gvd35ck0n6j2" path="res://inventory.gd" id="1_ki15f"]
-[ext_resource type="Script" path="res://InventoryHolder.gd" id="1_nwt7c"]
-[ext_resource type="Script" uid="uid://b7sra2etrweju" path="res://RecipeManager.gd" id="3_jqulp"]
-[ext_resource type="PackedScene" uid="uid://cbfs5x1xy8a3k" path="res://RecipeItem.tscn" id="3_nwt7c"]
+[ext_resource type="Script" uid="uid://gvd35ck0n6j2" path="res://Scripts/inventory.gd" id="1_ki15f"]
+[ext_resource type="Script" uid="uid://b3u1l1ln4xyib" path="res://Scripts/InventoryHolder.gd" id="1_nwt7c"]
+[ext_resource type="Script" uid="uid://b7sra2etrweju" path="res://Scripts/RecipeManager.gd" id="3_jqulp"]
 
 [node name="InventoryHold" type="Node2D"]
 script = ExtResource("1_nwt7c")
@@ -37,9 +36,6 @@ metadata/_tab_index = 1
 [node name="RecipeHolder" type="GridContainer" parent="Control/Container/Crafting"]
 layout_mode = 2
 columns = 4
-
-[node name="RecipeItem" parent="Control/Container/Crafting/RecipeHolder" instance=ExtResource("3_nwt7c")]
-layout_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="Control/Container/Crafting"]
 layout_mode = 2

@@ -1,10 +1,10 @@
 extends TextureButton
-var type = "Grass"
+var recName = "Grass"
 var components = ["Wood","Wood","Rock"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	load(str("res://AssetImages/InventoryItems/", type, "Inventory.png"))
+	load(str("res://AssetImages/InventoryItems/", recName, "Inventory.png"))
 	pass # Replace with function body.
 
 
@@ -12,9 +12,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-func itemNeeded (item):
+func getItemNeeded (item):
 	return components.count(item)
 	
-func setDescription ():
+func getRecipeName():
+	return recName
+	
+func setDescription (desc):
 	#This will return a formatted string to explain what is needed to craft this item.
 	pass
+
+func setComponents(comp1, comp2, comp3):
+	components = [comp1, comp2, comp3]
