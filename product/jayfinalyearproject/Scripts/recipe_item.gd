@@ -33,3 +33,20 @@ func setName(newName):
 func imageUpdate():
 	if recName != "None":
 		self.texture_normal = load(str("res://AssetImages/InventoryItems/", recName, "Inventory.png"))
+		
+# crafts a recipe if the player has the items to do so
+func craftRecipe():
+	pass
+	
+	
+func checkRecipe(inventory):
+	var componentChecks = components
+	for i in inventory:
+		for j in componentChecks:
+			if i.getType() == j:
+				componentChecks.erase(j)
+				break
+				
+	if len(componentChecks) == 0:
+		return true
+	return false

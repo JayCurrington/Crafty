@@ -9,7 +9,6 @@ var count = 0;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#self.texture_normal = load("res://AssetImages/InventoryItems/GrassInventory.png")
-	print(str("HERE" , type))
 	pass # Replace with function body.
 
 

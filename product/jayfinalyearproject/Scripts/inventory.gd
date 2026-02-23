@@ -28,3 +28,5 @@ func addToInventory(item):
 		#set values
 		newItem.setType(item.getType())
 		newItem.setCount(1)
+	recipeMaker.checkAllRecipes(self.get_children())
+	

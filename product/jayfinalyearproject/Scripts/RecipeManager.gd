@@ -69,6 +69,13 @@ func makeRecipe(recipeTemplate):
 	newRecipe.setName(recipeTemplate.Name)
 	pass
 	
+func checkAllRecipes(inventory):
+	for i in activeRecipes:
+		if i.checkRecipe(inventory):
+			print(i.getRecipeName())
+		else:
+			print("Can't make this yet")
+	
 
 	
 	
