@@ -84,7 +84,7 @@ func _physics_process(delta):
 
 #	Deal with interaction with object:
 	if Input.is_action_pressed("Interact") and nearObject != null:
-		InventoryObj.addToInventory(nearObject)
+		InventoryObj.addToInventory(nearObject.getType())
 		nearObject.isPickedUp()
 		nearObject = null
 		

@@ -3,9 +3,13 @@ var recName = "None"
 var components = []
 var craftable
 
+@onready var InventoryObj = $"../../../Inventory"
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	InventoryObj.testConn()
 	imageUpdate()
+	self.pressed.connect(wasClicked)
 	pass # Replace with function body.
 
 
@@ -25,6 +29,11 @@ func setDescription (desc):
 
 func setComponents(comp1, comp2, comp3):
 	components = [comp1, comp2, comp3]
+	#allows shorter recipes
+	for i in components:
+		if i == "None":
+			components.erase(i)
+
 
 func setName(newName):
 	recName = newName
@@ -44,16 +53,30 @@ func craftRecipe():
 	
 	
 func checkRecipe(inventory):
-	var componentChecks = components
+	var componentChecks = components.duplicate()
+	print(components)
+	craftable = false
 	for i in inventory:
-		for j in componentChecks:
-			if i.getType() == j:
-				componentChecks.erase(j)
-				break
+		for k in i.getCount():
+			for j in componentChecks:
+				if i.getType() == j:
+					componentChecks.erase(j)
+					print(componentChecks)
+					break
 				
 	if len(componentChecks) == 0:
 		craftable = true
 		imageUpdate()
 		return true
-	craftable = false
+	imageUpdate()
 	return false
+	
+func wasClicked():
+	print(components)
+	if(craftable):
+		print(true)
+		for i in components:
+			InventoryObj.removeFromInventory(i)
+			print(i)
+		InventoryObj.addToInventory(recName)
+	print("CLICKED")

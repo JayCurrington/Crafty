@@ -1,7 +1,7 @@
 {
 	"recipes":[
 		{
-			"Name": "Cloth", "Ingredient1":"Grass", "Ingredient2": "Rope", "Ingredient3": "Rope"
+			"Name": "Cloth", "Ingredient1":"Rope", "Ingredient2": "Rope", "Ingredient3": "None"
 		},
 
 		{

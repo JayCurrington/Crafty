@@ -65,6 +65,7 @@ func makeRecipe(recipeTemplate):
 		newRecipe = recipeItem.instantiate()
 		recipeHolder.add_child(newRecipe)
 	activeRecipes.append(newRecipe)
+	print(recipeTemplate.Ingredient1, recipeTemplate.Ingredient2, recipeTemplate.Ingredient3)
 	newRecipe.setComponents(recipeTemplate.Ingredient1, recipeTemplate.Ingredient2, recipeTemplate.Ingredient3)
 	newRecipe.setName(recipeTemplate.Name)
 	pass
