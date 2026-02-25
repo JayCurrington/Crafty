@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gotqsk10daqi"
-path="res://.godot/imported/ClothInventory.png-4c34dd8efc3fe2d424f9e1a431957ebb.ctex"
+uid="uid://cwv3cjfyd6rgq"
+path="res://.godot/imported/RopeInventoryUncraftable.png-ab1b7cfcc60642d52cc29157c2df241a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AssetImages/InventoryItems/ClothInventory.png"
-dest_files=["res://.godot/imported/ClothInventory.png-4c34dd8efc3fe2d424f9e1a431957ebb.ctex"]
+source_file="res://AssetImages/InventoryItems/RopeInventoryUncraftable.png"
+dest_files=["res://.godot/imported/RopeInventoryUncraftable.png-ab1b7cfcc60642d52cc29157c2df241a.ctex"]
 
 [params]
 

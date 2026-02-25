@@ -1,6 +1,7 @@
 extends TextureButton
 var recName = "None"
 var components = []
+var craftable
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -32,7 +33,10 @@ func setName(newName):
 	
 func imageUpdate():
 	if recName != "None":
-		self.texture_normal = load(str("res://AssetImages/InventoryItems/", recName, "Inventory.png"))
+		if craftable:
+			self.texture_normal = load(str("res://AssetImages/InventoryItems/", recName, "Inventory.png"))
+		else:
+			self.texture_normal = load(str("res://AssetImages/InventoryItems/", recName, "InventoryUncraftable.png"))
 		
 # crafts a recipe if the player has the items to do so
 func craftRecipe():
@@ -48,5 +52,8 @@ func checkRecipe(inventory):
 				break
 				
 	if len(componentChecks) == 0:
+		craftable = true
+		imageUpdate()
 		return true
+	craftable = false
 	return false
