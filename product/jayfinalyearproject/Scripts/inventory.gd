@@ -11,8 +11,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-func testConn():
-	print("connected")
 	
 #Removes one at a time or if no more, removes child.
 func removeFromInventory(item):

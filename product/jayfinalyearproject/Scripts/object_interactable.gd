@@ -1,7 +1,7 @@
 extends Area3D
 
 #This can later be changed to point to a type object.
-var itemTypes = ["Grass"]
+var itemTypes = ["Grass","Rock","Log"]
 var type = itemTypes.pick_random()
 var player = null
 

@@ -1,16 +1,37 @@
 {
 	"recipes":[
 		{
-			"Name": "Cloth", "Ingredient1":"Rope", "Ingredient2": "Rope", "Ingredient3": "None"
+			"Name": "Cloth", "Ingredient1":"Rope", "Ingredient2": "Rope", "Ingredient3": "None",
+			"Description":"A loosely woven fabric. It's a tad scratchy, but you're sure you can overlook that."
 		},
 
 		{
-			"Name": "Rope", "Ingredient1":"Grass", "Ingredient2": "Grass", "Ingredient3": "Grass"
+			"Name": "Rope", "Ingredient1":"Grass", "Ingredient2": "Grass", "Ingredient3": "Grass", 
+			"Description":"A long cord wound of dried grass. You're not too sure if it could hold your weight, but you could make something new with it."
 		},
 
 		{
-			"Name": "Dress", "Ingredient1":"Cloth", "Ingredient2": "Cloth", "Ingredient3": "Rope"
-		}
+			"Name": "Dress", "Ingredient1":"Cloth", "Ingredient2": "Cloth", "Ingredient3": "Rope",
+			"Description":"You feel oddly proud holding this dress. You don't tend to sew, but you'res sure anyone with this stunning outfit will feel like the coolest guy around."
+		},
+		
+		{
+			"Name": "Basket", "Ingredient1":"Rope", "Ingredient2": "Rope", "Ingredient3": "Rope", 
+			"Description":"A long cord wound of dried grass. You're not too sure if it could hold your weight, but you could make something new with it."
+		},
+		{
+			"Name": "Bowl", "Ingredient1":"Log", "Ingredient2": "Log", "Ingredient3": "None", 
+			"Description":"A smooth wooden bowl, looks like it would be pretty good to eat soup or noodles out of."
+		},
+		{
+			"Name": "Maraca", "Ingredient1":"Bowl", "Ingredient2": "Bowl", "Ingredient3": "Pebbles", 
+			"Description":"You could get real groovy with these, although you're not very good at playing them."
+		},
+		{
+			"Name": "Pebbles", "Ingredient1":"Rock", "Ingredient2": "Rock", "Ingredient3": "None", 
+			"Description":"You're not sure why you thought to smash two rocks together, but they both broke..."
+		},
+		
 
 	]
 }

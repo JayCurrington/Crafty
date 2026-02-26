@@ -1,8 +1,10 @@
 extends SplitContainer
 
 @onready var recipeHolder = $RecipeHolder
+@onready var craftButton = $Description/Button
 
 var recipeItem = preload("res://RecipeItem.tscn")
+var currentSelectedRecipe
 
 
 var PATH = "res://JSONs/recipes.json"
@@ -20,6 +22,8 @@ func _ready():
 		var temp = recipeItem.instantiate()
 		tempRec.append(temp)
 		recipeHolder.add_child(temp)
+		
+	craftButton.pressed.connect(craftRecipe)
 
 
 
@@ -76,6 +80,13 @@ func checkAllRecipes(inventory):
 			print(i.getRecipeName())
 		else:
 			print("Can't make this yet")
+	
+func selectRecipe(recipe):
+	currentSelectedRecipe = recipe
+	
+func craftRecipe():
+	if currentSelectedRecipe != null:
+		currentSelectedRecipe.craftRecipe()
 	
 
 	
