@@ -1,6 +1,9 @@
 # Diary Entries FYP:
 # Term 2
 
+## 27 Febuary 2026
+Just completed meeting with David. My project is running behind but we spoke about what needs to be done to feel confident about my project submission. NPCs will be implemented and they will give the player puzzles. The point of the next three weeks is to make a fun game. If I have time I will make an NPC that steals from the player as a pickpocket NPC. I also will need to complete the map and make the game enviornment more enjoyable. I have fully completed the crafting system and will only be making minor tweaks to it. Music has been implemented. Recipes will need to be added later in development. I need to work on my time management and get my NPCs done quickly so I can focus on my report in the final few weeks.
+
 ## 14 Febuary 2026
 Inventory can now be toggled on and off with "I". Godot does not use 2D arrays, I have decided to format my recipes as a JSON file. This JSON will be read by a recipeMaker program which will decide which recipes are made and placed into the crafting menu. All the recipes will have three elements. When the player has one of the three, the recipe appears, when the player has all three, they are able to craft the recipe and the item will appear in their inventory. This has yet to be fully implemented. Currently the JSO file can be read and the recipe base object has been made for the recipe maker to fill out. My goal is to finish this crafting system by the end of this week and start on an enemy system after.
 
