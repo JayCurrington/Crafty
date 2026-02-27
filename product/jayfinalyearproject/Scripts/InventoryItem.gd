@@ -25,6 +25,9 @@ func setType(newType):
 func setTexture(newTexture):
 	self.texture_normal = load(newTexture)
 	
+func getObjectType():
+	return "InventoryItem"
+	
 func getType():
 	return type
 	

@@ -15,3 +15,18 @@ shape = SubResource("BoxShape3D_6lul2")
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.674104, 0)
 texture = ExtResource("2_qwpgl")
+
+[node name="DialougePanel" type="TabContainer" parent="."]
+offset_left = 33.0
+offset_top = 647.0
+offset_right = 1108.0
+offset_bottom = 807.0
+scale = Vector2(1.70006, 1.67025)
+current_tab = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialougePanel"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

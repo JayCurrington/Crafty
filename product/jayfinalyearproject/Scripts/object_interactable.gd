@@ -17,7 +17,6 @@ func _on_body_entered(body: Node):
 		body.objectHit(self)
 		if player == null:
 			player = body
-		setImage()
 
 func _on_body_exited(body: Node):
 	if body.is_in_group("Player"):

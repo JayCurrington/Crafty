@@ -14,6 +14,11 @@ config/name="JayFinalYearProject"
 run/main_scene="uid://du1ccfs2c8c53"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
+[display]
+
+window/size/viewport_width=1908
+window/size/viewport_height=944
+
 [global_group]
 
 Object=""

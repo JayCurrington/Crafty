@@ -84,9 +84,13 @@ func _physics_process(delta):
 
 #	Deal with interaction with object:
 	if Input.is_action_pressed("Interact") and nearObject != null:
-		InventoryObj.addToInventory(nearObject.getType())
-		nearObject.isPickedUp()
-		nearObject = null
+		if nearObject.getObjectType() == "InventoryItem":
+			InventoryObj.addToInventory(nearObject.getType())
+			nearObject.isPickedUp()
+			nearObject = null
+			
+		elif  nearObject.getObjectType() == "NPC":
+			print("TALK TO NPC :D")
 		
 		
 	if Input.is_action_just_pressed("InventoryOpen"):

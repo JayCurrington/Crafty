@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://du1ccfs2c8c53"]
+[gd_scene load_steps=11 format=3 uid="uid://du1ccfs2c8c53"]
 
 [ext_resource type="PackedScene" uid="uid://cpe01awl8m6vf" path="res://Player.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://tbb1ax644yw6" path="res://wall.tscn" id="1_1bvp3"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://clr082r5jsyuf" path="res://Scripts/cameraScript.gd" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cdgknxtl1qu53" path="res://ObjectInteractable.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://b2i3vrkrioq5l" path="res://menu.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://bfen02ck3lrp0" path="res://npcCharacter.tscn" id="9_4c57u"]
 
 [node name="Node" type="Node"]
 
@@ -46,6 +47,9 @@ transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 
 
 [node name="Floor" parent="Floors" instance=ExtResource("3_h2yge")]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+
+[node name="NPC" parent="." instance=ExtResource("9_4c57u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.547, 0, -10.6683)
 
 [node name="InteractableObj2" parent="." instance=ExtResource("6_7mycd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.18201, 0.44939, -3.6087)
