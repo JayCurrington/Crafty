@@ -94,8 +94,9 @@ func checkRecipe(inventory):
 	return false
 	
 func wasClicked():
-	RecipeMaker.selectRecipe(self)
-	updateString()
+	if recName != "None":
+		RecipeMaker.selectRecipe(self)
+		updateString()
 
 	
 	
