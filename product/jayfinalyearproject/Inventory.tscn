@@ -18,17 +18,17 @@ layout_mode = 0
 offset_right = 651.0
 offset_bottom = 438.0
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
 use_hidden_tabs_for_min_size = true
 
 [node name="Inventory" type="GridContainer" parent="Control/Container"]
-visible = false
 layout_mode = 2
 columns = 5
 script = ExtResource("1_ki15f")
 metadata/_tab_index = 0
 
 [node name="Crafting" type="SplitContainer" parent="Control/Container"]
+visible = false
 layout_mode = 2
 script = ExtResource("3_jqulp")
 metadata/_tab_index = 1
@@ -40,13 +40,6 @@ columns = 4
 [node name="Description" type="RichTextLabel" parent="Control/Container/Crafting"]
 layout_mode = 2
 bbcode_enabled = true
-text = "[b]nameTemp[/b]
-descTemp
-
-Components:
-- comp1
-- comp2
-- comp3"
 
 [node name="Button" type="Button" parent="Control/Container/Crafting/Description"]
 layout_mode = 0

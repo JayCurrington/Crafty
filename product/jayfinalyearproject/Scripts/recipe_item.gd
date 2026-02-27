@@ -28,6 +28,7 @@ func getRecipeName():
 	return recName
 	
 func setDescription (desc):
+	description = desc
 	#This will return a formatted string to explain what is needed to craft this item.
 	pass
 
@@ -51,7 +52,7 @@ func imageUpdate():
 		if craftable:
 			self.texture_normal = load(str("res://AssetImages/InventoryItems/", recName, "Inventory.png"))
 		else:
-			self.texture_normal = load(str("res://AssetImages/InventoryItems/", recName, "InventoryUncraftable.png"))
+			self.texture_normal = load(str("res://AssetImages/InventoryItems/Uncraftable/", recName, "InventoryUncraftable.png"))
 		
 # crafts a recipe if the player has the items to do so
 func craftRecipe():

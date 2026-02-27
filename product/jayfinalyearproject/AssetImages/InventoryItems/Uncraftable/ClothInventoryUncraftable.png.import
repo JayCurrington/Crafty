@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nitb3ri1n1nf"
-path="res://.godot/imported/BowlInventoryUncraftable.png-2485b2a2f5a0ec0e0c2616c614345e17.ctex"
+uid="uid://xfrfppuoc5lh"
+path="res://.godot/imported/ClothInventoryUncraftable.png-eb7e6fde8ef53ca2768919ef10a8df68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AssetImages/InventoryItems/BowlInventoryUncraftable.png"
-dest_files=["res://.godot/imported/BowlInventoryUncraftable.png-2485b2a2f5a0ec0e0c2616c614345e17.ctex"]
+source_file="res://AssetImages/InventoryItems/Uncraftable/ClothInventoryUncraftable.png"
+dest_files=["res://.godot/imported/ClothInventoryUncraftable.png-eb7e6fde8ef53ca2768919ef10a8df68.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwv3cjfyd6rgq"
-path="res://.godot/imported/RopeInventoryUncraftable.png-ab1b7cfcc60642d52cc29157c2df241a.ctex"
+path="res://.godot/imported/RopeInventoryUncraftable.png-9d0c9cc93b672cf4aba6b30cf5140c88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AssetImages/InventoryItems/RopeInventoryUncraftable.png"
-dest_files=["res://.godot/imported/RopeInventoryUncraftable.png-ab1b7cfcc60642d52cc29157c2df241a.ctex"]
+source_file="res://AssetImages/InventoryItems/Uncraftable/RopeInventoryUncraftable.png"
+dest_files=["res://.godot/imported/RopeInventoryUncraftable.png-9d0c9cc93b672cf4aba6b30cf5140c88.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvt5vwi0bue4p"
-path="res://.godot/imported/MaracaInventoryUncraftable.png-7747c90ca10db292d7ad6e3104f75496.ctex"
+uid="uid://kw8ujw070ql8"
+path="res://.godot/imported/PebblesInventoryUncraftable.png-f12c9e453934f0c5b56cc0e10becd9c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AssetImages/InventoryItems/MaracaInventoryUncraftable.png"
-dest_files=["res://.godot/imported/MaracaInventoryUncraftable.png-7747c90ca10db292d7ad6e3104f75496.ctex"]
+source_file="res://AssetImages/InventoryItems/Uncraftable/PebblesInventoryUncraftable.png"
+dest_files=["res://.godot/imported/PebblesInventoryUncraftable.png-f12c9e453934f0c5b56cc0e10becd9c8.ctex"]
 
 [params]
 

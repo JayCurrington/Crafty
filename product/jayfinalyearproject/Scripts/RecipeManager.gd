@@ -63,15 +63,15 @@ func itemremoved(oldItem):
 func makeRecipe(recipeTemplate):
 	var newRecipe
 	if len(tempRec)>0:
-		newRecipe = tempRec.get(0)
-		tempRec.pop_front()
+		newRecipe = tempRec.pop_front()
+		
 	else: 
 		newRecipe = recipeItem.instantiate()
 		recipeHolder.add_child(newRecipe)
 	activeRecipes.append(newRecipe)
-	print(recipeTemplate.Ingredient1, recipeTemplate.Ingredient2, recipeTemplate.Ingredient3)
 	newRecipe.setComponents(recipeTemplate.Ingredient1, recipeTemplate.Ingredient2, recipeTemplate.Ingredient3)
 	newRecipe.setName(recipeTemplate.Name)
+	newRecipe.setDescription(recipeTemplate.Description)
 	pass
 	
 func checkAllRecipes(inventory):

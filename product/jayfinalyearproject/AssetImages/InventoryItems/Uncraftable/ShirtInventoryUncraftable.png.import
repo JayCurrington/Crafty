@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1bcga5vcnr2b"
-path="res://.godot/imported/BasketInventoryUncraftable.png-ed45f8b04fe395f59429380c2d00a8dd.ctex"
+uid="uid://dl18mv3rsw42p"
+path="res://.godot/imported/ShirtInventoryUncraftable.png-90d32989c20f2c7caf6a38fdd9d5b33c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AssetImages/InventoryItems/BasketInventoryUncraftable.png"
-dest_files=["res://.godot/imported/BasketInventoryUncraftable.png-ed45f8b04fe395f59429380c2d00a8dd.ctex"]
+source_file="res://AssetImages/InventoryItems/Uncraftable/ShirtInventoryUncraftable.png"
+dest_files=["res://.godot/imported/ShirtInventoryUncraftable.png-90d32989c20f2c7caf6a38fdd9d5b33c.ctex"]
 
 [params]
 
