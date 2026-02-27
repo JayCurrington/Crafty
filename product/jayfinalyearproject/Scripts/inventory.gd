@@ -12,19 +12,33 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
+#Removes one at a time or if no more, removes child.
+func removeFromInventory(item):
+	print("you made it here")
+	for c in self.get_children():
+		if c.getType() == item:
+			print("removing type: ", item)
+			if c.getCount()<=1:
+				self.remove_child(c)
+			else:
+				c.decreaseCount()
+			return
+	
 
 func addToInventory(item):
 	var added = false
 	for i in self.get_children():
-		if item.getType() == i.getType():
+		if item == i.getType():
 			i.increaseCount()
 			added = true
 	if !added:
 		#instanciate the item
 		var newItem = inventoryItem.instantiate()
-		recipeMaker.itemAdded(item.getType())
+		recipeMaker.itemAdded(item)
 		#this adds to the inventory container
 		self.add_child(newItem)
 		#set values
-		newItem.setType(item.getType())
+		newItem.setType(item)
 		newItem.setCount(1)
+	recipeMaker.checkAllRecipes(self.get_children())
+	

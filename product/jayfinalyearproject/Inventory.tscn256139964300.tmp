@@ -37,14 +37,6 @@ metadata/_tab_index = 1
 layout_mode = 2
 columns = 4
 
-[node name="Description" type="RichTextLabel" parent="Control/Container/Crafting"]
+[node name="ColorRect" type="ColorRect" parent="Control/Container/Crafting"]
 layout_mode = 2
-bbcode_enabled = true
-
-[node name="Button" type="Button" parent="Control/Container/Crafting/Description"]
-layout_mode = 0
-offset_left = 23.0
-offset_top = 313.0
-offset_right = 196.0
-offset_bottom = 383.0
-text = "Craft!"
+color = Color(0.255703, 0.233101, 0.319044, 1)

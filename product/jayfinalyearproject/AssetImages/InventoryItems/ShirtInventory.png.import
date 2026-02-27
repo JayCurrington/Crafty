@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://epea4lprijdv"
-path.s3tc="res://.godot/imported/TempCatImage2.png-07e3ab3e1c716d30a759dea6fe16a4ad.s3tc.ctex"
+uid="uid://4g0ac42l8tev"
+path.s3tc="res://.godot/imported/ShirtInventory.png-5025ff093c675d479976591e8e53ea99.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,15 +11,15 @@ metadata={
 
 [deps]
 
-source_file="res://AssetImages/TempCatImage2.png"
-dest_files=["res://.godot/imported/TempCatImage2.png-07e3ab3e1c716d30a759dea6fe16a4ad.s3tc.ctex"]
+source_file="res://AssetImages/InventoryItems/ShirtInventory.png"
+dest_files=["res://.godot/imported/ShirtInventory.png-5025ff093c675d479976591e8e53ea99.s3tc.ctex"]
 
 [params]
 
 compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
-compress/hdr_compression=0
+compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true

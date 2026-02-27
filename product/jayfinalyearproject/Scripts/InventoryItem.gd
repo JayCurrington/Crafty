@@ -9,7 +9,6 @@ var count = 0;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#self.texture_normal = load("res://AssetImages/InventoryItems/GrassInventory.png")
-	print(str("HERE" , type))
 	pass # Replace with function body.
 
 
@@ -34,6 +33,10 @@ func setCount(newCount):
 	
 func increaseCount():
 	count += 1
+	$Quantity.text = "X"+ str(count)
+	
+func decreaseCount():
+	count -= 1
 	$Quantity.text = "X"+ str(count)
 	
 func getCount():

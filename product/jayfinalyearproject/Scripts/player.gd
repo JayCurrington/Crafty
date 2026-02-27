@@ -84,14 +84,12 @@ func _physics_process(delta):
 
 #	Deal with interaction with object:
 	if Input.is_action_pressed("Interact") and nearObject != null:
-		print("Interact")
-		InventoryObj.addToInventory(nearObject)
+		InventoryObj.addToInventory(nearObject.getType())
 		nearObject.isPickedUp()
 		nearObject = null
 		
 		
 	if Input.is_action_just_pressed("InventoryOpen"):
-		print("inventory")
 		InventoryHold.OpenClose()
 
 	
@@ -99,10 +97,8 @@ func _physics_process(delta):
 func objectHit(object):
 	get_node("interactMenu").visible = true
 	nearObject = object
-	print("Hit")
 	
 func objectGone(object):
 	get_node("interactMenu").visible = false
 	nearObject = null
-	print("gone")
 	
