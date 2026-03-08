@@ -22,6 +22,9 @@ func _on_body_exited(body: Node):
 	if body.is_in_group("Player"):
 		body.objectGone(self)
 		
+func getObjectType():
+	return "InventoryItem"
+		
 		
 func isPickedUp():
 	self.visible = false

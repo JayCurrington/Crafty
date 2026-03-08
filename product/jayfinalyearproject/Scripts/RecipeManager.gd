@@ -55,10 +55,6 @@ func itemAdded(newItem):
 					makeRecipe(i)
 				
 	pass
-
-#For when the last of an item is uesd and recipes need to be removed
-func itemremoved(oldItem):
-	pass
 	
 func makeRecipe(recipeTemplate):
 	var newRecipe

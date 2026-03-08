@@ -24,6 +24,8 @@ var target_velocity = Vector3.ZERO
 var walkRot = 1
 var walkTrack = 0
 
+var talking = false
+
 
 #Automatically called by the engine when scene run and is called on fix time ints - related to gameplay loop
 func _physics_process(delta):
@@ -90,7 +92,11 @@ func _physics_process(delta):
 			nearObject = null
 			
 		elif  nearObject.getObjectType() == "NPC":
-			print("TALK TO NPC :D")
+			if !talking:
+				talking = true
+				nearObject.talkToPlayer()
+				print("TALK TO NPC :D")
+			
 		
 		
 	if Input.is_action_just_pressed("InventoryOpen"):
@@ -104,5 +110,8 @@ func objectHit(object):
 	
 func objectGone(object):
 	get_node("interactMenu").visible = false
+	if nearObject != null and nearObject.getObjectType() == "NPC":
+		talking = false
+		nearObject.stopTalking()
 	nearObject = null
 	

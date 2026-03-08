@@ -5,11 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://byhxvkturnpa2" path="res://Inventory.tscn" id="1_5vw27"]
 [ext_resource type="AudioStream" uid="uid://1ytxvv1ogvru" path="res://MainTheme.ogg" id="1_kek77"]
 [ext_resource type="PackedScene" uid="uid://dlneg0kylm00n" path="res://Camera.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://b1notf0a2141a" path="res://npcMakerScript.gd" id="3_efxa6"]
 [ext_resource type="PackedScene" uid="uid://do5qhmgk5srtp" path="res://floor.tscn" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://clr082r5jsyuf" path="res://Scripts/cameraScript.gd" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cdgknxtl1qu53" path="res://ObjectInteractable.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://b2i3vrkrioq5l" path="res://menu.tscn" id="7_272bh"]
-[ext_resource type="PackedScene" uid="uid://bfen02ck3lrp0" path="res://npcCharacter.tscn" id="9_4c57u"]
 
 [node name="Node" type="Node"]
 
@@ -24,12 +24,15 @@ parameters/looping = true
 visible = false
 position = Vector2(251, 81)
 
+[node name="NPCMaker" type="Node" parent="."]
+script = ExtResource("3_efxa6")
+
 [node name="Player" parent="." instance=ExtResource("1_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.76964, 0)
 
 [node name="interactMenu" parent="Player" instance=ExtResource("7_272bh")]
 visible = false
-position = Vector2(622, 244)
+position = Vector2(768, 336)
 
 [node name="Camera" parent="Player" instance=ExtResource("2_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, -0.0476322, 4.09101, 30.7651)
@@ -47,9 +50,6 @@ transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 
 
 [node name="Floor" parent="Floors" instance=ExtResource("3_h2yge")]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
-
-[node name="NPC" parent="." instance=ExtResource("9_4c57u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.547, 0, -10.6683)
 
 [node name="InteractableObj2" parent="." instance=ExtResource("6_7mycd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.18201, 0.44939, -3.6087)
