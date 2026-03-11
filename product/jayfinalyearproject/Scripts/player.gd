@@ -7,25 +7,18 @@ extends CharacterBody3D
 @onready var InventoryHold : InventoryHolder = get_node("../InventoryHold")
 
 @onready var InventoryObj : Inventory = InventoryHold.getInventory()
-func _ready() -> void:
-	
-	pass
-	
+
 #tracks jumping length 0 means no longer going upwards.
 var jumping = 0
-
 # Tracks nearby interactable object
 var nearObject = null
-
 #3D Vector used across frames for directed speed
 var target_velocity = Vector3.ZERO
-
 #These track the angle of rotation and transform strech for character walking
 var walkRot = 1
 var walkTrack = 0
-
 var talking = false
-
+var waitingForItem = false
 
 #Automatically called by the engine when scene run and is called on fix time ints - related to gameplay loop
 func _physics_process(delta):
@@ -95,6 +88,7 @@ func _physics_process(delta):
 			if !talking:
 				talking = true
 				nearObject.talkToPlayer()
+				
 				print("TALK TO NPC :D")
 			
 		
@@ -112,6 +106,21 @@ func objectGone(object):
 	get_node("interactMenu").visible = false
 	if nearObject != null and nearObject.getObjectType() == "NPC":
 		talking = false
+		waitingForItem = false
 		nearObject.stopTalking()
 	nearObject = null
+	
+	
+#sent by NPC when they want an item from the player
+func requestItem():
+	waitingForItem = true
+	InventoryHold.requestItem(self)
+	
+func recieveItem(item):
+	if waitingForItem:
+		waitingForItem = false
+		nearObject.recieveItem(item)
+		
+func cancelWait():
+	return
 	

@@ -3,6 +3,9 @@ class_name Inventory
 
 var inventoryItem = preload("res://InventoryItem.tscn")
 @onready var recipeMaker = $"../Crafting"
+@onready var player = $"../../../Player"
+
+var waitingForItem = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

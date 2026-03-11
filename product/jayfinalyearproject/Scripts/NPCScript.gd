@@ -33,12 +33,17 @@ func talkToPlayer():
 		dialougePanel.visible = true
 		nextDialouge()
 	
+	
 func stopTalking():
 	talkingTracker = -1
 	dialougePanel.visible = false
 	
 
 func nextDialouge():
+	if talkingTracker >0 and dialouge[talkingTracker] == "Do you have what I want?":
+		print("HERE " + dialouge[talkingTracker])
+		requestItem()
+		pass
 	if(talkingTracker+1 < len(dialouge)):
 		talkingTracker += 1
 		charCounter = 0
@@ -52,6 +57,9 @@ func setName(newName):
 	
 func setDialouge(newDialouge):
 	dialouge = newDialouge
+	
+func setDesiredObj(newObj):
+	desiredObject = newObj
 
 func setLocation(location):
 	self.position = location
@@ -61,12 +69,19 @@ func setImage():
 
 #checks the item the player gave them is correct
 func checkItem(playerItem):
+	print(playerItem)
+	print(desiredObject)
 	if playerItem == desiredObject:
 		print("Yay! This is what I wanted! Thanks")
 	else:
 		print("Nope, not sure why you thought I'd want that...")
 
 
+func requestItem():
+	player.requestItem()
+	
+func recieveItem(item):
+	checkItem(item.getType())
 	
 func _on_body_entered(body: Node):
 	if body.is_in_group("Player"):

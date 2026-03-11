@@ -1,8 +1,8 @@
 {
 	"Characters":[
 		{
-			"Name": "Fred", "DesiredItem": "Maraca", "Location":[-10, 1, -10],
-			"Dialouge1":["Hello", "I am looking for a little groove in my life", "Do you have some groove?"]
+			"Name": "Fred", "DesiredItem": "Rock", "Location":[-10, 1, -10],
+			"Dialouge1":["Hello", "I am looking for a little groove in my life", "Do you have some groove?", "Do you have what I want?"]
 		}
 
 		

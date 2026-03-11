@@ -4,11 +4,13 @@ class_name InventoryItem
 var type = null
 var count = 0;
 
+@onready var invHold = $"../../../../../InventoryHold"
+
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#self.texture_normal = load("res://AssetImages/InventoryItems/GrassInventory.png")
+	self.pressed.connect(wasClicked)
 	pass # Replace with function body.
 
 
@@ -44,6 +46,11 @@ func decreaseCount():
 	
 func getCount():
 	return count
+	
+		
+func wasClicked():
+	if invHold.checkLooking():
+		invHold.receiveItem(self)
 	
 	
 	

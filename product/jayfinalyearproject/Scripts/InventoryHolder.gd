@@ -2,10 +2,8 @@ extends Node2D
 class_name InventoryHolder
 
 var inventoryItem = preload("res://InventoryItem.tscn")
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
+var waitingForItem = false
+var waitingPlayer
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -16,9 +14,24 @@ func getInventory():
 	return(inventory)
 	
 func OpenClose():
+	if waitingForItem:
+		waitingPlayer.cancelWait()
 	if self.visible:
 		self.visible = false
 	else:
 		self.visible = true
+		
+func requestItem(player):
+	waitingForItem = true
+	self.visible = true
+	waitingPlayer = player
+	
+func receiveItem(item):
+	if(waitingForItem):
+		waitingForItem = false
+		waitingPlayer.recieveItem(item)
+	
+func checkLooking():
+	return waitingForItem
 	
 	
