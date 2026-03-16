@@ -29,6 +29,6 @@ func makeCharacter():
 		self.add_child(newCharacter)
 		newCharacter.setName(i.Name)
 		newCharacter.setDesiredObj(i.DesiredItem)
-		newCharacter.setDialouge(i.Dialouge1)
+		newCharacter.setDialouge(i.Dialouge1,i.DialougeSuccess, i.DialougeFail)
 		newCharacter.setLocation(Vector3(i.Location[0], i.Location[1], i.Location[2]))
 	pass

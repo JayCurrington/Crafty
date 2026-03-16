@@ -50,6 +50,7 @@ func getCount():
 		
 func wasClicked():
 	if invHold.checkLooking():
+		invHold.OpenClose("Inventory")
 		invHold.receiveItem(self)
 	
 	

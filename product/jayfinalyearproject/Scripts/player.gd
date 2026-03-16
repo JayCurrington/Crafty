@@ -11,7 +11,7 @@ extends CharacterBody3D
 #tracks jumping length 0 means no longer going upwards.
 var jumping = 0
 # Tracks nearby interactable object
-var nearObject = null
+var nearObject = []
 #3D Vector used across frames for directed speed
 var target_velocity = Vector3.ZERO
 #These track the angle of rotation and transform strech for character walking
@@ -78,37 +78,43 @@ func _physics_process(delta):
 	move_and_slide()
 
 #	Deal with interaction with object:
-	if Input.is_action_pressed("Interact") and nearObject != null:
-		if nearObject.getObjectType() == "InventoryItem":
-			InventoryObj.addToInventory(nearObject.getType())
-			nearObject.isPickedUp()
-			nearObject = null
-			
-		elif  nearObject.getObjectType() == "NPC":
-			if !talking:
-				talking = true
-				nearObject.talkToPlayer()
+	if Input.is_action_pressed("Interact") and len(nearObject) >0:
+		for i in nearObject:
+			if i.getObjectType() == "InventoryItem":
+				InventoryObj.addToInventory(i.getType())
+				i.isPickedUp()
+				nearObject.erase(i)
+				break
 				
-				print("TALK TO NPC :D")
+			elif  i.getObjectType() == "NPC":
+				if !talking:
+					talking = true
+					i.talkToPlayer()
+					break
 			
 		
 		
 	if Input.is_action_just_pressed("InventoryOpen"):
-		InventoryHold.OpenClose()
-
+		InventoryHold.OpenClose("Inventory")
+	if Input.is_action_just_pressed("craftingOpen"):
+		InventoryHold.OpenClose("Crafting")
 	
 	
 func objectHit(object):
-	get_node("interactMenu").visible = true
-	nearObject = object
+	if object.getObjectType() != "followNPC":
+		get_node("interactMenu").visible = true
+		nearObject.append(object)
 	
 func objectGone(object):
 	get_node("interactMenu").visible = false
-	if nearObject != null and nearObject.getObjectType() == "NPC":
-		talking = false
-		waitingForItem = false
-		nearObject.stopTalking()
-	nearObject = null
+	for i in nearObject:
+		if i== object:
+			if i.getObjectType() == "NPC":
+				talking = false
+				waitingForItem = false
+				i.stopTalking()
+				InventoryHold.cancelRequest()
+		nearObject.erase(i)
 	
 	
 #sent by NPC when they want an item from the player
@@ -119,8 +125,13 @@ func requestItem():
 func recieveItem(item):
 	if waitingForItem:
 		waitingForItem = false
-		nearObject.recieveItem(item)
+		for i in nearObject:
+			if i.getType() == "NPC":
+				i.recieveItem(item)
 		
 func cancelWait():
 	return
+	
+func getLocation():
+	return self.position
 	

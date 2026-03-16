@@ -13,9 +13,13 @@ func getInventory():
 	var inventory :Inventory = $Control/Container/Inventory
 	return(inventory)
 	
-func OpenClose():
+func OpenClose(screen):
 	if waitingForItem:
 		waitingPlayer.cancelWait()
+	if screen == "Inventory":
+		getInventory().visible = true
+	else:
+		getInventory().visible = false
 	if self.visible:
 		self.visible = false
 	else:
@@ -25,6 +29,8 @@ func requestItem(player):
 	waitingForItem = true
 	self.visible = true
 	waitingPlayer = player
+func cancelRequest():
+	waitingForItem = false
 	
 func receiveItem(item):
 	if(waitingForItem):

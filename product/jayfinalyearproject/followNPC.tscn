@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlgy552x0tl3v"]
+
+[ext_resource type="Script" uid="uid://i1qim8fw7l3p" path="res://Scripts/followNPCScript.gd" id="1_k2bbe"]
+[ext_resource type="Texture2D" uid="uid://bqvllja34rrfo" path="res://AssetImages/MapItems/NPCFred.png" id="2_fylo2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6lul2"]
+
+[node name="NPC" type="Area3D"]
+script = ExtResource("1_k2bbe")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(6, 0, 0, 0, 4.64915, 0, 0, 0, 6.02564, 0, 2.2096, 0)
+shape = SubResource("BoxShape3D_6lul2")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.674104, 0)
+texture = ExtResource("2_fylo2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

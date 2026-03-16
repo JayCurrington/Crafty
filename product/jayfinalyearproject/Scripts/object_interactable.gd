@@ -4,13 +4,23 @@ extends Area3D
 var itemTypes = ["Grass","Rock","Log"]
 var type = itemTypes.pick_random()
 var player = null
+var regenTime = -1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#set image to correct item
 	setImage()
-	
 	pass
+	
+func _process(delta: float) -> void:
+	if regenTime == 0:
+		regen()
+	elif regenTime>0:
+		regenTime-=1
+	
+func regen():
+	regenTime = -1
+	self.visible = true
 	
 func _on_body_entered(body: Node):
 	if body.is_in_group("Player") and self.visible:
@@ -28,6 +38,7 @@ func getObjectType():
 		
 func isPickedUp():
 	self.visible = false
+	regenTime = 300
 	if player != null:
 		player.objectGone(self)
 	
@@ -37,7 +48,3 @@ func getType():
 func setImage():
 	var texture = load(str("res://AssetImages/MapItems/", type, "Map.png"))
 	$Sprite3D.texture = texture
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
