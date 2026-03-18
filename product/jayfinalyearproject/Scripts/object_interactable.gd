@@ -17,6 +17,9 @@ func _process(delta: float) -> void:
 		regen()
 	elif regenTime>0:
 		regenTime-=1
+		
+func setLocation(location):
+	self.position = location
 	
 func regen():
 	regenTime = -1

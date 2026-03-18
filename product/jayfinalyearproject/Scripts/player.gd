@@ -126,7 +126,7 @@ func recieveItem(item):
 	if waitingForItem:
 		waitingForItem = false
 		for i in nearObject:
-			if i.getType() == "NPC":
+			if i.getObjectType() == "NPC":
 				i.recieveItem(item)
 		
 func cancelWait():
