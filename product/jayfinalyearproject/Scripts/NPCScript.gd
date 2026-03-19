@@ -21,7 +21,7 @@ var charCounter = 0
 
 func _ready() -> void:
 	nextButton.pressed.connect(nextDialouge)
-	setImage()
+	
 
 func _process(delta: float) -> void:
 	if talkingTracker>=0 :

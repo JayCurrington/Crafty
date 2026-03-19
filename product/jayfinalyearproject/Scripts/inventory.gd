@@ -3,7 +3,7 @@ class_name Inventory
 
 var inventoryItem = preload("res://InventoryItem.tscn")
 @onready var recipeMaker = $"../Crafting"
-@onready var player = $"../../../Player"
+@onready var player = $"../../../../Player"
 
 var waitingForItem = false
 
