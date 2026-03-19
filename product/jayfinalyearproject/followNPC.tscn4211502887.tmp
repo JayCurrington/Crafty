@@ -5,28 +5,15 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_k2bbe"]
 
-[node name="NPC" type="CharacterBody3D"]
+[node name="NPC" type="Node3D"]
 script = ExtResource("1_k2bbe")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.595, 0)
+transform = Transform3D(1.511, 0, 0, 0, 1.171, 0, 0, 0, 1.517, 0, 0.595, 0)
 shape = SubResource("CapsuleShape3D_k2bbe")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.674104, 0)
 texture = ExtResource("2_fylo2")
-
-[node name="DialougePanel" type="TabContainer" parent="."]
-visible = false
-offset_left = 33.0
-offset_top = 647.0
-offset_right = 1108.0
-offset_bottom = 807.0
-scale = Vector2(1.70006, 1.67025)
-current_tab = 0
-
-[node name="DialougeTextBox" type="RichTextLabel" parent="DialougePanel"]
-layout_mode = 2
-metadata/_tab_index = 0

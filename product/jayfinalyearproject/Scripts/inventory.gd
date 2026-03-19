@@ -27,6 +27,14 @@ func removeFromInventory(item):
 				c.decreaseCount()
 			return
 	
+func removeRandom():
+	var allItems = self.get_children()
+	var itemType = null
+	if len(allItems)>0:
+		itemType = allItems[randi()%len(self.get_children())].getType()
+		removeFromInventory(itemType)
+	return itemType
+	
 
 func addToInventory(item):
 	var added = false

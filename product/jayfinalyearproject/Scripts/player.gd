@@ -128,7 +128,10 @@ func recieveItem(item):
 		for i in nearObject:
 			if i.getObjectType() == "NPC":
 				i.recieveItem(item)
-		
+				
+func stealRandomItem():
+	return InventoryObj.removeRandom()
+	
 func cancelWait():
 	return
 	
