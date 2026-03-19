@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcyxy8hfh2i7g"]
+
+[ext_resource type="Script" uid="uid://budku8shg3xgl" path="res://Scripts/kudosScript.gd" id="1_q7ab4"]
+[ext_resource type="Texture2D" uid="uid://etflbbxb7qcg" path="res://AssetImages/kudos.png" id="2_5p5tt"]
+
+[node name="Kudos" type="Node2D"]
+script = ExtResource("1_q7ab4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_5p5tt")

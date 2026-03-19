@@ -20,6 +20,8 @@ var walkTrack = 0
 var talking = false
 var waitingForItem = false
 
+var kudos = 0
+
 #Automatically called by the engine when scene run and is called on fix time ints - related to gameplay loop
 func _physics_process(delta):
 	#Stores the direction of the player

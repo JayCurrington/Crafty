@@ -4,6 +4,9 @@ class_name Inventory
 var inventoryItem = preload("res://InventoryItem.tscn")
 @onready var recipeMaker = $"../Crafting"
 @onready var player = $"../../../../Player"
+@onready var kudos = $"../../../../Kudos"
+
+var canLeave = false
 
 var waitingForItem = false
 
@@ -13,6 +16,9 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if kudos.getKudos() == 1 and !canLeave:
+		addToInventory("Raft")
+		canLeave = true
 	pass
 	
 #Removes one at a time or if no more, removes child.

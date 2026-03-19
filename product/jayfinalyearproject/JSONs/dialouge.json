@@ -1,15 +1,15 @@
 {
 	"Characters":[
 		{
-			"Name": "Fred", "DesiredItem": "Maraca", "Location":[-10, 1, -10],
+			"Name": "Fred", "DesiredItem": "Grass", "Location":[-10, 1, -10],
 			"Dialouge1":["Hello", "I've been feeling kinda down.", "Can you help with that?", "Do you have what I want?"],
 			"DialougeSuccess":["This is perfect for my groove!", "Thank you, I'm feeling much better!"],
 			"DialougeFail":["I'm not quite sure that's making me feel better...", "Come back with something... groovier"]
 		},
 		
 		{
-			"Name": "Liz", "DesiredItem": "Ladder", "Location":[10, 1, -10],
-			"Dialouge1":["Hey, I'm Liz", "I heard you washed up on the shore here. We don't see many 3D people here so please excuse our shock.", "Welcome to our little village. Unfortunately, our craftsman went on a trip and hasn't come back.", "I was planning on going on an adventure but I couldnt possibly leave now.",  "Do you think you could help everyone out?", "When you're done, come by and if you have a way off the island, I can show you to the way back to the 3D world.", "Do you have what I want?"],
+			"Name": "Liz", "DesiredItem": "Raft", "Location":[10, 1, -10],
+			"Dialouge1":["Hey, I'm Liz", "I heard you washed up on the shore here. We don't see many 3D people here so please excuse our shock.", "Welcome to our little village. Unfortunately, our craftsman went on a trip and hasn't come back.", "I was planning on going on an adventure but I couldnt possibly leave now.", "When you're done, come by and if you have a way off the island, I can show you to the way back to the 3D world.", "Do you have what I want?"],
 			"DialougeSuccess":["This is perfect!", "I'll prepare it for our journey", "If everyone's okay, we'll get going."],
 			"DialougeFail":["I don't think I'd know how we'd leave with that.", "Come back with a way to leave."]
 		},

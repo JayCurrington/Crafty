@@ -5,6 +5,7 @@ class_name NPC
 @onready var dialougeTextBox = $"DialougePanel/DialougeTextBox"
 @onready var nextButton = $"DialougePanel/DialougeTextBox/nextButton"
 @onready var sprite = $"Sprite3D"
+@onready var kudos = $"../../Kudos"
 
 var desiredObject
 var player
@@ -18,6 +19,8 @@ var baseDialouge = []
 # -1 means not talking, otherwise that is the stage of dialouge it is on.
 var talkingTracker = -1
 var charCounter = 0
+
+var endGame = false
 
 func _ready() -> void:
 	nextButton.pressed.connect(nextDialouge)
@@ -34,7 +37,10 @@ func _process(delta: float) -> void:
 
 func talkToPlayer():
 	if talkingTracker < 0:
-		dialouge = baseDialouge
+		if desiredObject == "Satisfied":
+			dialouge = ["you've already helped me.", "Thanks!"]
+		else:
+			dialouge = baseDialouge
 		dialougePanel.set_tab_title(0,charName)
 		dialougePanel.visible = true
 		nextDialouge()
@@ -44,18 +50,21 @@ func stopTalking():
 	talkingTracker = -1
 	dialougePanel.visible = false
 	$DialougePanel/DialougeTextBox/nextButton.visible = true
+	if endGame:
+		print("DONE!!!!")
+		get_tree().change_scene_to_file('res://endGame.tscn')
 	
 
 func nextDialouge():
-	
-	if(talkingTracker+1 < len(dialouge)):
-		if talkingTracker >0 and dialouge[talkingTracker+1] == "Do you have what I want?":
-			print("HERE " + dialouge[talkingTracker])
-			requestItem()
-		talkingTracker += 1
-		charCounter = 0
-	else:
-		stopTalking()
+	if dialougePanel.visible:
+		if(talkingTracker+1 < len(dialouge)):
+			if talkingTracker >0 and dialouge[talkingTracker+1] == "Do you have what I want?":
+				print("HERE " + dialouge[talkingTracker+1])
+				requestItem()
+			talkingTracker += 1
+			charCounter = 0
+		else:
+			stopTalking()
 	pass
 	
 func setName(newName):
@@ -84,6 +93,12 @@ func checkItem(playerItem):
 	if playerItem == desiredObject:
 		dialouge+= successDialouge
 		talkingTracker += 1
+		if desiredObject == "Raft":
+			endGame = true
+		else:
+			kudos.addKudos()
+			if(kudos.getKudos() == 1):
+				dialouge+=["You've helped all of us. You should be able to leave now.", "Take this raft we made!"]
 		print("Yay! This is what I wanted! Thanks")
 	else:
 		dialouge+= failDialouge
