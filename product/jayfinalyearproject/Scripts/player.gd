@@ -83,7 +83,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("Interact") and len(nearObject) >0:
 		for i in nearObject:
 			if i.getObjectType() == "InventoryItem":
-				InventoryObj.addToInventory(i.getType())
+				InventoryObj.addToInventory(i.getType(),1)
 				i.isPickedUp()
 				nearObject.erase(i)
 				break

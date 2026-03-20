@@ -67,6 +67,7 @@ func makeRecipe(recipeTemplate):
 	activeRecipes.append(newRecipe)
 	newRecipe.setComponents(recipeTemplate.Ingredient1, recipeTemplate.Ingredient2, recipeTemplate.Ingredient3)
 	newRecipe.setName(recipeTemplate.Name)
+	newRecipe.setDurability(recipeTemplate.Durability)
 	newRecipe.setDescription(recipeTemplate.Description)
 	pass
 	

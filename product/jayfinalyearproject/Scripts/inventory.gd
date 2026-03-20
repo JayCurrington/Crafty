@@ -17,7 +17,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if kudos.getKudos() == 1 and !canLeave:
-		addToInventory("Raft")
+		addToInventory("Raft",1)
 		canLeave = true
 	pass
 	
@@ -27,11 +27,14 @@ func removeFromInventory(item):
 	for c in self.get_children():
 		if c.getType() == item:
 			print("removing type: ", item)
-			if c.getCount()<=1:
-				self.remove_child(c)
+			if c.getCurrentDurability() == 1:
+				if c.getCount()<=1:
+					self.remove_child(c)
+				else:
+					c.decreaseCount()
+				return
 			else:
-				c.decreaseCount()
-			return
+				c.decreaseDurability()
 	
 func removeRandom():
 	var allItems = self.get_children()
@@ -42,7 +45,7 @@ func removeRandom():
 	return itemType
 	
 
-func addToInventory(item):
+func addToInventory(item, dur):
 	var added = false
 	for i in self.get_children():
 		if item == i.getType():
@@ -57,5 +60,6 @@ func addToInventory(item):
 		#set values
 		newItem.setType(item)
 		newItem.setCount(1)
+		newItem.setDurability(dur)
 	recipeMaker.checkAllRecipes(self.get_children())
 	

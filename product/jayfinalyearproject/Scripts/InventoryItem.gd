@@ -3,6 +3,8 @@ class_name InventoryItem
 
 var type = null
 var count = 0;
+var durability = 1;
+var durabilityHold = durability;
 
 @onready var invHold = $"../../../../../InventoryHold"
 
@@ -33,8 +35,21 @@ func getObjectType():
 func getType():
 	return type
 	
+func getDurability():
+	return durability
+	
+func getCurrentDurability():
+	return durability
+	
+func decreaseDurability():
+	durability -=1;
+	
 func setCount(newCount):
 	count = newCount
+	
+func setDurability(newDurability):
+	durability = newDurability
+	durabilityHold = durability
 	
 func increaseCount():
 	count += 1

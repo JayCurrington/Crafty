@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdahi21j0p5rr"
-path="res://.godot/imported/StickInventoryUncraftable.png-1ac255a45a8cec142b3a5dd7862e53f4.ctex"
+uid="uid://cvb0yxlmprixl"
+path="res://.godot/imported/ScissorsInventory.png-0dd63085a9f042859aad4e4e06a51711.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AssetImages/InventoryItems/Uncraftable/StickInventoryUncraftable.png"
-dest_files=["res://.godot/imported/StickInventoryUncraftable.png-1ac255a45a8cec142b3a5dd7862e53f4.ctex"]
+source_file="res://AssetImages/InventoryItems/ScissorsInventory.png"
+dest_files=["res://.godot/imported/ScissorsInventory.png-0dd63085a9f042859aad4e4e06a51711.ctex"]
 
 [params]
 

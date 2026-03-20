@@ -3,6 +3,7 @@ var recName = "None"
 var components = []
 var craftable
 var description = "There is currently no description"
+var durability = 1
 
 var showString = "[b]nameTemp[/b]\n descTemp\n \n Components:\n - comp1\n - comp2\n - comp3"
 
@@ -47,6 +48,10 @@ func setName(newName):
 	imageUpdate()
 	print(recName)
 	
+func setDurability(newDurability):
+	durability = newDurability
+
+	
 func imageUpdate():
 	if recName != "None":
 		if craftable:
@@ -62,7 +67,7 @@ func craftRecipe():
 		for i in components:
 			InventoryObj.removeFromInventory(i)
 			print(i)
-		InventoryObj.addToInventory(recName)
+		InventoryObj.addToInventory(recName, durability)
 	print("CLICKED")
 	pass
 	
