@@ -1,9 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://du1ccfs2c8c53"]
+[gd_scene load_steps=16 format=3 uid="uid://du1ccfs2c8c53"]
 
 [ext_resource type="PackedScene" uid="uid://cpe01awl8m6vf" path="res://Player.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://byhxvkturnpa2" path="res://Inventory.tscn" id="1_5vw27"]
+[ext_resource type="PackedScene" uid="uid://bfd7nhbpi7ibu" path="res://PauseScreen.tscn" id="1_dg77c"]
 [ext_resource type="AudioStream" uid="uid://1ytxvv1ogvru" path="res://MainTheme.ogg" id="1_kek77"]
 [ext_resource type="PackedScene" uid="uid://dlneg0kylm00n" path="res://Camera.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bmvq8j75a51cn" path="res://controlsScreen.tscn" id="2_ycdy4"]
 [ext_resource type="Script" uid="uid://b1notf0a2141a" path="res://Scripts/npcMakerScript.gd" id="3_efxa6"]
 [ext_resource type="Script" uid="uid://clr082r5jsyuf" path="res://Scripts/cameraScript.gd" id="4_lquwl"]
 [ext_resource type="PackedScene" uid="uid://bcyxy8hfh2i7g" path="res://kudos.tscn" id="5_efxa6"]
@@ -47,6 +49,7 @@ mix_target = 1
 parameters/looping = true
 
 [node name="InventoryHold" parent="." instance=ExtResource("1_5vw27")]
+visible = false
 position = Vector2(613, 221)
 
 [node name="NPCMaker" type="Node" parent="."]
@@ -74,6 +77,13 @@ script = ExtResource("4_lquwl")
 
 [node name="FollowNPC" parent="." instance=ExtResource("8_efxa6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 3.93416, 3)
+
+[node name="Menus" type="Node2D" parent="."]
+
+[node name="PauseMenu" parent="Menus" instance=ExtResource("1_dg77c")]
+visible = false
+
+[node name="Node2D" parent="Menus" instance=ExtResource("2_ycdy4")]
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.76964, -2.60498)

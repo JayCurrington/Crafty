@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmvq8j75a51cn"]
+
+[ext_resource type="Texture2D" uid="uid://bn7jc0atkyx0k" path="res://AssetImages/MenuScreens/ControlScreen.png" id="1_qicid"]
+[ext_resource type="Script" uid="uid://d2mix6tnmn5lj" path="res://Scripts/controlsScreenScript.gd" id="1_via4l"]
+[ext_resource type="Texture2D" uid="uid://b4muxy0rcvf3f" path="res://AssetImages/MenuScreens/BackButton.png" id="3_via4l"]
+[ext_resource type="Texture2D" uid="uid://nhphobwqv7fd" path="res://AssetImages/MenuScreens/BackButtonAlt.png" id="4_x4316"]
+
+[node name="Node2D" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_via4l")
+
+[node name="ControlScreen" type="Sprite2D" parent="."]
+position = Vector2(950, 450)
+texture = ExtResource("1_qicid")
+
+[node name="ResumeButton" type="TextureButton" parent="."]
+offset_left = 887.0
+offset_top = 613.0
+offset_right = 1137.0
+offset_bottom = 863.0
+scale = Vector2(0.86292, 0.86292)
+texture_normal = ExtResource("3_via4l")
+texture_pressed = ExtResource("4_x4316")
