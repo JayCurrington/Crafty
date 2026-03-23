@@ -100,10 +100,12 @@ func checkItem(playerItem):
 			if(kudos.getKudos() == 1):
 				dialouge+=["You've helped all of us. You should be able to leave now.", "Take this raft we made!"]
 		print("Yay! This is what I wanted! Thanks")
+		return true
 	else:
 		dialouge+= failDialouge
 		talkingTracker += 1
 		print("Nope, not sure why you thought I'd want that...")
+		return false
 
 
 func requestItem():
@@ -111,7 +113,8 @@ func requestItem():
 	player.requestItem()
 	
 func recieveItem(item):
-	checkItem(item.getType())
+	if checkItem(item.getType()):
+		item.decreaseCount()
 	
 func _on_body_entered(body: Node):
 	if body.is_in_group("Player"):

@@ -58,6 +58,8 @@ func increaseCount():
 func decreaseCount():
 	count -= 1
 	$Quantity.text = "X"+ str(count)
+	if count == 0:
+		invHold.getInventory().removeFromInventory(type)
 	
 func getCount():
 	return count

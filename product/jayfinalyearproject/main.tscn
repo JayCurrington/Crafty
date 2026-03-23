@@ -23,8 +23,8 @@ fog_light_energy = 0.23
 fog_density = 0.0108
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.0226
-volumetric_fog_albedo = Color(0.532392, 0.715516, 0.896169, 1)
-volumetric_fog_emission = Color(0.23966, 0.37671, 0.553396, 1)
+volumetric_fog_albedo = Color(0.818749, 0.666099, 0.481414, 1)
+volumetric_fog_emission = Color(0.635377, 0.491076, 0.327218, 1)
 volumetric_fog_anisotropy = 0.66
 adjustment_enabled = true
 adjustment_contrast = 1.2
@@ -62,7 +62,7 @@ script = ExtResource("11_dg77c")
 position = Vector2(70, 70)
 
 [node name="Player" parent="." instance=ExtResource("1_0xm2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.76964, -2.60498)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 3.76964, -2.60498)
 
 [node name="interactMenu" parent="Player" instance=ExtResource("7_272bh")]
 visible = false

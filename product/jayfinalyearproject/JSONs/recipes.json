@@ -28,7 +28,7 @@
 			"Description":"You could get real groovy with these, although you're not very good at playing them."
 		},
 		{
-			"Name": "Pebbles","Durability":2, "Ingredient1":"Rock", "Ingredient2": "Rock", "Ingredient3": "None", 
+			"Name": "Pebbles","Durability":1, "Ingredient1":"Rock", "Ingredient2": "Rock", "Ingredient3": "None", 
 			"Description":"You're not sure why you thought to smash two rocks together, but they both broke..."
 		},
 		{

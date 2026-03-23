@@ -1,7 +1,7 @@
 {
 	"Characters":[
 		{
-			"Name": "Fred", "DesiredItem": "Maraca", "Location":[-10, 1, -10],
+			"Name": "Fred", "DesiredItem": "Rock", "Location":[-10, 1, -10],
 			"Dialouge1":["Hello", "I've been feeling kinda down.", "Can you help with that?", "Do you have what I want?"],
 			"DialougeSuccess":["This is perfect for my groove!", "Thank you, I'm feeling much better!"],
 			"DialougeFail":["I'm not quite sure that's making me feel better...", "Come back with something... groovier"]
