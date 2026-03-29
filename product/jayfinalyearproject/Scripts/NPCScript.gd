@@ -97,6 +97,7 @@ func checkItem(playerItem):
 			endGame = true
 		else:
 			kudos.addKudos()
+			desiredObject = "Satisfied"
 			if(kudos.getKudos() == 1):
 				dialouge+=["You've helped all of us. You should be able to leave now.", "Take this raft we made!"]
 		print("Yay! This is what I wanted! Thanks")

@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://8u2kg16u74ae"]
+[gd_scene load_steps=9 format=3 uid="uid://qtpajjc2cloa"]
 
 [ext_resource type="Texture2D" uid="uid://qa1kyschyv3u" path="res://AssetImages/MenuScreens/MainMenuScreen.png" id="1_gqihx"]
 [ext_resource type="Texture2D" uid="uid://b2gnpy6nckco3" path="res://AssetImages/MenuScreens/StartButton.png" id="2_4gtxw"]
-[ext_resource type="Script" uid="uid://dytyi51bomsnq" path="res://MainMenuScript.gd" id="2_8mqn5"]
+[ext_resource type="Script" path="res://MainMenuScript.gd" id="2_8mqn5"]
 [ext_resource type="Texture2D" uid="uid://rglul00tpl7b" path="res://AssetImages/MenuScreens/StarButtonAlt.png" id="4_m2tcv"]
 [ext_resource type="Texture2D" uid="uid://d2h6ol8cwv7tl" path="res://AssetImages/MenuScreens/QuitButton.png" id="4_t72po"]
 [ext_resource type="Texture2D" uid="uid://cxbdcu58jg7a1" path="res://AssetImages/MenuScreens/CreditsButton.png" id="5_m2tcv"]
@@ -25,6 +25,7 @@ offset_bottom = 525.0
 script = ExtResource("2_8mqn5")
 
 [node name="StartButton" type="TextureButton" parent="Control"]
+layout_mode = 0
 offset_left = -131.0
 offset_top = -44.0
 offset_right = 119.0
@@ -34,6 +35,7 @@ texture_normal = ExtResource("2_4gtxw")
 texture_pressed = ExtResource("4_m2tcv")
 
 [node name="CreditsButton" type="TextureButton" parent="Control"]
+layout_mode = 0
 offset_left = -101.0
 offset_top = 77.0
 offset_right = 149.0
@@ -43,6 +45,7 @@ texture_normal = ExtResource("5_m2tcv")
 texture_pressed = ExtResource("6_3ikvq")
 
 [node name="QuitButton" type="TextureButton" parent="Control"]
+layout_mode = 0
 offset_left = -46.0
 offset_top = 182.0
 offset_right = 204.0

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="JayFinalYearProject"
-run/main_scene="uid://8u2kg16u74ae"
+run/main_scene="uid://qtpajjc2cloa"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [display]

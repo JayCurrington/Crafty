@@ -1,7 +1,6 @@
 extends Node2D
 class_name InventoryHolder
 
-var inventoryItem = preload("res://InventoryItem.tscn")
 var waitingForItem = false
 var waitingPlayer
 

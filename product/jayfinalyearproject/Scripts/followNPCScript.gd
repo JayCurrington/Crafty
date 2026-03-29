@@ -22,6 +22,7 @@ func _ready() -> void:
 	navAgent.max_speed = speed
 
 func _physics_process(delta: float) -> void:
+	print(delta)
 	
 	if self.position.distance_to(player.getLocation()) < 5 and holdingItem == null:
 		chasingCounter = 150
