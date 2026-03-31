@@ -68,8 +68,8 @@ func craftRecipe():
 			InventoryObj.removeFromInventory(i)
 			print(i)
 		InventoryObj.addToInventory(recName, durability)
-	print("CLICKED")
-	pass
+		return true
+	return false
 	
 func updateString():
 	var tempText = showString

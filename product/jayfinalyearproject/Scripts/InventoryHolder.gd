@@ -28,6 +28,7 @@ func requestItem(player):
 	waitingForItem = true
 	self.visible = true
 	waitingPlayer = player
+	
 func cancelRequest():
 	waitingForItem = false
 	

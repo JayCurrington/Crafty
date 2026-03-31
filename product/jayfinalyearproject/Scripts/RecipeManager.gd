@@ -83,7 +83,15 @@ func selectRecipe(recipe):
 	
 func craftRecipe():
 	if currentSelectedRecipe != null:
-		currentSelectedRecipe.craftRecipe()
+		return currentSelectedRecipe.craftRecipe()
+		
+func getRecipes():
+	return recipeHolder.get_children()
+	
+func getCurrentRecipe():
+	return currentSelectedRecipe
+	
+
 	
 
 	

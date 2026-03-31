@@ -148,6 +148,7 @@ func recieveItem(item):
 		for i in nearObject:
 			if i.getObjectType() == "NPC":
 				i.recieveItem(item)
+				return item 
 
 
 func stealRandomItem():
