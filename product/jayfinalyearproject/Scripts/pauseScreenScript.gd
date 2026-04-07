@@ -3,11 +3,19 @@ extends Node2D
 var pauseHold = false
 @onready var ResumeButton = $"MainMenuScreen/Control/ResumeButton"
 @onready var QuitButton = $"MainMenuScreen/Control/QuitButton"
+@onready var ControlsButton = $"MainMenuScreen/Control/ControlsButton"
+@onready var BackButton = $"ControlScreen/Control/backButton"
+
+@onready var menuScreen = $"MainMenuScreen"
+@onready var controlScreen = $"ControlScreen"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	ResumeButton.pressed.connect(resumeScene)
 	QuitButton.pressed.connect(quitGame)
+	ControlsButton.pressed.connect(controlMenu)
+	BackButton.pressed.connect(backToMenu)
+
 	pass # Replace with function body.
 
 func resumeScene():
@@ -22,6 +30,16 @@ func resumeScene():
 	
 func quitGame():
 	get_tree().quit()
+	
+func controlMenu():
+	menuScreen.visible = false
+	controlScreen.visible = true
+	
+func backToMenu():
+	menuScreen.visible = true
+	controlScreen.visible = false
+	
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

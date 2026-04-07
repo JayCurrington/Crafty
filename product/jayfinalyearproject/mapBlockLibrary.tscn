@@ -407,7 +407,7 @@ cull_mode = 2
 albedo_texture = ExtResource("10_mccvf")
 roughness = 0.5
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_j6lko"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_7yrdh"]
 _surfaces = [{
 "aabb": AABB(-1, -1, -1, 2, 2, 2),
 "format": 34896613377,
@@ -437,7 +437,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("/////wAA//8AAP///////wAA//8AAP///////////////wAA////vwAA//////+//////////78AAAAA////vwAAAAD//1TVAAD//wAAVNUAAP////9U1QAAAAAAAFTVAAAAAAAA/7///wAA////v///AAAAAP+/AAAAAP///7///wAAAABU1f///////1TV/////wAAVNX//wAA//9U1QAAAAAAAP///////wAA//8AAP//AAD/////AAAAAP///3//v/9//7//f/+//3//v/////////////////////9U1VTVVNVU1VTVVNVU1VTVAAD/fwAA/38AAP9/AAD/f6oqqiqqKqoqqiqqKqoqqir/v/+//7//v/+//7//v/+/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_j6lko")
+shadow_mesh = SubResource("ArrayMesh_7yrdh")
 
 [node name="Node3D" type="Node3D"]
 
@@ -562,7 +562,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("BoxShape3D_i2nj0")
 
 [node name="dirt" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+transform = Transform3D(8.74228e-08, 2, -1.74846e-07, 2, -8.74228e-08, 0, -7.64274e-15, -1.74846e-07, -2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ufxgj")
 skeleton = NodePath("")
 

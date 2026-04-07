@@ -7,13 +7,14 @@ extends Control
 func _ready() -> void:
 	StartButton.pressed.connect(startScene)
 	QuitButton.pressed.connect(quitGame)
+	CreditsButton.pressed.connect(creditScene)
 	pass # Replace with function body.
 
 func startScene():
 	get_tree().change_scene_to_file('res://main.tscn')
 	
 func creditScene():
-	get_tree().change_scene_to_file('res://main.tscn')
+	get_tree().change_scene_to_file('res://creditsScene.tscn')
 	
 func quitGame():
 	get_tree().quit()
