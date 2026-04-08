@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://b04m253852nkt"]
 
-[ext_resource type="Script" uid="uid://bskvpc76v3msl" path="res://creditSceneScript.gd" id="1_r26no"]
+[ext_resource type="Script" uid="uid://bskvpc76v3msl" path="res://Scripts/creditSceneScript.gd" id="1_r26no"]
 [ext_resource type="Texture2D" uid="uid://cwk3ma0jhavhn" path="res://AssetImages/MenuScreens/CreditsScreen.png" id="2_u3chi"]
 [ext_resource type="Texture2D" uid="uid://b4muxy0rcvf3f" path="res://AssetImages/MenuScreens/BackButton.png" id="3_te62q"]
 [ext_resource type="Texture2D" uid="uid://nhphobwqv7fd" path="res://AssetImages/MenuScreens/BackButtonAlt.png" id="4_v7dfp"]
@@ -24,6 +24,7 @@ offset_right = 28.0
 offset_bottom = 48.0
 
 [node name="backButton" type="TextureButton" parent="CreditsScreen/Control"]
+layout_mode = 0
 offset_left = -1349.73
 offset_top = 487.44
 offset_right = -1204.73
@@ -48,6 +49,7 @@ offset_right = 28.0
 offset_bottom = 48.0
 
 [node name="backButton" type="TextureButton" parent="ControlScreen/Control"]
+layout_mode = 0
 offset_left = -772.381
 offset_top = 282.296
 offset_right = -627.381

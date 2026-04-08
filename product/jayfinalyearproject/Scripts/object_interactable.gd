@@ -41,7 +41,7 @@ func getObjectType():
 		
 func isPickedUp():
 	self.visible = false
-	regenTime = 300
+	regenTime = 1000
 	if player != null:
 		player.objectGone(self)
 	

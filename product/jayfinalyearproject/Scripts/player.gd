@@ -19,8 +19,12 @@ var walkRot = 1
 var walkTrack = 0
 var talking = false
 var waitingForItem = false
+var startLocation
 
 var kudos = 0
+func _ready():
+	get_tree().paused = false
+	startLocation = self.position
 
 #Automatically called by the engine when scene run and is called on fix time ints - related to gameplay loop
 func _physics_process(delta):
@@ -52,7 +56,6 @@ func playerMovement(delta):
 		direction = direction.normalized()
 		# Setting the basis property will affect the rotation of the node. - makes player look around
 		$Pivot.basis = Basis.looking_at(direction)
-		
 		walkWobble()
 	else:
 		$Pivot.rotation.z = 0;
@@ -159,3 +162,6 @@ func cancelWait():
 
 func getLocation():
 	return self.position
+	
+func sendToStart():
+	self.position = startLocation

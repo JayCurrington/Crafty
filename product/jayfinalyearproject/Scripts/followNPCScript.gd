@@ -9,7 +9,7 @@ var type = "followNPC"
 
 
 var waypointCounter = 0
-var waypoints = [Vector3(-10,1,3), Vector3(0,1,3), Vector3(-10,1,13)]
+@onready var waypoints = [self.position+ Vector3(-10,0,0), self.position+Vector3(0,0,10),self.position+ Vector3(-10,0,10)]
 var defaultLocation = Vector3(-10,1,3)
 var speed = 8
 var chasingCounter = 1
@@ -20,9 +20,10 @@ var dialougeCounter =0
 
 func _ready() -> void:
 	navAgent.max_speed = speed
+	
+	
 
 func _physics_process(delta: float) -> void:
-	print(delta)
 	
 	if self.position.distance_to(player.getLocation()) < 5 and holdingItem == null:
 		chasingCounter = 150
@@ -32,7 +33,7 @@ func _physics_process(delta: float) -> void:
 		chasingCounter-=1
 		if self.position.distance_to(player.getLocation()) < 1.26 and holdingItem == null:
 			print("STOLEN")
-			chasingCounter=-1
+			chasingCounter = -1
 			holdingItem = player.stealRandomItem()
 #tell the player what it took
 			print(holdingItem)
@@ -48,10 +49,11 @@ func _physics_process(delta: float) -> void:
 			
 	else:
 		navAgent.target_position = waypoints[waypointCounter%waypoints.size()]
-		if(self.position.distance_to(waypoints[waypointCounter%waypoints.size()])<0.5):
+		if(self.position.distance_to(waypoints[waypointCounter%waypoints.size()])<1):
 			holdingItem = null
 			waypointCounter+=1
 			
+		
 	
 	if dialougeCounter < len(dialouge):
 		dialougeCounter +=1

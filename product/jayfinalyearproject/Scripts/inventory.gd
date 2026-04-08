@@ -23,10 +23,8 @@ func _process(delta: float) -> void:
 	
 #Removes one at a time or if no more, removes child.
 func removeFromInventory(item):
-	print("you made it here")
 	for c in self.get_children():
 		if c.getType() == item:
-			print("removing type: ", item)
 			if c.getCurrentDurability() == 1:
 				if c.getCount()<=1:
 					self.remove_child(c)
@@ -36,6 +34,7 @@ func removeFromInventory(item):
 			else:
 				c.decreaseDurability()
 	
+#removes a random item from inventory
 func removeRandom():
 	var allItems = self.get_children()
 	var itemType = null

@@ -22,7 +22,6 @@ func _process(delta: float) -> void:
 	
 func makeCharacter():
 	for i in charList:
-		print("Hello")
 		var newCharacter = NPCItem.instantiate()
 		self.add_child(newCharacter)
 		newCharacter.setName(i.Name)

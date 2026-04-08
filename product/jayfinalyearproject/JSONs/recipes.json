@@ -72,6 +72,10 @@
 			"Description":"A good mix for potting all your plants. It might grow some unexpected additions to your gardem though."
 		},
 		{
+			"Name": "Mulch","Durability":1, "Ingredient1":"Sticks", "Ingredient2": "Axe", "Ingredient3": "None", 
+			"Description":"A good mix for potting all your plants. It might grow some unexpected additions to your gardem though."
+		},
+		{
 			"Name": "Rags","Durability":1, "Ingredient1":"Cloth", "Ingredient2": "Scissors", "Ingredient3": "None", 
 			"Description":"It's a shame to cut this fabric up but these will be good for cleaning up messes."
 		},

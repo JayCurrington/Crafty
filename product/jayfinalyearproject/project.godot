@@ -14,6 +14,10 @@ config/name="JayFinalYearProject"
 run/main_scene="uid://qtpajjc2cloa"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
+[autoload]
+
+AudioPlayer="*res://audioPlayer.gd"
+
 [display]
 
 window/size/viewport_width=1600
@@ -87,3 +91,4 @@ pause={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+occlusion_culling/use_occlusion_culling=true

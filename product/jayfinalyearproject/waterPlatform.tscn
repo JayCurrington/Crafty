@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://hcvlfvb7075k"]
+
+[ext_resource type="Texture2D" uid="uid://bswax4wg7qq5j" path="res://AssetImages/MapItems/waterBase.png" id="1_15ys7"]
+[ext_resource type="Script" uid="uid://yaikpo5smq5p" path="res://Scripts/waterScript.gd" id="1_f3qyw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f3qyw"]
+
+[node name="Node3D" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+script = ExtResource("1_f3qyw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.56)
+shape = SubResource("BoxShape3D_f3qyw")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+texture = ExtResource("1_15ys7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
