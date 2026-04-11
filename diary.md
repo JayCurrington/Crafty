@@ -1,84 +1,183 @@
 # Diary Entries FYP:
+
 # Term 2
 
-## 27 Febuary 2026
+
+## 10 April 2026
+
+Editing the Report. An issue with the graphics has been found by a tester. I am unable to reproduce the issue and may be related to outdated windows version or unzipping errors. Report will be finished editing tomorrow and video will be filmed soon. Other testers have found various bugs which have been fixed. All assets were added this week and the json files were fixed. Things such as NPC waypoints, item spawning times, and kudos requirement have changed as the game has been prepped for the final build. I have also added export templates for the export which come from Godot's website and allow the export to build the correct files.
+
+
+## 5 April 2026
+
+Had a meeting with David. After reading the comments on my first draft of my report, I reformatted the draft and will fix some of the formatting. There are some areas to alter, the game programming patterns section, finishing some unfinished paragraphs, and a section about testing the game. Due to extension, deadline has been moved to 15th of April. Decided to create some automatic tests for the inventory system and crafting system and have playtesters when the game is completed. I will be editing and finishing incomplete sections of the report. Based off feedback, I am feeling good about my report as the main issues are formatting and editing and not content.  
+
+
+## 30 March 2026
+
+Report draft almost compete, in the process of finishing up code descriptions. Some images will have to be added later including drawings of code. It will not be very well edited for review, but the general format and direction is there. I am applying for the 5 day extension tomorrow. I will take a few days to work on my one other assignment and then continue to edit the report and code. I have altered some of the code as I write and realise some needed alterations.
+
+
+## 25 March 2026
+
+Report writing is the main focus. I am feeling slightly behind but will be able to get my draft of the report to my advisor by Monday for the meeting. I have added the sections from my interim report, began the professional issues, and added to the game engines talking about them more in depth. I am adding more code explanations and professional issues section about plagiarism. I will continue to focus on the report as my main focus. Other modules are winding down and I am able to focus on working on this.
+
+
+
+## 22 March 2026 
+
+Retextured player model on blender to have rendered colours within Godot. Fixed NPC so they now actually take the item from player when given the correct item. Also added all the menus and buttons. Should have made a script for each button, but each menu has a script instead. This works but has some repeated code. Some menu buttons are incomplete since they haven't been created yet. Player glitches at the beginning of the game when falling, not sure why but I will attempt to resolve that. Added durability to items after a recommendation from my project advisor. Lots of busywork to be completed to get the game running, however, the game is playable and most busywork is bug fixes and assets. Will be writing report in the following days and will be scheduling a meeting to talk about first draft edits.
+
+
+## 19 March 2026
+
+Added kudos so that the number of NPCs the player has helped is tracked and shown on screen. They show at the top of the screen and when you help all the NPCs, they give you a raft. This means the game can end and the player has to play the whole thing. Need to make the raft not be able to be stolen by the thiefs since that will break the game. Also need to add menu and pause screens with quit buttons to exit the game since they are easy to forget. Added gridmap, I need to alter some blender files to fix orientation. The gridmap will allow the NPCs to pathfind to the player and makes building the map easier. I am feeling good about the game progress but I need to make sure I am on top of the progress. I am planning on taking an extension to the project to make sure the game is fully completed.
+
+
+## 12 March 2026
+
+Finished NPCs that take an item from the player and checks if it is what it wants. This then takes the item away from the player. They also say the lines on screen one letter at a time when spoken to with a next button to go to the next dialogue. I need to add in more NPCs onto the map once the map is built. I am catching up slightly, I will be adding NPCs that walk around and follow the player and takes things from the inventory. I will look into Godot's pathfinding system.
+
+
+## 8 March 2026
+
+NPCs are now being made as a prototype class with a NPC maker. The JSON file holds their information and dialogue. They also interact with the player, they only print that the player interacts. I need to show dialogue later. Personal reasons have led to slow development, I had to go back to my home country for a while. Will get back on track to catch up. I have looked at the next few programming patterns and will write those sections up in the next few days.
+
+
+
+## 27 February 202634
+
 Just completed meeting with David. My project is running behind but we spoke about what needs to be done to feel confident about my project submission. NPCs will be implemented and they will give the player puzzles. The point of the next three weeks is to make a fun game. If I have time I will make an NPC that steals from the player as a pickpocket NPC. I also will need to complete the map and make the game enviornment more enjoyable. I have fully completed the crafting system and will only be making minor tweaks to it. Music has been implemented. Recipes will need to be added later in development. I need to work on my time management and get my NPCs done quickly so I can focus on my report in the final few weeks.
 
-## 14 Febuary 2026
-Inventory can now be toggled on and off with "I". Godot does not use 2D arrays, I have decided to format my recipes as a JSON file. This JSON will be read by a recipeMaker program which will decide which recipes are made and placed into the crafting menu. All the recipes will have three elements. When the player has one of the three, the recipe appears, when the player has all three, they are able to craft the recipe and the item will appear in their inventory. This has yet to be fully implemented. Currently the JSO file can be read and the recipe base object has been made for the recipe maker to fill out. My goal is to finish this crafting system by the end of this week and start on an enemy system after.
 
-## 10 Febuary 2026
+## 14 February 2026
+
+Inventory can now be toggled on and off with "I". Godot does not use 2D arrays, I have decided to format my recipes as a JSON file. This JSON will be read by a recipeMaker program which will decide which recipes are made and placed into the crafting menu. All the recipes will have three elements. When the player has one of the three, the recipe appears, when the player has all three, they are able to craft the recipe and the item will appear in their inventory. This has yet to be fully implemented. Currently the JSON file can be read and the recipe base object has been made for the recipe maker to fill out. My goal is to finish this crafting system by the end of this week and start on an enemy system after.
+
+
+## 10 February 2026
+
 Items now randomised and asset textures line up with type. Inventory working properly. I have began mapping out what the recipies will look like for crafting. I have a few options: Make each recipe a seperate node, each made and showing up in the crafting menu, figure how to connect a database with the title and components and then connect that to the inventory, so that it can pull craftable recipies to the crafting menu, and finally, use a type object of recipe and make individual recipie types that fill out based on criteria. I also have to decide how I portray to the user what can be crafted and if all recipies are shown or only ones where the user has one or more of the items needed to craft it. I am still behind, however now I have a working inventory, I can set myself in the correct direction for steady progress. 
 
-## 8 Febuary 2026
-Issue with child of items resolved. After four days of working on this bug, the issue was a second instance of a singleton variable. Instead of grabbing a pointer to the singleton, the player node was making a second instance of this node. This meant that there was a second, incorrectly instntiated inventory in which the player was attempting to add children nodes to. This was causing issues with the node tree and led to the setback. Because of this setback, I am behind on my work. I am unable to schedule a meeting with my advisor this week due to personal commitments, however I will plan on making a meeting next week to talk about my progress and unease about the timing behind the work I have done currently.
 
-## 2 Febuary 2026
-I have had a few personal issues recently, this has set me back on my timeline. I am having issues having children items of the inventory show up and am currently working on fixing those. I need to figure out the way that Godot makes child nodesin order to figure how to manipulate them. This weekend I plan on completeing a written section on games, this inventory showing items, and a last little segment on game programming patterns. I need to keep in mind more places in which I am using game programming patterns throughout my code. I plan on meeting with my advisor next week or the week after to reconvine and talk about my planning schedule.
+## 8 February 2026
+
+Issue with child of items resolved. The issue was a second instance of a singleton variable. Instead of grabbing a pointer to the singleton, the player node was making a second instance of this node. This meant that there was a second, incorrectly instntiated inventory in which the player was attempting to add children nodes to. This was causing issues with the node tree and led to the setback. Because of this setback, I am behind on my work. I am unable to schedule a meeting with my advisor this week due to personal commitments, however I will plan on making a meeting next week to talk about my progress and unease about the timing behind the work I have done currently.
+
+
+## 2 February 2026
+
+I have had a few personal issues recently, this has set me back on my timeline. I am having issues having children items of the inventory show up and am currently working on fixing those. I need to figure out the way that Godot makes child nodes in order to figure how to manipulate them. This weekend I plan on completing a written section on games, this inventory showing items, and a last little segment on game programming patterns. I need to keep in mind more places in which I am using game programming patterns throughout my code. I plan on meeting with my advisor next week or the week after to reconvine and talk about my planning schedule.
+
 
 ## 28 January 2026
-Over break and this first week back, I have added some graphics, and began properly formatting the inventory items. Due to personal reasons I fell behind over break. To catch up, I need to finish formatting items, figure easy graphics implemetation, and write a segment on my reference games.
+
+Over break and this first week back, I have added some graphics, and began properly formatting the inventory items. Due to personal reasons I fell behind over break. To catch up, I need to finish formatting items, figure easy graphics implementation, and write a segment on my reference games.
+
 As of today, I am on track to have the inventory and images implemented with plans of writing end of the week or start of next if I have no time.
+
+
 
 # Term 1:
 
+
 ## 12 December 2025
+
 Report and retrospective took longer than expected. Video has been listed on YouTube at https://www.youtube.com/watch?v=WFEr_yzgYOc. The report and retrospective are ready to be submitted. I finished up the last few bits of code cleanup and interaction today. I am aware these changes are late, and I will strive to complete code on a more timely basis going forward. I will do one go-over of the diary with a spell check, and then create the zip file for submission.
 
+
 ## 10 December 2025
+
 I aim to finish the first draft of my retrospective, report, and script for my video today. I am mostly complete with my report and retrospective. I completed the last of my coding. The player now has an inventory system that will be altered early next term to use a type object programming pattern. The way objects are stored in the inventory is by storing the data as an array of two-element arrays, which are formatted [type, quantity]. Tomorrow I will film the video and complete my editing so that they can be submitted late tomorrow or at the latest, Friday morning.
 
+
 ## 8 December 2025
+
 I have been primarily working on my report and retrospective. I have completed the last small chunk of reading on game programming patterns, and I am now focusing on the writing itself and preparing for my presentation.
 
+
 ## 4 December 2025
+
 When the player presses the \'E\' button, the object currently being detected disappears. The player does not keep track of the objects it has picked up, and the object does not get removed, just disappears. My presentation for the Viva is mostly complete. Had a meeting with David today, I was concerned with the possibility of the code I have written being under the expected amount due to how streamlined GDScript is; however, he assured me that due to the game engine having other elements, and that I have completed all my goals, I will be okay. I will be sure to make sure I finish up the inventory.
 
+
 ## 26 November 2025
+
 While I still feel behind, I am happy with the progress I have made today to catch up. I have been struggling a lot to find a proper Godot tutorial and documentation for their 3D objects. Due to it primarily being a 2D platform until recently, a majority of the developers, and in turn, forum questions, documentation, and useful tutorials are for 2D games, which this is not. While I am able to adapt some of these resources into my 3D game, it is far from easy and takes quite a bit of troubleshooting and trying to find the correct wording to find what I need. Today I got my player to interact with an object. The pickup is not quite working, but when a player walks in the vicinity of an object, the object will tell the player, and in turn, a menu will show up saying press E to pick up. This is great progress, and I am approaching the end of what I intended to implement for the first term.
 
+
 ## 25 November 2025
+
 The report has about 1000 words, being written on Google Drive, so not being uploaded to GitHub yet. I will add a version when it is completed. I have been finding research to be going much better since switching my focus. Tomorrow I will work more on the programming side rather than the research, as I need more code for my interim report. The research aspect is much more time-consuming than expected, and I am having the opposite issue than expected, where my programming is coming second to my research.
 
+
 ## 23 November 2025
+
 Swamped currently with other uni work. I am feeling behind on my research for this. While this is stressful, I plan on getting parts of my report together and seeing what major gaps I can fill rather than focusing on small technical bits. The technicalities can come later.
 
+
 ## 20 November 2025
+
 Issues with the graphics driver. Godot is having issues with Vulkan. I have swapped the default driver and will need to look into what exactly the issue is. Only collision meshes and no rendered files are showing for a while. Swapped to DirectX as my default driver, and issues were fixed.
 
+
 ## 14 November 2025
+
 Decided that the indie game research wasn\'t going in the direction I intended. I wanted to look at indie game development and trends of games released and team sizes; however, I was struggling to find resources, so I have changed my research to in-game crafting systems. This will be relevant to my project as I am using crafting as a main feature. I have lost time to this difficulty with researching and not finding resources that feel relevant enough to the programming of this project. I will be working on code this weekend and catching up on research.
 
+
 ## 10 November 2025
+
 Read up on the relevance of Godot in the game programming sphere. I am feeling slightly stressed about my progress, as the last week has been full of coursework from other classes. I am hoping to catch up on my research; however, I also need to begin to focus on specific elements that are needed in the report for the end of term. I am also catching up on programming; however, there are more available resources for programming than for research. I am a tad concerned that my research should be more focused on programming and development, so I will steer in that direction.
 
+
 ## 3 November 2025
+
 Began reading up on indie games and what classifies as an indie game. I am struggling to find research that is relevant to both programming and indie game development. I would like to read more specifically on Godot\'s impact on indie games and game development; however am struggling to find relevant articles. I am also struggling to find relevant articles that are not web blogs or videos. I also wrote a section about Potion Permit. I am behind on my game references but on track with the rest of my research.
 
+
 ## 30 October 2025
+
 Before my meeting with my advisor, I was sure to have a section about game programming patterns complete. While unedited, it covers 5/6 main design patterns. I will need more about this in the future. Had a meeting with the advisor, which went very well. Talked about timing and yet again moved the timeline around. Spoke about project progress, and I was glad to hear I am on track.
 
+
 ## 28 October 2025:
+
 Writing a paragraph today. It will be done by tomorrow. Laptop charger is finally working, allowing me to work while not on my desktop PC, which means more productivity. I have re-worked my plan with my advisor and am looking for a meeting this Thursday with him to talk in person.
 
+
 ## 24 October 2025:
+
 Forgot to log in the digital diary, so I am preemptively adding my written journal entry. I am behind on my research, will be reading through library books and writing paragraph on the game programming patterns this week/weekend. Will also add player interaction with objects if time allows this week.
 
+
 ## 20 October 2025:
+
 Added in the player movement, the player can now walk, jump, and look in the direction of movement. The camera follows the player; however player's jump creates weird movement with the camera. The Player model has been made and may be tweaked later. Godot's proof of concept is on track. Next implementation will be the ability to interact with objects and fix the camera.
 
+
 ## 16 October 2025:
+
 Other coursework has taken much more time than expected. I have created a Godot environment, and I will begin the programming on that, with a movable player by Monday. Research has been going much slower than expected. Will resume over the weekend and into the next week. I will have a small paragraph outlining what a game programming pattern is and an example from a real game in which one was likely used by Monday afternoon. My laptop is currently broken, inhibiting progress slightly; however, a new charger has been ordered and will hopefully fix the issue within the next few days. If the issue is not resolved tomorrow, I will reference my risks and mitigations and work through my technological failure mitigation.
 
+
 ## 9 October 2025:
+
 Abstract, risks and mitigations, timeline, and bibliography complete and will be turned in tonight. This weekend, I plan on working on some basic game feature lists, finding my reference games, and beginning to look into video game design patterns.
 
+
 ## 7 October 2025:
+
 I have continued to write my assertion. I am slightly behind schedule with my abstract, as the research needed has been more than expected; however, I am ahead of schedule with my resource list for my bibliography. My research has centered around game engines and the pros and cons of the different ones. I still need some research on game programming design. I will be completing my abstract tonight, if not tomorrow morning, and beginning my risk assessment tomorrow.
 
+
 ## 4 October 2025:
+
 On Thursday, I had my meeting with my advisor. The meeting went to plan, confirmed I was on the right track with my ideas. I have began my week by week plan and will complete that this weekend, as well as beginning my abstract. This upcoming week, I have to complete my risk assessment and project abstract. I plan on completing my abstract by Wednesday and the risk assessment by Thursday. It is important to keep on top of the project at this point as to not fall behind as I plan. The project plan is due on the 10th.
 
+
 ## 29 September 2025:
+
 I have begun planning my project. I have a meeting scheduled with my advisor for Thursday and hope to have a large chunk of my plan complete before then. I also plan on writing a list of questions and advice I would like for this meeting, so it can go as seamless as possible. I am currently working towards deciding the basics of my project, such as the program I will use for development, focuses of my report and research, my timeline, and books and resources I will use. I am also looking into what existing games I will analyse technically and break down to use as inspiration.
+
 
