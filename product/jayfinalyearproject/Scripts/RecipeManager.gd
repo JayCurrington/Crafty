@@ -79,6 +79,8 @@ func checkAllRecipes(inventory):
 			print("Can't make this yet")
 	
 func selectRecipe(recipe):
+	if currentSelectedRecipe != null:
+		currentSelectedRecipe.deselect()
 	currentSelectedRecipe = recipe
 	
 func craftRecipe():

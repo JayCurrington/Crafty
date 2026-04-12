@@ -4,6 +4,7 @@ var components = []
 var craftable
 var description = "There is currently no description"
 var durability = 1
+@onready var selected = $"SelectionBox"
 
 var showString = "[b]nameTemp[/b]\n descTemp\n \n Components:\n - comp1\n - comp2\n - comp3"
 
@@ -102,6 +103,10 @@ func wasClicked():
 	if recName != "None":
 		RecipeMaker.selectRecipe(self)
 		updateString()
+		selected.visible = true
+
+func deselect():
+	selected.visible = false
 
 	
 	
