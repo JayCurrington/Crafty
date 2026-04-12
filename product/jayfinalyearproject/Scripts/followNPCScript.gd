@@ -40,7 +40,10 @@ func _physics_process(delta: float) -> void:
 			dialougePanel.set_tab_title(0,"Theif")
 			dialougeCounter = 0
 			if holdingItem!= null:
-				dialouge = "Ha! I stole your "+ holdingItem+". Hope you didn't need that...          "
+				if holdingItem == "Raft":
+					dialouge = "Oh, a raft? I won't take that.          "
+				else:
+					dialouge = "Ha! I stole your "+ holdingItem+". Hope you didn't need that...          "
 			else:
 				holdingItem = "None"
 				dialouge = "Oh... you don't have anything. That's kind of sad.          "

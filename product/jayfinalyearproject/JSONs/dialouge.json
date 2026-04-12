@@ -9,9 +9,15 @@
 		
 		{
 			"Name": "Liz", "DesiredItem": "Raft", "Location":[-18, 0.5, 2.5],
-			"Dialouge1":["Hey, I'm Liz", "I heard you washed up on the shore here. We don't see many 3D people here so please excuse our shock.", "Welcome to our little village. Unfortunately, our craftsman went on a trip and hasn't come back.", "I was planning on going on an adventure but I couldnt possibly leave now.", "Can you help us out? There's not many of us around, only about five others.", "When you're done, come by and if you have a way off the island, I can show you to the way back to the 3D world.", "Do you have what I want?"],
+			"Dialouge1":["Hey, I'm Liz", "I heard you washed up on the shore here. We don't see many 3D people here so please excuse our shock.", "Welcome to our little village. Unfortunately, our craftsman went on a trip and hasn't come back.", "I was planning on going on an adventure but I couldn't possibly leave now.", "Can you help us out? There's not many of us around, only about six others.", "When you're done, come by and if you have a way off the island, I can show you to the way back to the 3D world.", "Do you have what I want?"],
 			"DialougeSuccess":["This is perfect!", "I'll prepare it for our journey", "If everyone's okay, we'll get going."],
 			"DialougeFail":["I don't think I'd know how we'd leave with that.", "Come back with a way to leave."]
+		},
+		{
+			"Name": "Karen", "DesiredItem": "Trousers", "Location":[76, 4.5, -73],
+			"Dialouge1":["Hi sweetheart.", "I don't know what is up with the island recently but everyone has been so unfashionable.", "Maybe you could replace some of my old wardrobe... I did just buy a new shirt though...", "Do you have what I want?"],
+			"DialougeSuccess":["Oh sweetie! This is great", "Thank you kindly."],
+			"DialougeFail":["I don't love those, sorry sweetie.", "I'll see you later."]
 		},
 		
 		{

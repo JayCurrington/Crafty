@@ -6,4 +6,6 @@ func _ready():
 	play()
 	
 func _process(delta: float) -> void:
+	if playing == false:
+		play()
 	print("MUSICCC")

@@ -10,11 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://b2i3vrkrioq5l" path="res://menu.tscn" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://dlgy552x0tl3v" path="res://followNPC.tscn" id="8_efxa6"]
 [ext_resource type="Script" uid="uid://fpdq1f72cbjn" path="res://Scripts/itemMakerScript.gd" id="11_dg77c"]
-[ext_resource type="Texture2D" uid="uid://qtxryuqmcnep" path="res://AssetImages/MapItems/Untitled_Artwork 1-scaled.png" id="13_w48qg"]
 [ext_resource type="MeshLibrary" uid="uid://cnesu3g2ixtmc" path="res://meshLibrary/NewMeshLibrary.res" id="13_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://cb14180dvux20" path="res://AssetImages/MapItems/BlueHouse.png" id="14_82xsv"]
-[ext_resource type="Texture2D" uid="uid://cnfr81h30nh28" path="res://AssetImages/MapItems/Untitled_Artwork-scaled.png" id="15_getpj"]
+[ext_resource type="Texture2D" uid="uid://brdl6nam1tcg2" path="res://AssetImages/MapItems/Bush.png" id="17_074og"]
 [ext_resource type="Texture2D" uid="uid://bcgd7frbvv3hv" path="res://AssetImages/MapItems/YellowHouse.png" id="17_ryguw"]
+[ext_resource type="Texture2D" uid="uid://wvglg1cih5ms" path="res://AssetImages/MapItems/Tree.png" id="18_074og"]
 [ext_resource type="Texture2D" uid="uid://cynmcgwpe5l02" path="res://AssetImages/MapItems/RedHouse.png" id="18_d13ii"]
 [ext_resource type="Texture2D" uid="uid://cm5bko66chlfm" path="res://AssetImages/MapItems/TreeCat.png" id="19_1u8w0"]
 [ext_resource type="PackedScene" uid="uid://hcvlfvb7075k" path="res://waterPlatform.tscn" id="19_getpj"]
@@ -53,7 +53,7 @@ script = ExtResource("3_efxa6")
 script = ExtResource("11_dg77c")
 
 [node name="Kudos" parent="." instance=ExtResource("5_efxa6")]
-position = Vector2(70, 70)
+position = Vector2(26, 28)
 
 [node name="Player" parent="." instance=ExtResource("1_0xm2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 27.7696, 25.395)
@@ -108,7 +108,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 4.93416, 81)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62, 0.93416, 77)
 
 [node name="FollowNPC8" parent="." instance=ExtResource("8_efxa6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91, 4.93416, 100)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91, 4.93416, 94)
 
 [node name="FollowNPC9" parent="." instance=ExtResource("8_efxa6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 8.93416, -37)
@@ -489,774 +489,774 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 5, 0)
 
 [node name="Bush" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, -2, -25)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush2" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51, -1, -21)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush3" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, -2, -11)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush4" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62, -2, -5)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush5" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, -1, -1)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush6" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49, -2, 4)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush7" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65, -1, 10)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush8" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, -2, 7)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush9" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49, -2, 16)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush10" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, -2, 26)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush11" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, -1, 33)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush12" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49, -2, 50)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush13" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57, -1, 59)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush14" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, -2, 59)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush15" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54, -1, 73)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush16" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, -1, 93)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush17" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34, -2, 82)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush18" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51, -1, 80)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush19" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31, -2, 70)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush20" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, -2, 52)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush21" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 69)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush22" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -2, 64)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush23" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -2, 31)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush24" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21, -2, 38)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush25" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -1, 38)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush26" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 46)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush27" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 54)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush28" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -2, 44)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush29" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -2, 54)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush30" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -2, 27)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush31" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, -1, 33)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush32" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, -2, 24)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush33" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, -2, 20)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush34" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, -1, 9)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush35" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, -2, 9)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush36" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, -2, -7)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush37" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, -2, -16)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush38" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74, 2, -1)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush39" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71, 2, 4)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush40" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86, 2, 9)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush41" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91, 2, 3)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush42" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92, 2, 13)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush43" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 6, -17)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush44" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 6, -5)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush45" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 6, -22)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush46" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 6, -32)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush47" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 6, -77)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush48" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 6, -53)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush49" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43, 7, -51)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush50" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66, 6, -54)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush51" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 6, -45)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush52" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, 6, -32)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush53" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -109, 6, -38)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush54" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115, 6, -1)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush55" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -95, 7, 9)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush56" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83, 6, 4)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush57" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -125, 2, 12)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush58" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -110, 2, 24)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush59" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114, 2, 41)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush60" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -140, 2, -6)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush61" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -109, 6, 66)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush62" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91, 6, 52)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush63" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, 6, 88)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush64" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122, 3, 102)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush65" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111, 2, 108)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush66" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -87, 2, 95)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush67" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55, 2, 108)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush68" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 2, 106)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush69" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 2, 115)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush70" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 2, 92)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush71" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 2, 85)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush72" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 2, 102)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush73" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 6, 102)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush74" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 6, 95)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush75" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47, 6, 118)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush76" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98, 6, 102)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush77" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63, 6, 130)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush78" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 2, 138)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush79" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 2, 147)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush80" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 113, 2, 96)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush81" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126, 2, 76)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush82" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119, 2, 58)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush83" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62, 2, 40)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush84" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 2, 58)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush85" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69, 2, 48)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush86" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82, 2, 38)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush87" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102, 2, 48)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush88" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 161, 2, 14)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush89" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108, -2, 6)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush90" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 118, -2, -26)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush91" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95, -2, -35)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush92" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123, 2, -50)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush93" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69, 2, -67)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Bush94" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 134, 2, -11)
-texture = ExtResource("15_getpj")
+texture = ExtResource("17_074og")
 
 [node name="Trees" type="Node3D" parent="MapDeatailHolder"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 5, 0)
 
 [node name="Tree" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -26)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree2" type="Sprite3D" parent="MapDeatailHolder/Trees"]
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree3" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 5)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree4" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -10)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree5" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54, 0, -9)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree6" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65, 0, 5)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree7" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47, 0, 15)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree8" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61, 0, 23)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree9" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 0, 27)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree10" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 0, 18)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree11" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 35)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree12" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, 0, 32)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree13" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 0, 40)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree14" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69, 0, 40)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree15" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55, 0, 38)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree16" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 53)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree17" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37, 0, 64)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree18" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 0, 55)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree19" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 49)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree20" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 81)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree21" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 0, 81)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree22" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57, 0, 66)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree23" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 69)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree24" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, 0, 71)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree25" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 98)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree26" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 65)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree27" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 74)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree28" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 35)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree29" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 24)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree30" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 35)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree31" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0, 30)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree32" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 44)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree33" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 41)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree34" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 52)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree35" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 55)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree36" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 0, 41)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree37" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, -9)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree38" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0, 6)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree39" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59, 0, 6)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree40" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 21)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree41" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 0, 18)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree42" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81, 0, 20)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree43" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 4, -4)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree44" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93, 4, 7)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree45" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79, 4, 9)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree46" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 8, -33)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree47" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 8, -15)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree48" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 4, 9)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree49" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 4, 15)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree50" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 4, 53)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree51" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 4, 37)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree52" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62, 4, 44)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree53" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 4, 35)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree54" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91, 4, 43)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree55" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 118, 4, 43)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree56" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107, 4, 51)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree57" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 4, 62)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree58" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 113, 4, 86)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree59" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126, 4, 93)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree60" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 104, 8, 66)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree61" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67, 8, 60)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree62" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 8, 89)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree63" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 8, 108)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree64" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53, 8, 124)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree65" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82, 8, 115)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree66" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79, 4, 129)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree67" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 4, 139)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree68" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 4, 151)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree69" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 4, 110)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree70" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 4, 107)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree71" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 4, 94)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree72" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99, 4, 102)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree73" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -129, 4, 97)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree74" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116, 4, 53)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree75" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -105, 4, 33)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree76" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94, 8, 40)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree77" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -105, 8, 71)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree78" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -105, 8, 5)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree79" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 8, 16)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree80" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 8, -43)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree81" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, 8, -66)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree82" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54, 8, -56)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree83" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78, 8, -36)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree84" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -131, 4, -29)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree85" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -145, 4, -13)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree86" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -135, 4, 3)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree87" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -115, 4, 19)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree88" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 12, -69)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree89" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 8, -51)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree90" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 4, -41)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree91" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 4, -69)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree92" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 4, -78)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree93" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74, 4, -68)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree94" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109, 4, -62)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree95" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 4, -53)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree96" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127, 4, -9)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree97" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 8, 9)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree98" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 153, 4, 18)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")
 
 [node name="Tree99" type="Sprite3D" parent="MapDeatailHolder/Trees"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94, 0, -40)
-texture = ExtResource("13_w48qg")
+texture = ExtResource("18_074og")

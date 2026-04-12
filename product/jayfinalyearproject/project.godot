@@ -10,7 +10,9 @@ config_version=5
 
 [application]
 
-config/name="JayFinalYearProject"
+config/name="Crafty"
+config/description="A Royal Holloway final year project ="
+config/version="1.0"
 run/main_scene="uid://qtpajjc2cloa"
 config/features=PackedStringArray("4.4", "Forward Plus")
 

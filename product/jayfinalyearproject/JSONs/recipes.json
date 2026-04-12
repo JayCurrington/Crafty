@@ -69,11 +69,11 @@
 		},
 		{
 			"Name": "PottingMix","Durability":1, "Ingredient1":"Mulch", "Ingredient2": "Grass", "Ingredient3": "Sand", 
-			"Description":"A good mix for potting all your plants. It might grow some unexpected additions to your gardem though."
+			"Description":"A good mix for potting all your plants. It might grow some unexpected additions to your garden though."
 		},
 		{
 			"Name": "Mulch","Durability":1, "Ingredient1":"Sticks", "Ingredient2": "Axe", "Ingredient3": "None", 
-			"Description":"A good mix for potting all your plants. It might grow some unexpected additions to your gardem though."
+			"Description":"Bits of chopped up wood, surely this is useful somehow.... right?"
 		},
 		{
 			"Name": "Rags","Durability":1, "Ingredient1":"Cloth", "Ingredient2": "Scissors", "Ingredient3": "None", 

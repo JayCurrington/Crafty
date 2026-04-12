@@ -16,9 +16,14 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if kudos.getKudos() == 1 and !canLeave:
-		addToInventory("Raft",1)
+	if kudos.getKudos() == 6:
 		canLeave = true
+		
+		for i in self.get_children():
+			if i.getType() == "Raft":
+				return
+		addToInventory("Raft",1)
+		
 	pass
 	
 #Removes one at a time or if no more, removes child.
