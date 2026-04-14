@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=3 uid="uid://cl854njjfbfc5"]
+
+[ext_resource type="Texture2D" uid="uid://qa1kyschyv3u" path="res://AssetImages/MenuScreens/MainMenuScreen.png" id="1_626fi"]
+[ext_resource type="Script" uid="uid://d1sueu1idk75" path="res://Scripts/pauseScreenScript.gd" id="2_ihmgj"]
+[ext_resource type="Texture2D" uid="uid://c52mncb00gyyb" path="res://AssetImages/MenuScreens/ResumeButton.png" id="3_jtgmu"]
+[ext_resource type="Texture2D" uid="uid://wemo8hgt8ppa" path="res://AssetImages/MenuScreens/ControlsButton.png" id="3_rkflb"]
+[ext_resource type="Texture2D" uid="uid://bjmcv2jh1844" path="res://AssetImages/MenuScreens/ControlsButtonAlt.png" id="4_fsvti"]
+[ext_resource type="Texture2D" uid="uid://5jd7bod4osrh" path="res://AssetImages/MenuScreens/ResumeButtonAlt.png" id="4_rkflb"]
+[ext_resource type="Texture2D" uid="uid://d2h6ol8cwv7tl" path="res://AssetImages/MenuScreens/QuitButton.png" id="5_fsvti"]
+[ext_resource type="Texture2D" uid="uid://cd38nayjokt5s" path="res://AssetImages/MenuScreens/QuitButtonAlt.png" id="6_of1qh"]
+[ext_resource type="Texture2D" uid="uid://bn7jc0atkyx0k" path="res://AssetImages/MenuScreens/ControlScreen.png" id="9_rkflb"]
+[ext_resource type="Texture2D" uid="uid://b4muxy0rcvf3f" path="res://AssetImages/MenuScreens/BackButton.png" id="10_5k405"]
+[ext_resource type="Texture2D" uid="uid://nhphobwqv7fd" path="res://AssetImages/MenuScreens/BackButtonAlt.png" id="11_k2vsg"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("2_ihmgj")
+
+[node name="MainMenuScreen" type="Sprite2D" parent="."]
+position = Vector2(955, 485)
+texture = ExtResource("1_626fi")
+
+[node name="Control" type="Control" parent="MainMenuScreen"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_left = -12.0
+offset_top = 8.0
+offset_right = 28.0
+offset_bottom = 48.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ControlsButton" type="TextureButton" parent="MainMenuScreen/Control"]
+layout_mode = 0
+offset_left = -79.0
+offset_top = 79.0
+offset_right = 176.0
+offset_bottom = 149.0
+scale = Vector2(1.14, 1.14)
+texture_normal = ExtResource("3_rkflb")
+texture_pressed = ExtResource("4_fsvti")
+metadata/_edit_use_anchors_ = true
+
+[node name="ResumeButton" type="TextureButton" parent="MainMenuScreen/Control"]
+layout_mode = 0
+offset_left = -100.0
+offset_top = -35.0
+offset_right = 105.0
+offset_bottom = 35.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("3_jtgmu")
+texture_pressed = ExtResource("4_rkflb")
+metadata/_edit_use_anchors_ = true
+
+[node name="QuitButton" type="TextureButton" parent="MainMenuScreen/Control"]
+layout_mode = 0
+offset_left = -23.0
+offset_top = 165.0
+offset_right = 127.0
+offset_bottom = 235.0
+texture_normal = ExtResource("5_fsvti")
+texture_pressed = ExtResource("6_of1qh")
+metadata/_edit_use_anchors_ = true
+
+[node name="ControlScreen" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(949, 510)
+scale = Vector2(1.20222, 1.20222)
+texture = ExtResource("9_rkflb")
+
+[node name="Control" type="Control" parent="ControlScreen"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_left = -12.0
+offset_top = 8.0
+offset_right = 28.0
+offset_bottom = 48.0
+
+[node name="backButton" type="TextureButton" parent="ControlScreen/Control"]
+layout_mode = 0
+offset_left = -772.381
+offset_top = 282.296
+offset_right = -627.381
+offset_bottom = 370.296
+scale = Vector2(1.14, 1.14)
+texture_normal = ExtResource("10_5k405")
+texture_pressed = ExtResource("11_k2vsg")

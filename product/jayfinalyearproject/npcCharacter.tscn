@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bfen02ck3lrp0"]
 
 [ext_resource type="Script" uid="uid://dk2jtbspqtnt2" path="res://Scripts/NPCScript.gd" id="1_3a7gy"]
-[ext_resource type="Texture2D" uid="uid://h27uamuh1ku3" path="res://AssetImages/MapItems/RockMap.png" id="2_qwpgl"]
+[ext_resource type="Texture2D" uid="uid://bqvllja34rrfo" path="res://AssetImages/MapItems/NPCImages/NPCFred.png" id="2_3a7gy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6lul2"]
 
@@ -14,4 +14,28 @@ shape = SubResource("BoxShape3D_6lul2")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.674104, 0)
-texture = ExtResource("2_qwpgl")
+texture = ExtResource("2_3a7gy")
+
+[node name="DialougePanel" type="TabContainer" parent="."]
+visible = false
+offset_left = 33.0
+offset_top = 647.0
+offset_right = 1108.0
+offset_bottom = 807.0
+scale = Vector2(1.70006, 1.67025)
+current_tab = 0
+
+[node name="DialougeTextBox" type="RichTextLabel" parent="DialougePanel"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="nextButton" type="Button" parent="DialougePanel/DialougeTextBox"]
+layout_mode = 0
+offset_left = 1019.38
+offset_top = 92.9334
+offset_right = 1064.38
+offset_bottom = 123.933
+text = "Next"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

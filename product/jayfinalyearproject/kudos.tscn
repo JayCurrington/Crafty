@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcyxy8hfh2i7g"]
+
+[ext_resource type="Script" uid="uid://budku8shg3xgl" path="res://Scripts/kudosScript.gd" id="1_q7ab4"]
+
+[node name="Kudos" type="Node2D"]
+script = ExtResource("1_q7ab4")

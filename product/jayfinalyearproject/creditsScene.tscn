@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://b04m253852nkt"]
+
+[ext_resource type="Script" uid="uid://bskvpc76v3msl" path="res://Scripts/creditSceneScript.gd" id="1_r26no"]
+[ext_resource type="Texture2D" uid="uid://cwk3ma0jhavhn" path="res://AssetImages/MenuScreens/CreditsScreen.png" id="2_u3chi"]
+[ext_resource type="Texture2D" uid="uid://b4muxy0rcvf3f" path="res://AssetImages/MenuScreens/BackButton.png" id="3_te62q"]
+[ext_resource type="Texture2D" uid="uid://nhphobwqv7fd" path="res://AssetImages/MenuScreens/BackButtonAlt.png" id="4_v7dfp"]
+[ext_resource type="Texture2D" uid="uid://bn7jc0atkyx0k" path="res://AssetImages/MenuScreens/ControlScreen.png" id="5_u3chi"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_r26no")
+
+[node name="CreditsScreen" type="Sprite2D" parent="."]
+position = Vector2(949, 510)
+scale = Vector2(0.682222, 0.682222)
+texture = ExtResource("2_u3chi")
+
+[node name="Control" type="Control" parent="CreditsScreen"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_left = -12.0
+offset_top = 8.0
+offset_right = 28.0
+offset_bottom = 48.0
+
+[node name="backButton" type="TextureButton" parent="CreditsScreen/Control"]
+layout_mode = 0
+offset_left = -1349.73
+offset_top = 487.44
+offset_right = -1204.73
+offset_bottom = 575.44
+scale = Vector2(1.78495, 1.78495)
+texture_normal = ExtResource("3_te62q")
+texture_pressed = ExtResource("4_v7dfp")
+
+[node name="ControlScreen" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(949, 510)
+scale = Vector2(1.20222, 1.20222)
+texture = ExtResource("5_u3chi")
+
+[node name="Control" type="Control" parent="ControlScreen"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_left = -12.0
+offset_top = 8.0
+offset_right = 28.0
+offset_bottom = 48.0
+
+[node name="backButton" type="TextureButton" parent="ControlScreen/Control"]
+layout_mode = 0
+offset_left = -772.381
+offset_top = 282.296
+offset_right = -627.381
+offset_bottom = 370.296
+scale = Vector2(1.14, 1.14)
+texture_normal = ExtResource("3_te62q")
+texture_pressed = ExtResource("4_v7dfp")

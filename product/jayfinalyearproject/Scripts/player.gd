@@ -7,26 +7,35 @@ extends CharacterBody3D
 @onready var InventoryHold : InventoryHolder = get_node("../InventoryHold")
 
 @onready var InventoryObj : Inventory = InventoryHold.getInventory()
-func _ready() -> void:
-	
-	pass
-	
+
 #tracks jumping length 0 means no longer going upwards.
 var jumping = 0
-
 # Tracks nearby interactable object
-var nearObject = null
-
+var nearObject = []
 #3D Vector used across frames for directed speed
 var target_velocity = Vector3.ZERO
-
 #These track the angle of rotation and transform strech for character walking
 var walkRot = 1
 var walkTrack = 0
+var talking = false
+var waitingForItem = false
+var startLocation
 
+var kudos = 0
+func _ready():
+	get_tree().paused = false
+	startLocation = self.position
 
 #Automatically called by the engine when scene run and is called on fix time ints - related to gameplay loop
 func _physics_process(delta):
+	playerMovement(delta)
+	move_and_slide()
+	
+	interactDetect()
+	inventoryDetect()
+	
+
+func playerMovement(delta):
 	#Stores the direction of the player
 	var direction = Vector3.ZERO
 	
@@ -36,7 +45,6 @@ func _physics_process(delta):
 		direction.x += 1
 	if Input.is_action_pressed("move_left"):
 		direction.x -= 1
-
 #The higher the z, the further into the screen the player goes.
 	if Input.is_action_pressed("move_back"):
 		direction.z += 1
@@ -48,15 +56,7 @@ func _physics_process(delta):
 		direction = direction.normalized()
 		# Setting the basis property will affect the rotation of the node. - makes player look around
 		$Pivot.basis = Basis.looking_at(direction)
-		
-		#Make the chaarcter rotate and bounce when walks
-		if(walkTrack >= 5 or walkTrack <= -5 ):
-			walkRot = -walkRot
-		#print(walkTrack, ", ", walkRot)
-		walkTrack += walkRot
-		#This sets all size transform to 1, undoes any scaling done ( otherwise shape will be misshapen after while)
-		$Pivot.rotate_object_local(Vector3(0, 0, 1), 0.05 * walkRot)
-		transform = transform.orthonormalized()
+		walkWobble()
 	else:
 		$Pivot.rotation.z = 0;
 
@@ -80,25 +80,93 @@ func _physics_process(delta):
 	
 	#Actually move the player
 	velocity = target_velocity
-	move_and_slide()
 
-#	Deal with interaction with object:
-	if Input.is_action_pressed("Interact") and nearObject != null:
-		InventoryObj.addToInventory(nearObject.getType())
-		nearObject.isPickedUp()
-		nearObject = null
-		
-		
+
+
+func walkWobble():
+	#Make the chaarcter rotate and bounce when walks
+		if(walkTrack >= 5 or walkTrack <= -5 ):
+			walkRot = -walkRot
+		#print(walkTrack, ", ", walkRot)
+		walkTrack += walkRot
+		#This sets all size transform to 1, undoes any scaling done ( otherwise shape will be misshapen after while)
+		$Pivot.rotate_object_local(Vector3(0, 0, 1), 0.05 * walkRot)
+		transform = transform.orthonormalized()
+
+
+
+func interactDetect():
+	#	Deal with interaction with object:
+	if Input.is_action_pressed("Interact") and len(nearObject) >0:
+		for i in nearObject:
+			if i.getObjectType() == "InventoryItem":
+				InventoryObj.addToInventory(i.getType(),1)
+				i.isPickedUp()
+				nearObject.erase(i)
+				break
+				
+			elif  i.getObjectType() == "NPC":
+				if !talking:
+					talking = true
+					i.talkToPlayer()
+					break
+
+#opens and closes inventory
+func inventoryDetect():
 	if Input.is_action_just_pressed("InventoryOpen"):
-		InventoryHold.OpenClose()
+		InventoryHold.OpenClose("Inventory")
+	if Input.is_action_just_pressed("craftingOpen"):
+		InventoryHold.OpenClose("Crafting")
+func closeInventory():
+	InventoryHold.visible = false
 
-	
-	
+#objects that are near the player, makes 'Press 'e' to interact' show and adds t an arry of nearby oibjects
 func objectHit(object):
-	get_node("interactMenu").visible = true
-	nearObject = object
-	
+	if object.getObjectType() != "followNPC":
+		get_node("interactMenu").visible = true
+		nearObject.append(object)
+
+#Removes item from nearby object array
 func objectGone(object):
-	get_node("interactMenu").visible = false
-	nearObject = null
 	
+	for i in nearObject:
+		if i== object:
+			if i.getObjectType() == "NPC":
+				talking = false
+				waitingForItem = false
+				i.stopTalking()
+				#Cancels NPC asking for item
+				InventoryHold.cancelRequest()
+		nearObject.erase(i)
+	if len(nearObject) == 0:
+		 # if no objects nearby, hides interact menu
+		get_node("interactMenu").visible = false
+
+
+
+#sent by NPC when they want an item from the player
+func requestItem():
+	waitingForItem = true
+	InventoryHold.requestItem(self)
+	
+func recieveItem(item):
+	if waitingForItem:
+		waitingForItem = false
+		for i in nearObject:
+			if i.getObjectType() == "NPC":
+				i.recieveItem(item)
+				return item 
+
+
+func stealRandomItem():
+	return InventoryObj.removeRandom()
+
+func cancelWait():
+	return
+
+func getLocation():
+	return self.position
+	
+#sends to initail location when falls in the water
+func sendToStart():
+	self.position = startLocation

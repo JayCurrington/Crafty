@@ -1,0 +1,88 @@
+[gd_scene load_steps=13 format=3 uid="uid://du1ccfs2c8c53"]
+
+[ext_resource type="PackedScene" uid="uid://cpe01awl8m6vf" path="res://Player.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://tbb1ax644yw6" path="res://wall.tscn" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://byhxvkturnpa2" path="res://Inventory.tscn" id="1_5vw27"]
+[ext_resource type="AudioStream" uid="uid://1ytxvv1ogvru" path="res://MainTheme.ogg" id="1_kek77"]
+[ext_resource type="PackedScene" uid="uid://dlneg0kylm00n" path="res://Camera.tscn" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://b1notf0a2141a" path="res://Scripts/npcMakerScript.gd" id="3_efxa6"]
+[ext_resource type="PackedScene" uid="uid://do5qhmgk5srtp" path="res://floor.tscn" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://clr082r5jsyuf" path="res://Scripts/cameraScript.gd" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cdgknxtl1qu53" path="res://ObjectInteractable.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://b2i3vrkrioq5l" path="res://menu.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://dlgy552x0tl3v" path="res://followNPC.tscn" id="8_efxa6"]
+[ext_resource type="Script" uid="uid://fpdq1f72cbjn" path="res://Scripts/itemMakerScript.gd" id="11_dg77c"]
+
+[node name="Node" type="Node"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_kek77")
+volume_db = 10.0
+autoplay = true
+mix_target = 1
+parameters/looping = true
+
+[node name="InventoryHold" parent="." instance=ExtResource("1_5vw27")]
+visible = false
+position = Vector2(251, 81)
+
+[node name="NPCMaker" type="Node" parent="."]
+script = ExtResource("3_efxa6")
+
+[node name="Player" parent="." instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.76964, 0)
+
+[node name="interactMenu" parent="Player" instance=ExtResource("7_272bh")]
+visible = false
+position = Vector2(768, 336)
+
+[node name="Camera" parent="Player" instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, -0.0476322, 4.09101, 30.7651)
+v_offset = 5.0
+size = 17.038
+script = ExtResource("4_lquwl")
+
+[node name="FollowNPC" parent="." instance=ExtResource("8_efxa6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1, 3)
+
+[node name="Floors" type="Node" parent="."]
+
+[node name="Cliff" parent="Floors" instance=ExtResource("1_1bvp3")]
+transform = Transform3D(42.3842, 2.27924e-07, 2.42877, -5.24015e-06, 3.68706, 0, 42.3842, 2.27924e-07, -2.42877, 17.083, 1.39619, -16.6494)
+
+[node name="FloorUpper" parent="Floors" instance=ExtResource("3_h2yge")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 37.404, 3.23642, -36.3934)
+
+[node name="Floor" parent="Floors" instance=ExtResource("3_h2yge")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
+
+[node name="ItemMaker" type="Node" parent="."]
+script = ExtResource("11_dg77c")
+
+[node name="interactableObj9" parent="." instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0452, 0.52241, 18.7651)
+visible = false
+
+[node name="interactableObj8" parent="." instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1239, 1.01792, 12.1324)
+visible = false
+
+[node name="interactableObj7" parent="." instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8009, 0.508961, 6.06622)
+visible = false
+
+[node name="interactableObj11" parent="." instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.48073, 0.827638, 3.65873)
+visible = false
+
+[node name="interactableObj4" parent="." instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3241, 0.413819, -3.17886)
+visible = false
+
+[node name="interactableObj3" parent="." instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9198, 0.546123, 3.09818)
+visible = false
+
+[node name="interactableObj2" parent="." instance=ExtResource("6_7mycd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1347, 0.363501, -1.05962)
+visible = false

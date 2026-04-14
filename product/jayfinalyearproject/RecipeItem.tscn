@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbfs5x1xy8a3k"]
+[gd_scene load_steps=3 format=3 uid="uid://cbfs5x1xy8a3k"]
 
 [ext_resource type="Script" uid="uid://c2ngihrb34pc" path="res://Scripts/recipe_item.gd" id="1_t001j"]
+[ext_resource type="Texture2D" uid="uid://drfk6c8luromh" path="res://AssetImages/InventoryItems/SelectionBoxBack.png" id="3_vwyln"]
 
 [node name="RecipeItem" type="TextureButton"]
+visibility_layer = 3
 custom_minimum_size = Vector2(100, 100)
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,3 +12,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t001j")
+
+[node name="SelectionBox" type="TextureRect" parent="."]
+visible = false
+z_index = -1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 109.0
+offset_bottom = 113.0
+scale = Vector2(0.901786, 0.901786)
+texture = ExtResource("3_vwyln")
+expand_mode = 1

@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlgy552x0tl3v"]
+
+[ext_resource type="Script" uid="uid://i1qim8fw7l3p" path="res://Scripts/followNPCScript.gd" id="1_k2bbe"]
+[ext_resource type="Texture2D" uid="uid://divc8r0yi7e7e" path="res://AssetImages/MapItems/RobberNPC.png" id="2_k2bbe"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_k2bbe"]
+
+[node name="NPC" type="CharacterBody3D"]
+script = ExtResource("1_k2bbe")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.595, 0)
+shape = SubResource("CapsuleShape3D_k2bbe")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.674104, 0)
+texture = ExtResource("2_k2bbe")
+
+[node name="DialougePanel" type="TabContainer" parent="."]
+visible = false
+offset_left = 33.0
+offset_top = 647.0
+offset_right = 1108.0
+offset_bottom = 807.0
+scale = Vector2(1.70006, 1.67025)
+current_tab = 0
+
+[node name="DialougeTextBox" type="RichTextLabel" parent="DialougePanel"]
+layout_mode = 2
+metadata/_tab_index = 0

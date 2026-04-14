@@ -1,37 +1,88 @@
 {
 	"recipes":[
 		{
-			"Name": "Cloth", "Ingredient1":"Rope", "Ingredient2": "Rope", "Ingredient3": "None",
+			"Name": "Cloth", "Durability":1,"Ingredient1":"Thread", "Ingredient2": "Thread", "Ingredient3": "None",
 			"Description":"A loosely woven fabric. It's a tad scratchy, but you're sure you can overlook that."
 		},
 
 		{
-			"Name": "Rope", "Ingredient1":"Grass", "Ingredient2": "Grass", "Ingredient3": "Grass", 
+			"Name": "Rope","Durability":1, "Ingredient1":"Grass", "Ingredient2": "Grass", "Ingredient3": "None", 
 			"Description":"A long cord wound of dried grass. You're not too sure if it could hold your weight, but you could make something new with it."
 		},
 
 		{
-			"Name": "Shirt", "Ingredient1":"Cloth", "Ingredient2": "Cloth", "Ingredient3": "Rope",
+			"Name": "Shirt","Durability":1, "Ingredient1":"Cloth", "Ingredient2": "Thread", "Ingredient3": "Needle",
 			"Description":"You feel oddly proud holding this shirt. You don't tend to sew, but you'res sure anyone with this stunning outfit will feel like the coolest guy around."
+		},
+		{
+			"Name": "Trousers","Durability":1, "Ingredient1":"Cloth", "Ingredient2": "Thread", "Ingredient3": "Needle",
+			"Description":"You feel oddly proud holding these trousers. You don't tend to sew, but you'res sure anyone with this stunning outfit will feel like the coolest guy around."
 		},
 		
 		{
-			"Name": "Basket", "Ingredient1":"Rope", "Ingredient2": "Rope", "Ingredient3": "Rope", 
+			"Name": "Basket", "Durability":1,"Ingredient1":"Rope", "Ingredient2": "Rope", "Ingredient3": "Scissors", 
 			"Description":"A long cord wound of dried grass. You're not too sure if it could hold your weight, but you could make something new with it."
 		},
 		{
-			"Name": "Bowl", "Ingredient1":"Log", "Ingredient2": "Log", "Ingredient3": "None", 
+			"Name": "Bowl","Durability":1, "Ingredient1":"Log", "Ingredient2": "Log", "Ingredient3": "Axe", 
 			"Description":"A smooth wooden bowl, looks like it would be pretty good to eat soup or noodles out of."
 		},
 		{
-			"Name": "Maraca", "Ingredient1":"Bowl", "Ingredient2": "Bowl", "Ingredient3": "Pebbles", 
+			"Name": "Maraca","Durability":1, "Ingredient1":"Bowl", "Ingredient2": "Bowl", "Ingredient3": "Pebbles", 
 			"Description":"You could get real groovy with these, although you're not very good at playing them."
 		},
 		{
-			"Name": "Pebbles", "Ingredient1":"Rock", "Ingredient2": "Rock", "Ingredient3": "None", 
+			"Name": "Pebbles","Durability":1, "Ingredient1":"Rock", "Ingredient2": "Hammer", "Ingredient3": "None", 
 			"Description":"You're not sure why you thought to smash two rocks together, but they both broke..."
 		},
-		
+		{
+			"Name": "Shard","Durability":1, "Ingredient1":"Hammer", "Ingredient2": "Rock", "Ingredient3": "None", 
+			"Description":"You figured you could chip away at this rock and create a sort of sharp tool. Surely you could make something with this."
+		},
+		{
+			"Name": "Hammer","Durability":3, "Ingredient1":"Rock", "Ingredient2": "Rope", "Ingredient3": "Log", 
+			"Description":"A heavy tool, this should endure a few hits. This will be helpful! Careful to not crush your fingers."
+		},
+		{
+			"Name": "Sand","Durability":1, "Ingredient1":"Pebbles", "Ingredient2": "Hammer", "Ingredient3": "None", 
+			"Description":"You've crushed these rocks as much as you can."
+		},
+		{
+			"Name": "Axe","Durability":3, "Ingredient1":"Shard", "Ingredient2": "Rope", "Ingredient3": "Log", 
+			"Description":"Strong! Not sure you could cut a tree down with this but you could definitely use it to cut logs. Will last a few solid hits."
+		},
+		{
+			"Name": "Sticks","Durability":1, "Ingredient1":"Log", "Ingredient2": "Axe", "Ingredient3": "None", 
+			"Description":"It's some sticks. You're not sure why you keep breaking things down but surely something will be useful."
+		},
+		{
+			"Name": "Thread","Durability":1, "Ingredient1":"Rope", "Ingredient2": "Scissors", "Ingredient3": "None", 
+			"Description":"Strong thread, not the neatest but will hold any fabric together."
+		},
+		{
+			"Name": "Scissors","Durability":4, "Ingredient1":"Shard", "Ingredient2": "Shard", "Ingredient3": "Log", 
+			"Description":"Careful, these are sharp. They'll definitely be useful, though. They seem decently sturdy, you could use these a few times."
+		},
+		{
+			"Name": "Needle","Durability":3, "Ingredient1":"Sticks", "Ingredient2": "Axe", "Ingredient3": "None", 
+			"Description":"Surprisingly pointy!"
+		},
+		{
+			"Name": "PottingMix","Durability":1, "Ingredient1":"Mulch", "Ingredient2": "Grass", "Ingredient3": "Sand", 
+			"Description":"A good mix for potting all your plants. It might grow some unexpected additions to your garden though."
+		},
+		{
+			"Name": "Mulch","Durability":1, "Ingredient1":"Sticks", "Ingredient2": "Axe", "Ingredient3": "None", 
+			"Description":"Bits of chopped up wood, surely this is useful somehow.... right?"
+		},
+		{
+			"Name": "Rags","Durability":1, "Ingredient1":"Cloth", "Ingredient2": "Scissors", "Ingredient3": "None", 
+			"Description":"It's a shame to cut this fabric up but these will be good for cleaning up messes."
+		},
+		{
+			"Name": "Ladder","Durability":1, "Ingredient1":"Sticks", "Ingredient2": "Rope", "Ingredient3": "Rope", 
+			"Description":"A simple rope ladder. Stable enough but you wouldn't trust it to last forever."
+		}
 
 	]
 }

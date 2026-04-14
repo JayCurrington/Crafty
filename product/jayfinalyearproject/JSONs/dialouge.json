@@ -1,0 +1,50 @@
+{
+	"Characters":[
+		{
+			"Name": "Penny", "DesiredItem": "Maraca", "Location":[-16.5, 4.5, 93],
+			"Dialouge1":["Hello", "I've been feeling kinda down.", "Can you help with that?", "Do you have what I want?"],
+			"DialougeSuccess":["This is perfect for my groove!", "Thank you, I'm feeling much better!"],
+			"DialougeFail":["I'm not quite sure that's making me feel better...", "Come back with something... groovier"]
+		},
+		
+		{
+			"Name": "Liz", "DesiredItem": "Raft", "Location":[-18, 0.5, 2.5],
+			"Dialouge1":["Hey, I'm Liz", "I heard you washed up on the shore here. We don't see many 3D people here so please excuse our shock.", "Welcome to our little village. Unfortunately, our craftsman went on a trip and hasn't come back.", "I was planning on going on an adventure but I couldn't possibly leave now.", "Can you help us out? There's not many of us around, only about six others.", "When you're done, come by and if you have a way off the island, I can show you to the way back to the 3D world.", "Do you have what I want?"],
+			"DialougeSuccess":["This is perfect!", "I'll prepare it for our journey", "If everyone's okay, we'll get going."],
+			"DialougeFail":["I don't think I'd know how we'd leave with that.", "Come back with a way to leave."]
+		},
+		{
+			"Name": "Karen", "DesiredItem": "Trousers", "Location":[76, 4.5, -73],
+			"Dialouge1":["Hi sweetheart.", "I don't know what is up with the island recently but everyone has been so unfashionable.", "Maybe you could replace some of my old wardrobe... I did just buy a new shirt though...", "Do you have what I want?"],
+			"DialougeSuccess":["Oh sweetie! This is great", "Thank you kindly."],
+			"DialougeFail":["I don't love those, sorry sweetie.", "I'll see you later."]
+		},
+		
+		{
+			"Name": "Jett", "DesiredItem": "Ladder", "Location":[51,0.5, -12],
+			"Dialouge1":["Hi!!", "I found a kitty!", "Fred was trying to help me shake the tree.","I don't think Fred was much help though.", "Do you have what I want?"],
+			"DialougeSuccess":["This is perfect for the kitty!", "Thank you, strange being."],
+			"DialougeFail":["I'm not quite sure the kitty would like that...", "Come back with something... else"]
+		},
+		{
+			"Name": "Olive", "DesiredItem": "Shirt", "Location":[-149.5,4.5, -17.5],
+			"Dialouge1":["Oh, hey there.", "You look a little weird...", "I like your vibe though. I'd like to look like you. We don't have many people who sew cool clothes around here.", "Do you have what I want?"],
+			"DialougeSuccess":["This is perfect! Now I'll be the coolest guy on the island.", "Thanks man, I'll see you around."],
+			"DialougeFail":["Yeah... I'm not wearing that...", "Can I have something like you?"]
+		},
+		{
+			"Name": "Donna", "DesiredItem": "PottingMix", "Location":[80,8.5, 104.5],
+			"Dialouge1":["Hey!", "I hope you're enjoying your visit on this island. Be careful of the thiefs though...", "I do wish I could spruce things up around here.", "Maybe you have an idea of something that would help.", "Do you have what I want?"],
+			"DialougeSuccess":["Oh! yes! This is exactly it! I will have so much fun planting the garden.", "Thank you, dear. I hope you'll come visit when it blooms."],
+			"DialougeFail":["I don't know how I feel about that.", "Maybe lets try something else."]
+		},
+		{
+			"Name": "Fred", "DesiredItem": "Rags", "Location":[62,4.5, -13],
+			"Dialouge1":["Oh, hi there.", "Sorry about how I look right now.", "I slipped while trying to get that cat, now I'm covered in mud.", "I've heard mud is good for your skin but I feel quite gross right now.", "Do you have what I want?"],
+			"DialougeSuccess":["Oh! Thank you.", "This will help get the mud off my clothes. I'll head home soon to change."],
+			"DialougeFail":["I'm not in the mood for that.", "Sorry, man."]
+		}
+
+
+	]
+}

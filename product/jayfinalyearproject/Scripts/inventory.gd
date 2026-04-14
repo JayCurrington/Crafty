@@ -1,32 +1,55 @@
 extends GridContainer
 class_name Inventory
 
+#prototype button
 var inventoryItem = preload("res://InventoryItem.tscn")
 @onready var recipeMaker = $"../Crafting"
+@onready var player = $"../../../../Player"
+@onready var kudos = $"../../../../Kudos"
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+var canLeave = false
+
+var waitingForItem = false
+
 func _process(delta: float) -> void:
+	#if the player has helped all NPCs
+	if kudos.getKudos() == 6:
+		canLeave = true
+		
+		for i in self.get_children():
+			if i.getType() == "Raft":
+				return
+		addToInventory("Raft",1)
+		
 	pass
 	
-#Removes one at a time or if no more, removes child.
+#Removes one at a time when it reaches the last item, it removes the child.
 func removeFromInventory(item):
-	print("you made it here")
 	for c in self.get_children():
 		if c.getType() == item:
-			print("removing type: ", item)
-			if c.getCount()<=1:
-				self.remove_child(c)
+			if c.getCurrentDurability() == 1:
+				if c.getCount()<=1:
+					self.remove_child(c)
+				else:
+					c.decreaseCount()
+				return
 			else:
-				c.decreaseCount()
-			return
+				c.decreaseDurability()
+	
+#removes a random item from inventory -> used by thief NPC
+func removeRandom():
+	var allItems = self.get_children()
+	var itemType = null
+	if len(allItems)>0:
+		itemType = allItems[randi()%len(self.get_children())].getType()
+		removeFromInventory(itemType)
+	return itemType
 	
 
-func addToInventory(item):
+#Adds an item to the inventory
+func addToInventory(item, dur):
 	var added = false
+	#If theres an item of this type, increase count 
 	for i in self.get_children():
 		if item == i.getType():
 			i.increaseCount()
@@ -40,5 +63,6 @@ func addToInventory(item):
 		#set values
 		newItem.setType(item)
 		newItem.setCount(1)
+		newItem.setDurability(dur)
 	recipeMaker.checkAllRecipes(self.get_children())
 	

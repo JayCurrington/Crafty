@@ -15,20 +15,20 @@ offset_bottom = 40.0
 
 [node name="Container" type="TabContainer" parent="Control"]
 layout_mode = 0
-offset_right = 651.0
-offset_bottom = 438.0
+offset_right = 650.0
+offset_bottom = 440.0
 tab_alignment = 1
-current_tab = 0
+current_tab = 1
 use_hidden_tabs_for_min_size = true
 
 [node name="Inventory" type="GridContainer" parent="Control/Container"]
+visible = false
 layout_mode = 2
 columns = 5
 script = ExtResource("1_ki15f")
 metadata/_tab_index = 0
 
 [node name="Crafting" type="SplitContainer" parent="Control/Container"]
-visible = false
 layout_mode = 2
 script = ExtResource("3_jqulp")
 metadata/_tab_index = 1

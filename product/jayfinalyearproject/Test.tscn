@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://duixllmjne6am"]
+
+[ext_resource type="Script" uid="uid://530imyal5m2r" path="res://Scripts/testScript.gd" id="1_njov2"]
+[ext_resource type="PackedScene" uid="uid://byhxvkturnpa2" path="res://Inventory.tscn" id="2_2au82"]
+[ext_resource type="PackedScene" uid="uid://bcyxy8hfh2i7g" path="res://kudos.tscn" id="3_q1uvj"]
+[ext_resource type="PackedScene" uid="uid://cpe01awl8m6vf" path="res://Player.tscn" id="4_qs82m"]
+[ext_resource type="PackedScene" uid="uid://b2i3vrkrioq5l" path="res://menu.tscn" id="5_c4vo5"]
+[ext_resource type="PackedScene" uid="uid://dlneg0kylm00n" path="res://Camera.tscn" id="6_vwb7u"]
+[ext_resource type="Script" uid="uid://clr082r5jsyuf" path="res://Scripts/cameraScript.gd" id="7_cqdos"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_njov2")
+
+[node name="InventoryHold" parent="." instance=ExtResource("2_2au82")]
+position = Vector2(613, 221)
+
+[node name="Kudos" parent="." instance=ExtResource("3_q1uvj")]
+position = Vector2(70, 70)
+
+[node name="Player" parent="." instance=ExtResource("4_qs82m")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 3.76964, -2.60498)
+
+[node name="interactMenu" parent="Player" instance=ExtResource("5_c4vo5")]
+visible = false
+position = Vector2(768, 336)
+
+[node name="Camera" parent="Player" instance=ExtResource("6_vwb7u")]
+transform = Transform3D(1, 0, 0, 0, 0.869512, 0.493911, 0, -0.493911, 0.869512, -0.0476322, 2.20708, 11.7356)
+v_offset = 5.0
+projection = 0
+size = 17.038
+script = ExtResource("7_cqdos")

@@ -6,18 +6,22 @@ extends SplitContainer
 var recipeItem = preload("res://RecipeItem.tscn")
 var currentSelectedRecipe
 
-
+#json of all recipes
 var PATH = "res://JSONs/recipes.json"
 var recipeList
+#all items the player has held
 var activeItems = []
+#All unlocked recipes
 var activeRecipes = []
 var tempRec = []
 
 func _ready():
+	#parses through recipes and stores to recipe list
 	var json = JSON.new()
 	var file = FileAccess.get_file_as_string(PATH)
 	var jsonText = json.parse_string(file)
 	recipeList = jsonText["recipes"]
+	#used for formatting, get replaced when recipes are unlocked
 	for i in range(4):
 		var temp = recipeItem.instantiate()
 		tempRec.append(temp)
@@ -25,12 +29,6 @@ func _ready():
 		
 	craftButton.pressed.connect(craftRecipe)
 
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-	
 	
 #for when a player gets a new item and recipes are updated
 func itemAdded(newItem):
@@ -55,13 +53,11 @@ func itemAdded(newItem):
 					makeRecipe(i)
 				
 	pass
-
-#For when the last of an item is uesd and recipes need to be removed
-func itemremoved(oldItem):
-	pass
 	
+#Makes a recipe based off proytotype and populates all info.
 func makeRecipe(recipeTemplate):
 	var newRecipe
+	#Replaces formatting recipes
 	if len(tempRec)>0:
 		newRecipe = tempRec.pop_front()
 		
@@ -71,9 +67,11 @@ func makeRecipe(recipeTemplate):
 	activeRecipes.append(newRecipe)
 	newRecipe.setComponents(recipeTemplate.Ingredient1, recipeTemplate.Ingredient2, recipeTemplate.Ingredient3)
 	newRecipe.setName(recipeTemplate.Name)
+	newRecipe.setDurability(recipeTemplate.Durability)
 	newRecipe.setDescription(recipeTemplate.Description)
 	pass
 	
+#checks to see if the recipe is craftable
 func checkAllRecipes(inventory):
 	for i in activeRecipes:
 		if i.checkRecipe(inventory):
@@ -81,12 +79,23 @@ func checkAllRecipes(inventory):
 		else:
 			print("Can't make this yet")
 	
+#Selects a recipe,  allows player to craft it
 func selectRecipe(recipe):
+	if currentSelectedRecipe != null:
+		currentSelectedRecipe.deselect()
 	currentSelectedRecipe = recipe
 	
 func craftRecipe():
 	if currentSelectedRecipe != null:
-		currentSelectedRecipe.craftRecipe()
+		return currentSelectedRecipe.craftRecipe()
+		
+func getRecipes():
+	return recipeHolder.get_children()
+	
+func getCurrentRecipe():
+	return currentSelectedRecipe
+	
+
 	
 
 	

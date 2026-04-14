@@ -1,24 +1,42 @@
 extends Node2D
 class_name InventoryHolder
 
-var inventoryItem = preload("res://InventoryItem.tscn")
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var waitingForItem = false
+var waitingPlayer
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 	
 func getInventory():
 	var inventory :Inventory = $Control/Container/Inventory
 	return(inventory)
-	
-func OpenClose():
+
+#Controls what inventory screen shows when I or C is pressed.
+func OpenClose(screen):
+	if waitingForItem:
+		waitingPlayer.cancelWait()
+	if screen == "Inventory":
+		getInventory().visible = true
+	else:
+		getInventory().visible = false
 	if self.visible:
 		self.visible = false
 	else:
 		self.visible = true
+		
+# Controls the player giving an item to the NPC
+func requestItem(player):
+	waitingForItem = true
+	self.visible = true
+	waitingPlayer = player
+	
+func cancelRequest():
+	waitingForItem = false
+	
+func receiveItem(item):
+	if(waitingForItem):
+		waitingForItem = false
+		waitingPlayer.recieveItem(item)
+	
+func checkLooking():
+	return waitingForItem
 	
 	

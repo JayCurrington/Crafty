@@ -12,5 +12,5 @@ offset_bottom = 32.0
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
-text = "Press 'E' to pick up"
+text = "Press 'E' to interact"
 flat = false
