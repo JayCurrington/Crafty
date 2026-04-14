@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gat8cfw6d66f"
-path="res://.godot/imported/JettNPC.png-b504b4547e8b7cb94544f3ba9aece661.ctex"
+uid="uid://ccrkgtij36nrp"
+path="res://.godot/imported/NPCPenny.png-61e77ea24dd167fa422a77648f03efcc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AssetImages/MapItems/JettNPC.png"
-dest_files=["res://.godot/imported/JettNPC.png-b504b4547e8b7cb94544f3ba9aece661.ctex"]
+source_file="res://AssetImages/MapItems/NPCPenny.png"
+dest_files=["res://.godot/imported/NPCPenny.png-61e77ea24dd167fa422a77648f03efcc.ctex"]
 
 [params]
 

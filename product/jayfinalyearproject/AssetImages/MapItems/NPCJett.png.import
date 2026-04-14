@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccrkgtij36nrp"
-path="res://.godot/imported/PennyNPC.png-3e388f4d3190a888fce8257472151e73.ctex"
+uid="uid://gat8cfw6d66f"
+path="res://.godot/imported/NPCJett.png-b99d48a7d68b1440cbe5593fc4033810.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AssetImages/MapItems/PennyNPC.png"
-dest_files=["res://.godot/imported/PennyNPC.png-3e388f4d3190a888fce8257472151e73.ctex"]
+source_file="res://AssetImages/MapItems/NPCJett.png"
+dest_files=["res://.godot/imported/NPCJett.png-b99d48a7d68b1440cbe5593fc4033810.ctex"]
 
 [params]
 
