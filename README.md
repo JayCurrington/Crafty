@@ -32,6 +32,9 @@ Ensure the CraftyLinux.x84_62 file has executable permissions on your device.
 
 Run the CraftyLinux.x84_62 file.
 
+## Demo Video:
+You can find the demo video at https://youtu.be/YYzN9BN8Faw
+
 
 ## Licensing 
 ### Programming
