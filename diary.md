@@ -1,6 +1,8 @@
 # Diary Entries FYP:
 
 # Term 2
+## 13 April 2026
+Final entry. All code has been commented today and is ready for submission. Git missed some wfiles when pushing from laptop to PC so I am hoping that wont cause issue. Am filming Video demo tomorrow and submitting. Report and perfessional issues are written and edited with bibliographies added. Remianing I have a final read through of both, final git merges, itch.io builds to update, finalising the git, and the video.
 
 
 ## 10 April 2026
