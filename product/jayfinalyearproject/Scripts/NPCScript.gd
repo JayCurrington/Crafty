@@ -85,7 +85,7 @@ func setLocation(location):
 	self.position = location
 	
 func setImage():
-	sprite.texture = load(str("res://AssetImages/MapItems/NPC", charName, ".png"))
+	sprite.texture = load(str("res://AssetImages/MapItems/NPCImages/NPC", charName, ".png"))
 
 #checks the item the player gave them is correct
 func checkItem(playerItem):

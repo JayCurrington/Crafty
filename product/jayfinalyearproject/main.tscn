@@ -21,7 +21,7 @@
 
 [sub_resource type="Environment" id="Environment_efxa6"]
 background_mode = 1
-background_color = Color(0.66744, 0.74962, 0.930717, 1)
+background_color = Color(0.472875, 0.66507, 0.946149, 1)
 ambient_light_color = Color(0.40352, 0.614801, 0.940953, 1)
 fog_light_color = Color(0.577858, 0.735649, 0.885314, 1)
 fog_light_energy = 0.23
@@ -660,7 +660,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 6, -17)
 texture = ExtResource("17_074og")
 
 [node name="Bush44" type="Sprite3D" parent="MapDeatailHolder/Bushes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 6, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.6066, 6, -4.95853)
 texture = ExtResource("17_074og")
 
 [node name="Bush45" type="Sprite3D" parent="MapDeatailHolder/Bushes"]

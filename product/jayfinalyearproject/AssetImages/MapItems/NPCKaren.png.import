@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd4405rt76cri"
-path="res://.godot/imported/NPCDonna.png-49bf9113bfebb6417e21447ae88332f0.ctex"
+uid="uid://d1hfspavuw56f"
+path="res://.godot/imported/NPCKaren.png-0b1c6641ecd2f2a9f1ac9d1cd1d25e88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AssetImages/MapItems/NPCDonna.png"
-dest_files=["res://.godot/imported/NPCDonna.png-49bf9113bfebb6417e21447ae88332f0.ctex"]
+source_file="res://AssetImages/MapItems/NPCKaren.png"
+dest_files=["res://.godot/imported/NPCKaren.png-0b1c6641ecd2f2a9f1ac9d1cd1d25e88.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccrkgtij36nrp"
-path="res://.godot/imported/NPCPenny.png-61e77ea24dd167fa422a77648f03efcc.ctex"
+path="res://.godot/imported/NPCPenny.png-9653258c1dcad96808cb1603791186d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AssetImages/MapItems/NPCPenny.png"
-dest_files=["res://.godot/imported/NPCPenny.png-61e77ea24dd167fa422a77648f03efcc.ctex"]
+source_file="res://AssetImages/MapItems/NPCImages/NPCPenny.png"
+dest_files=["res://.godot/imported/NPCPenny.png-9653258c1dcad96808cb1603791186d3.ctex"]
 
 [params]
 

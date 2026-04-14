@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da6m4kkk04f8b"
-path="res://.godot/imported/NPCLiz.png-50a2eccaca3c66250ea2e791c8d3adcc.ctex"
+uid="uid://bd4405rt76cri"
+path="res://.godot/imported/NPCDonna.png-e415bd7636af0058d7a4c7813a8685dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://AssetImages/MapItems/NPCLiz.png"
-dest_files=["res://.godot/imported/NPCLiz.png-50a2eccaca3c66250ea2e791c8d3adcc.ctex"]
+source_file="res://AssetImages/MapItems/NPCImages/NPCDonna.png"
+dest_files=["res://.godot/imported/NPCDonna.png-e415bd7636af0058d7a4c7813a8685dc.ctex"]
 
 [params]
 
