@@ -111,20 +111,22 @@ func interactDetect():
 					i.talkToPlayer()
 					break
 
-
+#opens and closes inventory
 func inventoryDetect():
 	if Input.is_action_just_pressed("InventoryOpen"):
 		InventoryHold.OpenClose("Inventory")
 	if Input.is_action_just_pressed("craftingOpen"):
 		InventoryHold.OpenClose("Crafting")
+func closeInventory():
+	InventoryHold.visible = false
 
-
+#objects that are near the player, makes 'Press 'e' to interact' show and adds t an arry of nearby oibjects
 func objectHit(object):
 	if object.getObjectType() != "followNPC":
 		get_node("interactMenu").visible = true
 		nearObject.append(object)
 
-
+#Removes item from nearby object array
 func objectGone(object):
 	
 	for i in nearObject:
@@ -133,9 +135,11 @@ func objectGone(object):
 				talking = false
 				waitingForItem = false
 				i.stopTalking()
+				#Cancels NPC asking for item
 				InventoryHold.cancelRequest()
 		nearObject.erase(i)
 	if len(nearObject) == 0:
+		 # if no objects nearby, hides interact menu
 		get_node("interactMenu").visible = false
 
 
@@ -163,5 +167,6 @@ func cancelWait():
 func getLocation():
 	return self.position
 	
+#sends to initail location when falls in the water
 func sendToStart():
 	self.position = startLocation

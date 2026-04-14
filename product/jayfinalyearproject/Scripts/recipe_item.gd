@@ -12,17 +12,11 @@ var showString = "[b]nameTemp[/b]\n descTemp\n \n Components:\n - comp1\n - comp
 @onready var DescriptionObj = $"../../Description"
 @onready var RecipeMaker = $"../.."
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	imageUpdate()
 	self.pressed.connect(wasClicked)
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-	
+#getters and setters
 func getItemNeeded (item):
 	return components.count(item)
 	
@@ -72,6 +66,7 @@ func craftRecipe():
 		return true
 	return false
 	
+#Shows correct description string
 func updateString():
 	var tempText = showString
 	tempText = tempText.replace("nameTemp", recName)
@@ -80,6 +75,7 @@ func updateString():
 		tempText = tempText.replace("comp"+str(i+1), components[i])
 	DescriptionObj.text = tempText
 	
+# checks if the player has the items needed to craft this. If so, recipe changes the image and marked as able to be crafted
 func checkRecipe(inventory):
 	var componentChecks = components.duplicate()
 	print(components)
@@ -99,6 +95,7 @@ func checkRecipe(inventory):
 	imageUpdate()
 	return false
 	
+#When clicked, update string, highlight the recipe, and tell manager this is the current selected 
 func wasClicked():
 	if recName != "None":
 		RecipeMaker.selectRecipe(self)

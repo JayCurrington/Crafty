@@ -1,6 +1,7 @@
 extends GridContainer
 class_name Inventory
 
+#prototype button
 var inventoryItem = preload("res://InventoryItem.tscn")
 @onready var recipeMaker = $"../Crafting"
 @onready var player = $"../../../../Player"
@@ -10,12 +11,8 @@ var canLeave = false
 
 var waitingForItem = false
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	#if the player has helped all NPCs
 	if kudos.getKudos() == 6:
 		canLeave = true
 		
@@ -26,7 +23,7 @@ func _process(delta: float) -> void:
 		
 	pass
 	
-#Removes one at a time or if no more, removes child.
+#Removes one at a time when it reaches the last item, it removes the child.
 func removeFromInventory(item):
 	for c in self.get_children():
 		if c.getType() == item:
@@ -39,7 +36,7 @@ func removeFromInventory(item):
 			else:
 				c.decreaseDurability()
 	
-#removes a random item from inventory
+#removes a random item from inventory -> used by thief NPC
 func removeRandom():
 	var allItems = self.get_children()
 	var itemType = null
@@ -49,8 +46,10 @@ func removeRandom():
 	return itemType
 	
 
+#Adds an item to the inventory
 func addToInventory(item, dur):
 	var added = false
+	#If theres an item of this type, increase count 
 	for i in self.get_children():
 		if item == i.getType():
 			i.increaseCount()

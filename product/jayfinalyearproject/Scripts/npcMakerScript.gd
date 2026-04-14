@@ -1,12 +1,13 @@
 extends Node
 class_name NPCMaker
-
+#prototype 
 var NPCItem = preload("res://npcCharacter.tscn")
 
-
+#json file
 var PATH = "res://JSONs/dialouge.json"
 var charList
 
+#Parses json and holds information in the charList
 func _ready():
 	var json = JSON.new()
 	var file = FileAccess.get_file_as_string(PATH)
@@ -15,11 +16,7 @@ func _ready():
 	makeCharacter()
 		
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-	
+#Makes all NPCs based on the data in charList
 func makeCharacter():
 	for i in charList:
 		var newCharacter = NPCItem.instantiate()

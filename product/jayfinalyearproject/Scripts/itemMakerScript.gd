@@ -6,6 +6,7 @@ var mapItem = preload("res://ObjectInteractable.tscn")
 var PATH = "res://JSONs/itemLocations.json"
 var itemList
 
+#parse json with all locations
 func _ready():
 	var json = JSON.new()
 	var file = FileAccess.get_file_as_string(PATH)
@@ -14,11 +15,7 @@ func _ready():
 	makeItems()
 		
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-	
+#populate map based on locations
 func makeItems():
 	for i in itemList:
 		print("Hello")

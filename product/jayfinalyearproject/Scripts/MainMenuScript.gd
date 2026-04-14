@@ -3,12 +3,12 @@ extends Control
 @onready var CreditsButton = $"CreditsButton"
 @onready var QuitButton = $"QuitButton"
 
-# Called when the node enters the scene tree for the first time.
+#controls buttons on main menu
+
 func _ready() -> void:
 	StartButton.pressed.connect(startScene)
 	QuitButton.pressed.connect(quitGame)
 	CreditsButton.pressed.connect(creditScene)
-	pass # Replace with function body.
 
 func startScene():
 	get_tree().change_scene_to_file('res://main.tscn')

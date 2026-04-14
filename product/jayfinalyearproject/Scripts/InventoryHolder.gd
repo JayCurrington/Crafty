@@ -4,14 +4,12 @@ class_name InventoryHolder
 var waitingForItem = false
 var waitingPlayer
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 	
 func getInventory():
 	var inventory :Inventory = $Control/Container/Inventory
 	return(inventory)
-	
+
+#Controls what inventory screen shows when I or C is pressed.
 func OpenClose(screen):
 	if waitingForItem:
 		waitingPlayer.cancelWait()
@@ -24,6 +22,7 @@ func OpenClose(screen):
 	else:
 		self.visible = true
 		
+# Controls the player giving an item to the NPC
 func requestItem(player):
 	waitingForItem = true
 	self.visible = true

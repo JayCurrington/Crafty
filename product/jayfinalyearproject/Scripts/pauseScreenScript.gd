@@ -1,5 +1,5 @@
 extends Node2D
-
+#controls the pause screen and all buttons on it
 var pauseHold = false
 @onready var ResumeButton = $"MainMenuScreen/Control/ResumeButton"
 @onready var QuitButton = $"MainMenuScreen/Control/QuitButton"
@@ -22,8 +22,10 @@ func resumeScene():
 	get_tree().paused = false
 	if pauseHold:
 		pauseHold = false
+		#This resumes the game
 		get_tree().paused = false
 	else:
+		#This stops the game from running
 		pauseHold = true
 		get_tree().paused = true
 	self.visible = pauseHold
@@ -41,7 +43,6 @@ func backToMenu():
 	
 	
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	#When esc hit, pauses game
 	if Input.is_action_just_pressed("pause"):
